@@ -1,12 +1,12 @@
 #baseURL = "https://yizenglistat.github.io/blog/"
 baseURL = "https://yizengli.com/"
 languageCode = 'en-us'
-title = "My Research Blog"
+title = "Blog"
 theme = "kiss"
 #copyright = "&copy; <a href=\"https://github.com/yizenglistat\">Yizeng Li</a> 2017"
 disqusShortname = "yizengli"
 googleAnalytics = "UA-125871484-1"
-Paginate = 5 # Number of posts per page
+Paginate = 2 # Number of posts per page
 enableRobotsTXT = true
 
 [params.rss] # Adding this tag enables RSS feed
@@ -21,7 +21,7 @@ customCSS = ["css/custom.css"]
 adsense = "" # Adsense ID (ID only, without ca-pub-)
 enableSocial = true # Adds OpenGraph and Twitter cards
 homeTitle = "Blog" # Title for home page
-poweredby = false # Adds powered by hugo and kiss below Copyright
+poweredby = true # Adds powered by hugo and kiss below Copyright
 related = true # Includes related articles at the bottom of the article
 codeCopy = true # Add copy button above code blocks
 taxonomiesCount = true # Add taxonomies count
@@ -42,3 +42,18 @@ tag ="tags"
 
 [blackfriday]
 hrefTargetBlank = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[menu]
+	[[menu.nav]]
+	identifier = "tags"
+	name = "Tags"
+	url = "/tags/"
+	weight = 1
+	[[menu.nav]]
+	identifier = "search"
+	name = "Search"
+	url = "/search/"
+	weight = 2
