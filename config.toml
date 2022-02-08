@@ -5,7 +5,7 @@ title = "My Research Blog"
 theme = "kiss"
 #copyright = "&copy; <a href=\"https://github.com/yizenglistat\">Yizeng Li</a> 2017"
 disqusShortname = "yizengli"
-googleAnalytics = ""
+googleAnalytics = "UA-125871484-1"
 Paginate = 5 # Number of posts per page
 enableRobotsTXT = true
 
