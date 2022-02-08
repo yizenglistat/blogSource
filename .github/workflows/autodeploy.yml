@@ -1,0 +1,36 @@
+name: Deploy gh-pages
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true 
+          fetch-depth: 1   
+      
+      - name: Update theme
+        run: git submodule update --init --recursive
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          #deploy_key: ${{ secrets.DEPLOY_TOKEN }}
+          external_repository: yizenglistat/blog
+          publish_branch: master
+          publish_dir: ./public
+          allow_empty_commit: true
