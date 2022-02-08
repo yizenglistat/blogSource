@@ -1,5 +1,5 @@
 #baseURL = "https://yizenglistat.github.io/blog/"
-baseURL = "http://yizengli.com"
+baseURL = "http://yizengli.com/"
 languageCode = 'en-us'
 title = "My Research Blog"
 theme = "kiss"
