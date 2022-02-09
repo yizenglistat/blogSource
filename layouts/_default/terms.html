@@ -1,0 +1,37 @@
+{{ partial "header" . }}
+{{ partial "nav" . }}
+<section class="section">
+  <div class="container">
+    {{- $pages := . -}}
+    {{- if .IsHome -}}
+    {{- $pages = .Site.RegularPages -}}
+    {{- else -}}
+    {{ $pages = .Pages -}}
+    {{- end -}}
+    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+    
+    {{ range $.Site.Taxonomies.tags.ByCount }}
+      <li>
+        <h1 class='content'>
+          <a href="/tags/{{ .Name }}"> 
+            {{ if in .Name "-" }}
+            {{replace .Name "-" " " | title}}
+            {{ else }}
+            {{ .Name | title}}
+            {{ end }}          
+            ({{ .Count }})
+          </a>
+        </h1>
+        <div class="content"></div>
+      </li>
+    {{end}}
+
+<!--     {{ range sort .Pages }}
+    <article>
+      <h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a>{{ if .Draft }} ::Draft{{ end }}</h2>
+    </article>
+    {{ end }} -->
+  </div>
+</section>
+<!-- {{ partial "pager" . }} -->
+{{ partial "footer" . }}
