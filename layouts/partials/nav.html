@@ -2,12 +2,10 @@
   <div class="container">
     <nav id="nav-main" class="nav">
       <div id="nav-name" class="nav-left">
-        
         {{ range .Site.Menus.nav }}
           <a id="nav-anchor" class="nav-item" href="{{ .URL }}">
           <h1 id="nav-heading" class="title is-4">{{ .Name }}</h1>
         {{ end }}
-      
       </div>
       <div class="nav-right">
         <nav id="nav-items" class="nav-item level is-mobile">
@@ -53,7 +51,9 @@
       </div>
       {{ end }}
     </nav>
-
+    <div class="nav-center">
+      <hr style="width:50%;opcity:0.4;text-align:left;margin-left:0">
+    </div>
   </div>
   <script src="/js/navicon-shift.js"></script>
 </section>
