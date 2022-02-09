@@ -3,10 +3,6 @@
     <nav id="nav-main" class="nav">
       <div id="nav-name" class="nav-left">
         
-        <a id="nav-anchor" class="nav-item" href="{{ .Site.BaseURL }}">
-          <h1 id="nav-heading" class="title is-4">{{ .Site.Title }}</h1>
-        </a>
-
         {{ range .Site.Menus.nav }}
           <a id="nav-anchor" class="nav-item" href="{{ .URL }}">
           <h1 id="nav-heading" class="title is-4">{{ .Name }}</h1>

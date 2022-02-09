@@ -11,8 +11,9 @@
     {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
     
     {{ range $.Site.Taxonomies.tags.ByCount }}
-      <li>
+      
         <h1 class='content'>
+          <li>
           <a href="/tags/{{ .Name }}"> 
             {{ if in .Name "-" }}
             {{replace .Name "-" " " | title}}
@@ -21,9 +22,9 @@
             {{ end }}          
             ({{ .Count }})
           </a>
+          </li>
         </h1>
-        <div class="content"></div>
-      </li>
+      
     {{end}}
 
 <!--     {{ range sort .Pages }}

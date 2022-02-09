@@ -51,9 +51,15 @@ hrefTargetBlank = true
 	identifier = "tags"
 	name = "Tags"
 	url = "/tags/"
-	weight = 1
-	[[menu.nav]]
-	identifier = "search"
-	name = "Search"
-	url = "/search/"
 	weight = 2
+	# [[menu.nav]]
+	# identifier = "search"
+	# name = "Search"
+	# url = "/search/"
+	# weight = 3
+	[[menu.nav]]
+	identifier = "home"
+	name = "Home"
+	url = "/"
+	weight = 1
+

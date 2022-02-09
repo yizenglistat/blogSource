@@ -39,7 +39,7 @@ input[type="radio"] {
 a:hover,
 strong,
 table th {
-  color: #38cf6a;
+  color: #23ad51;
 }
 
 .container,
@@ -801,13 +801,13 @@ a.box:active {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #d3d6db;
+  border: 0px solid #d3d6db;
   border-radius: 3px;
-  color: #38cf6a;
+  color: #082fbf;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-size: 14px;
+  font-size: 18px;
   height: 32px;
   line-height: 24px;
   position: relative;
@@ -890,7 +890,7 @@ a.box:active {
 .button.is-active,
 .button:focus,
 .button:hover {
-  color: #38cf6a;
+  color: #23ad51;
 }
 
 .button:active {
@@ -1291,14 +1291,17 @@ a.box:active {
 .button.is-link {
   background-color: transparent;
   border-color: transparent;
-  color: #42464c;
+  color: #3038d9;
   text-decoration: underline;
+  text-underline-offset:2px;
+  font-weight: bold;
+  font-size: 15px;
+  position: relative;
 }
 
-.button.is-link:focus,
 .button.is-link:hover {
-  background-color: #d3d6db;
-  color: #38cf6a;
+  background-color: none;
+  color: #23ad51;
 }
 
 .button.is-small {
@@ -1344,16 +1347,18 @@ a.box:active {
   position: absolute !important;
 }
 
-.content a:not(.button) {
-  border-bottom: 1px solid #d3d6db;
-}
 
-.content a:not(.button):visited {
-  color: #847bb9;
-}
+/*.content a:not(.button):visited {
+  color: #23ad51;
+}*/
 
-.content a:not(.button):hover {
+/*.content a:not(.button):hover {
   border-bottom-color: #2077b2;
+}*/
+
+.content a:not(.button){
+  color: #3038d9;
+  font-weight: 500;
 }
 
 .content li+li {
@@ -1437,7 +1442,7 @@ a.box:active {
   background-color: #fff;
   border: 1px solid #d3d6db;
   border-radius: 3px;
-  color: #38cf6a;
+  color: #23ad51;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1626,7 +1631,7 @@ a.box:active {
 
 .checkbox:hover,
 .radio:hover {
-  color: #38cf6a;
+  color: #23ad51;
 }
 
 .is-disabled.checkbox,
@@ -1655,7 +1660,7 @@ a.box:active {
   background-color: #fff;
   border: 1px solid #d3d6db;
   border-radius: 3px;
-  color: #38cf6a;
+  color: #23ad51;
   font-size: 14px;
   height: 32px;
   -webkit-box-pack: start;
@@ -1772,7 +1777,7 @@ a.box:active {
 }
 
 .select:hover:after {
-  border-color: #38cf6a;
+  border-color: #23ad51;
 }
 
 .select.is-small {
@@ -1813,7 +1818,7 @@ a.box:active {
 }
 
 .label {
-  color: #38cf6a;
+  color: #23ad51;
 }
 
 .label:not(:last-child) {
@@ -2322,7 +2327,7 @@ a.box:active {
 
 .table {
   background-color: #fff;
-  color: #38cf6a;
+  color: #23ad51;
   margin-bottom: 20px;
   width: 100%;
 }
@@ -2370,7 +2375,7 @@ a.box:active {
 
 .table td.is-link>a:hover,
 .table th.is-link>a:hover {
-  background-color: #2077b2;
+  background-color: red;
   color: #fff;
 }
 
@@ -2381,13 +2386,13 @@ a.box:active {
 }
 
 .table th {
-  color: #38cf6a;
+  color: #23ad51;
   text-align: left;
 }
 
 .table tr:hover {
   background-color: #f5f7fa;
-  color: #38cf6a;
+  color: #23ad51;
 }
 
 .table thead td,
@@ -2461,7 +2466,7 @@ a.box:active {
 
 .subtitle,
 .title {
-  font-weight: 300;
+  font-weight: bold;
   word-break: break-word;
 }
 
@@ -2494,17 +2499,13 @@ a.box:active {
   vertical-align: top;
 }
 
-.title {
-  color: #38cf6a;
+.title strong {
+  color: Black;
 }
 
 .title code {
   display: inline-block;
   font-size: 28px;
-}
-
-.title strong {
-  color: inherit;
 }
 
 .title+.highlight,
@@ -2528,8 +2529,12 @@ a.box:active {
 
 .title.is-3 code,
 .title.is-4 {
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: 1000;
+/*  text-decoration: underline;
+  text-underline-offset:2px;*/
 }
+
 
 .title.is-4 code,
 .title.is-5 {
@@ -2568,7 +2573,7 @@ a.box:active {
 }
 
 .subtitle strong {
-  color: #38cf6a;
+  color: black;
 }
 
 .subtitle+.title {
@@ -2603,11 +2608,18 @@ a.box:active {
 .subtitle.is-6,
 .subtitle.is-6 code {
   font-size: 14px;
+  color:#23ad51;
 }
+
+.subtitle.is-6 a:hover{
+  color:#3038d9;
+}
+
 
 .subtitle.tags,
 .subtitle.date {
   line-height: 1.5em;
+  color:black;
 }
 
 .subtitle.is-normal {
@@ -2966,7 +2978,7 @@ a.box:active {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  color: #38cf6a;
+  color: black;
   display: flex;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
@@ -4796,7 +4808,7 @@ a.box:active {
 }
 
 .modal-card-title {
-  color: #38cf6a;
+  color: #23ad51;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -4909,7 +4921,7 @@ a.nav-item {
 .nav-item a:hover,
 a.nav-item.is-active,
 a.nav-item:hover {
-  color: #38cf6a;
+  color: #3038d9;
 }
 
 .nav-item a.is-tab,
@@ -5169,7 +5181,7 @@ a.panel-block:hover {
 
 .panel-heading {
   border-radius: 4px 4px 0 0;
-  color: #38cf6a;
+  color: #23ad51;
   font-size: 18px;
   font-weight: 300;
   padding: 10px;
@@ -5202,8 +5214,8 @@ a.panel-block:hover {
 }
 
 .panel-tabs a.is-active {
-  border-bottom-color: #38cf6a;
-  color: #38cf6a;
+  border-bottom-color: #23ad51;
+  color: #23ad51;
 }
 
 .panel-block:not(:last-child),
@@ -5213,7 +5225,7 @@ a.panel-block:hover {
 }
 
 .panel-block {
-  color: #38cf6a;
+  color: #23ad51;
   display: block;
   line-height: 16px;
   padding: 10px;
@@ -5266,8 +5278,8 @@ a.panel-block:hover {
 }
 
 .tabs a:hover {
-  border-bottom-color: #38cf6a;
-  color: #38cf6a;
+  border-bottom-color: #23ad51;
+  color: #23ad51;
 }
 
 .tabs li {
@@ -6437,7 +6449,7 @@ html {
 
 .footer a:hover,
 .footer a:visited:hover {
-  color: #38cf6a;
+  color: #23ad51;
 }
 
 .footer a:not(.icon),
@@ -6505,8 +6517,9 @@ article+article {
 }
 
 .title a {
-  color: #38cf6a;
+  color: black;
 }
+
 
 .title.notfound {
   font-size: 20vw;
