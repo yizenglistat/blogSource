@@ -2,7 +2,7 @@
 date: 2012-09-28
 linktitle: Testing B
 title: Testing B
-weight: 1
+weight: 10
 tags: ["Python", "Neural Networks"]
 next: /testing-c
 prev: /testing-a

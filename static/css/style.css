@@ -1,4 +1,28 @@
+.pagination{
+  font-weight: bold;
+  font-size: 18px;
+  color:white;
+  margin-top: 7px;
+}
 
+.pagination a {
+  color:#3038d9;
+}
+
+.pagination-item{
+  opacity: 0.9;
+  background-color:#3038d9;
+  border-radius: 5px;
+  color: white
+}
+
+.pagination-item a {
+  color: white
+}
+
+.pagination-item a:hover {
+  color: white
+}
 
 .grad {
         height: 0.5px;
@@ -5139,6 +5163,7 @@ a.panel-block:hover {
 .pagination ul,
 .tabs a {
   -webkit-box-align: center;
+
 }
 
 .pagination a {

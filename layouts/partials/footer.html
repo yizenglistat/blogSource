@@ -1,0 +1,25 @@
+<section class="section">
+  <div class="container has-text-centered">
+    <p>{{ .Site.Copyright | safeHTML }}</p>
+    {{if .Site.Params.Info.poweredby}}
+      <p> © Yizeng Li 2022</p>
+    {{ end }}
+  </div>
+</section>
+{{ if .Site.GoogleAnalytics }}
+{{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
+{{ if .Site.Params.matomoAnalytics }}
+{{- partial "analytics/matomo" . -}}
+{{ end }}
+{{ if .Site.Params.fathomAnalytics }}
+{{- partial "analytics/fathom" . -}}
+{{ end }}
+{{ if .Site.Params.hotjarAnalytics}}
+{{- partial "analytics/hotjar" . -}}
+{{ end }}
+{{ if .Site.Params.plausibleAnalytics}}
+{{- partial "analytics/plausible" . -}}
+{{ end }}
+</body>
+</html>
