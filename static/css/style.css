@@ -1,4 +1,13 @@
+.row {
+  display: flex; /* equal height of the children */
+}
 
+.col {
+  flex: 1; /* additionally, equal width */
+  
+  padding: 1em;
+  border: solid;
+}
 
 .grad {
         height: 0.5px;
@@ -4896,7 +4905,7 @@ a.box:active {
   stroke: currentColor;
   fill: none;
   position: relative;
-  top: 0.1111111111111111em;
+  top: 0.5em;
 }
 
 .nav-item {

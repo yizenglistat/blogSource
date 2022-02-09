@@ -22,6 +22,7 @@
 
         {{ end }}
 
+        
       </div>
       <div class="nav-right" >
         <nav id="nav-items" class="nav-item level is-mobile" >
@@ -30,8 +31,8 @@
           {{- with $username := ( index $social $platform ) -}}
           <a class="level-item" aria-label="{{ $platform }}" href='{{ print ( index $.Site.Data.theme.social.base $platform ) $username }}'
             target='_blank' rel='noopener'>
-            <span class="icon" >
-              <i>
+            <span class="icon">
+              <i >
                 {{- partial "svg/icons" $platform -}}
               </i>
             </span>
