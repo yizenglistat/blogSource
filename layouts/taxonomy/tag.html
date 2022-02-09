@@ -6,18 +6,20 @@
     {{ range sort .Paginator.Pages }}
     <article>
       <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
+      
       <div class="subtitle tags is-6 is-pulled-right">
         {{ if .Params.tags }}
         {{ partial "tags" .Params.tags }}
         {{ end }}
       </div>
       <h2 class="subtitle is-6 date">{{ .Date.Format "January 2, 2006" }}</h2>
+      
       <div class="content">
         {{ .Summary | plainify | safeHTML }}
         {{ if .Truncated }}
         <a class="button is-link" href="{{ .Permalink }}" style="height:28px">
-          Read
-        </a>
+          Read FUCK
+        </a> 
         {{ end }}
       </div>
     </article>
