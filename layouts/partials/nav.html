@@ -4,9 +4,10 @@
     <nav id="nav-main" class="nav">
       <div id="nav-name" class="nav-left">
         {{ range .Site.Menus.nav }}
+          
           {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
           {{ $active = or $active (eq .Name $current.Title) }}
-          {{ $active = or $active (and (eq .Name "Home") (eq $current.Section "post")) }}
+          {{ $active = or $active (and (eq .Name "Home") (or (eq $current.Section "") (eq $current.Section "post"))) }}
           {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
           
           {{ if $active}}
@@ -20,6 +21,7 @@
           {{ end }}
 
         {{ end }}
+
       </div>
       <div class="nav-right">
         <nav id="nav-items" class="nav-item level is-mobile">

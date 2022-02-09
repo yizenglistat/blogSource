@@ -2623,10 +2623,13 @@ a.box:active {
 .subtitle.is-6 code {
   font-size: 14px;
   color:#23ad51;
+  transition: all 500ms;
 }
 
 .subtitle.is-6 a:hover{
   color:#3038d9;
+  font-size: 15px;
+  font-size-adjust: 20px;
 }
 
 
@@ -4929,6 +4932,8 @@ a.box:active {
 .nav-item a,
 a.nav-item {
   color: #42464c;
+/*  transition: all 500ms;
+  font-size: 5px;*/
 }
 
 .nav-item a.is-active,
@@ -4938,6 +4943,8 @@ a.nav-item:hover {
   color: #3038d9;
   text-decoration: underline;
   text-underline-offset:5px;
+/*  font-size:20px;
+  font-size-adjust: 20px;*/
 }
 
 .nav-item a.is-tab,
@@ -6659,7 +6666,9 @@ img[src$="#r"] {
 
 .related a:not(.button){
   color:#3038d9;
+  font-weight: bold;
 }
+
 
 .related ul {
   font-size: 17px;
