@@ -2,6 +2,7 @@
 {{ partial "nav" . }}
 <section class="section">
   <div class="container">
+    
     {{- $pages := . -}}
     {{- if .IsHome -}}
     {{- $pages = .Site.RegularPages -}}
@@ -10,6 +11,7 @@
     {{- end -}}
     {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
     {{ range sort .Paginator.Pages }}
+
     <article>
       <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
       <h2 class="subtitle tags is-6">
