@@ -5,8 +5,8 @@ linktitle: Creating a New Theme
 menu:
   main:
     parent: tutorials
-next: /tutorials/github-pages-blog
-prev: /tutorials/automated-deployments
+next: /testing-b
+prev: /testing-a
 title: A Testing Article
 weight: 10
 tags: ["Python", "Neural Networks"]

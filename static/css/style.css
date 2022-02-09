@@ -1,13 +1,4 @@
-.row {
-  display: flex; /* equal height of the children */
-}
 
-.col {
-  flex: 1; /* additionally, equal width */
-  
-  padding: 1em;
-  border: solid;
-}
 
 .grad {
         height: 0.5px;
@@ -2739,6 +2730,15 @@ a.box:active {
 }
 
 .icon.is-small {
+  padding-top: 1.5px;
+  font-size: 14px;
+  height: 16px;
+  line-height: 16px;
+  width: 16px;
+}
+
+.icon.is-special {
+  padding-top: 1.5px;
   font-size: 14px;
   height: 16px;
   line-height: 16px;
