@@ -1302,14 +1302,16 @@ a.box:active {
 }
 
 .button.is-link {
-  color: #23ad51;
+  color: #3038d9;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
+  text-decoration: underline;
+  text-underline-offset:3px;
 }
 
 .button.is-link:hover {
   background-color: none;
-  color: #3038d9;
+  color: #23ad51;
 }
 
 .button.is-small {
