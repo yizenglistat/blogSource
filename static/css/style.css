@@ -4926,7 +4926,7 @@ a.box:active {
 }
 
 .level-item {
-  stroke: currentColor;
+  stroke: black;
   fill: none;
   position: relative;
   top: 1.2em;

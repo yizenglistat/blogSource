@@ -48,10 +48,15 @@ hrefTargetBlank = true
   home = ["HTML", "RSS", "JSON"]
 
 [menu]
+	[[menu.nav]]
+	identifier = "search"
+	name = "Search"
+	url = "/search/"
+	weight = 4
 	# [[menu.nav]]
-	# identifier = "search"
-	# name = "Search"
-	# url = "/search/"
+	# identifier = "series"
+	# name = "Series"
+	# url = "/series/"
 	# weight = 3
 	[[menu.nav]]
 	identifier = "tags"

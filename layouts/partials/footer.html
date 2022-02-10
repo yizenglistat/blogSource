@@ -2,7 +2,19 @@
   <div class="container has-text-centered">
     <p>{{ .Site.Copyright | safeHTML }}</p>
     {{if .Site.Params.Info.poweredby}}
-      <p> © Yizeng Li 2022</p>
+    {{- $social := ( .Site.Params.social ) -}}
+  	
+  	{{- range $platform := $social.config.platforms -}}
+  	{{- with $username := ( index $social $platform ) -}}
+  	<a class="level-item" aria-label="{{ $platform }}" href='{{ print ( index $.Site.Data.theme.social.base $platform ) $username }}'
+            target='_blank' rel='noopener'>
+            <span class="icon" style="padding-left: 8px;">
+                {{- partial "svg/icons" $platform -}} 
+            </span>
+          </a>
+    {{end}}
+    {{end}}
+    <p class="level-item" style="padding-top:0em"> © YL 2022</p>
     {{ end }}
   </div>
 </section>

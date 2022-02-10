@@ -32,9 +32,8 @@
           <a class="level-item" aria-label="{{ $platform }}" href='{{ print ( index $.Site.Data.theme.social.base $platform ) $username }}'
             target='_blank' rel='noopener'>
             <span class="icon">
-              <i >
-                {{- partial "svg/icons" $platform -}}
-              </i>
+                <!-- {{- partial "svg/icons" $platform -}} -->
+
             </span>
           </a>
           {{- end -}}
@@ -42,6 +41,8 @@
         </nav>
       </div>
     </nav>
+
+
 
     <nav class="nav">
       {{ if (isset .Site.Params "sections_left" ) }}
@@ -68,6 +69,9 @@
       </div>
       {{ end }}
     </nav>
+    
+
+
     <div class="nav-center">
       <div class="grad" style="width:80%;"></div>
     </div>
