@@ -1,11 +1,11 @@
 {
-  "scripts": {
-    "algolia": "atomic-algolia"
-  },
-  "devDependencies": {
-    "atomic-algolia": "^0.3.19"
-  },
-  "dependencies": {
-    "@algolia/autocomplete-js": "^1.5.2"
-  }
+  // "scripts": {
+  //   "algolia": "atomic-algolia"
+  // },
+  // "devDependencies": {
+  //   "atomic-algolia": "^0.3.19"
+  // },
+  // "dependencies": {
+  //   "@algolia/autocomplete-js": "^1.5.2"
+  // }
 }
