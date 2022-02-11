@@ -47,7 +47,9 @@ hrefTargetBlank = true
 
 # for search
 
-
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  
 # for menu
 
 [menu]
