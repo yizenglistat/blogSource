@@ -44,15 +44,18 @@ tag ="tags"
 [blackfriday]
 hrefTargetBlank = true
 
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
+
+# for search
+
+
+# for menu
 
 [menu]
-	[[menu.nav]]
-	identifier = "search"
-	name = "Search"
-	url = "/search/"
-	weight = 4
+	# [[menu.nav]]
+	# identifier = "search"
+	# name = "Search"
+	# url = "/search/"
+	# weight = 4
 	# [[menu.nav]]
 	# identifier = "series"
 	# name = "Series"

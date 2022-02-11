@@ -1,5 +1,11 @@
 {
+  "scripts": {
+    "algolia": "atomic-algolia"
+  },
+  "devDependencies": {
+    "atomic-algolia": "^0.3.19"
+  },
   "dependencies": {
-    "fuse.js": "^6.5.3"
+    "@algolia/autocomplete-js": "^1.5.2"
   }
 }
