@@ -1,26 +1,21 @@
 {{ partial "header" . }}
 {{ partial "nav" . }}
 
-<section class="section">
+<section class="section" style="text-align: center">
 
 <div id = searchbox>
 	<form>
-    	<input type="search" name='s' autofocus aria-label="search" id="searchInput" placeholder="search here">
+    	<input type="search" name='s' autofocus aria-label="search" id="searchInput" placeholder="search">
 	</form>
 	<ul id="searchResults" aria-label="search results"></ul>
 </div>
 
-
 <script id="search-result-template" type="text/x-js-template">
-
-<div style="text-align:center">
-
-	<div id="summary-${key}">
-		<a href="${link}">${title}</a>
-	</div>
-
-</div>
-
+	<li id="summary-${key}" style="display: block">
+		<a href="${link}">
+			${title}
+		</a>
+	</li>
 </script>
 
 </section>
