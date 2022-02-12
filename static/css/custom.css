@@ -1,0 +1,48 @@
+#searchbox{
+    text-align: center
+}
+#searchbox input {
+    padding: 4px 10px;
+    width: 30%;
+    color: #3038d9;
+    font-weight: bold;
+    border: 2px solid none;
+    border-radius: 8px;
+}
+
+#searchbox input:focus {
+    border-color: gray;
+}
+
+#searchResults li {
+    list-style: none;
+    border-radius: 2px;
+    padding: 1px;
+    margin: 1000px;
+    position: relative;
+    font-weight: 500;
+}
+
+#searchResults {
+    margin: 1px 0;
+    width: 30%;
+}
+
+#searchResults li:active {
+    transition: transform 0.1s;
+    transform: scale(0.98);
+}
+
+#searchResults a {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    outline: none;
+}
+
+#searchResults .focus {
+    transform: scale(0.98);
+    border: 2px solid var(--tertiary);
+}

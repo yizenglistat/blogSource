@@ -1,32 +1,3 @@
-summaryInclude=60;
-var fuseOptions = {
-  shouldSort: true,
-  includeMatches: true,
-  threshold: 0.0,
-  tokenize:true,
-  location: 0,
-  distance: 100,
-  maxPatternLength: 32,
-  minMatchCharLength: 1,
-  keys: [
-    {name:"title",weight:0.8},
-    {name:"contents",weight:0.5},
-    {name:"tags",weight:0.3},
-    // {name:"categories",weight:0.3}
-  ]
-};
-
-
-var searchQuery = param("s");
-if(searchQuery){
-  $("#search-query").val(searchQuery);
-  executeSearch(searchQuery);
-}else {
-  $('#search-results').append("<p>Please enter a word or phrase above</p>");
-}
-
-
-
 function executeSearch(searchQuery){
   $.getJSON( "/index.json", function( data ) {
     var pages = data;
@@ -36,7 +7,7 @@ function executeSearch(searchQuery){
     if(result.length > 0){
       populateResults(result);
     }else{
-      $('#search-results').append("<p>No matches found</p>");
+      $('#searchResults').append("<p>Oops! not found.</p>");
     }
   });
 }
@@ -69,7 +40,7 @@ function populateResults(result){
     var templateDefinition = $('#search-result-template').html();
     //replace values
     var output = render(templateDefinition,{key:key,title:value.item.title,link:value.item.permalink,tags:value.item.tags,categories:value.item.categories,snippet:snippet});
-    $('#search-results').append(output);
+    $('#searchResults').append(output);
 
     $.each(snippetHighlights,function(snipkey,snipvalue){
       $("#summary-"+key).mark(snipvalue);
@@ -105,4 +76,33 @@ function render(templateString, data) {
     templateString = templateString.replace(re, data[key]);
   }
   return templateString;
+}
+
+
+summaryInclude=60;
+var fuseOptions = {
+  shouldSort: true,
+  includeMatches: true,
+  threshold: 0.0,
+  tokenize:true,
+  location: 0,
+  distance: 100,
+  maxPatternLength: 32,
+  minMatchCharLength: 1,
+  keys: [
+    {name:"title",weight:0.8},
+    {name:"contents",weight:0.5},
+    {name:"tags",weight:0.3},
+    {name:"categories",weight:0.3}
+  ]
+};
+
+
+var searchQuery = param("s");
+
+if(searchQuery){
+  $("#searchInput").val(searchQuery);
+  executeSearch(searchQuery);
+}else {
+  $('#searchResults').append("<p>Please enter a word or phrase above</p>");
 }

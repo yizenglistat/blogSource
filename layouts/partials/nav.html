@@ -9,7 +9,8 @@
           {{ $active = or $active (eq .Name $current.Title) }}
           {{ $active = or $active (and (eq .Name "Home") (or (eq $current.Section "") (eq $current.Section "post"))) }}
           {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
-          
+          {{ $active = or $active (and (eq .Name "Search") (eq $current.Section "search")) }}
+
           {{ if $active}}
             <a id="nav-anchor" class="nav-item nav-active" href="{{ .URL }}"> 
             <h1 id="nav-heading" class="title is-4" style="font-weight: bold;font-size: 20px">{{ .Name }}</h1> 
@@ -23,19 +24,27 @@
       </div>
       
 
-<!--       <div class="nav-right">
+
+
+      <!-- <div class="nav-right">
       <nav id="nav-items" class="nav-item level is-mobile">
-      <form action="{{ "search" | absURL }}" method="GET" style="padding-top: 10px" >
-            <input type="search" name="s" id="search-query" placeholder="Be my guest">
-            <button type="submit">Search</button>
+      <div class="container">
+      <form style="padding-top: 15px">      
+            <input type="search" name='s' id="search-query" placeholder="search within blog">
       </form>
+      <div id="search-results" style="display: block">
+      </div>
+      </div>
       </nav>
-      </div> -->
-
-
-
-
-
+      </div>
+      <script id="search-result-template" type="text/x-js-template">
+    <div id="summary-${key}">
+      <h4><a href="${link}">${title}</a></h4>
+      <p>${snippet}</p>
+      ${ isset tags }<p>Tags: ${tags}</p>${ end }
+      ${ isset categories }<p>Categories: ${categories}</p>${ end }
+    </div>
+</script> -->
 
 <!--       <div class="nav-right" >
         <nav id="nav-items" class="nav-item level is-mobile" >
@@ -57,7 +66,7 @@
 
 
 
-    <nav class="nav">
+<!--     <nav class="nav">
       {{ if (isset .Site.Params "sections_left" ) }}
       <div class="nav-left">
         {{- range $section, $printable := .Site.Params.sections_left -}}
@@ -81,13 +90,14 @@
         {{- end -}}
       </div>
       {{ end }}
-    </nav>
+    </nav> -->
     
 
-
-    <div class="nav-center">
+<!--     <div class="nav-center">
       <div class="grad" style="width:80%;"></div>
-    </div>
+    </div> -->
   </div>
+
+
   <script src="/js/navicon-shift.js"></script>
 </section>
