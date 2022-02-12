@@ -3338,8 +3338,6 @@ a.box:active {
     -webkit-box-flex: 0;
     -ms-flex: none;
     flex: none;
-    #searchbox { display:block }
-    #searchResults { display:block; width:auto }
   }
 
   .column.is-full-mobile {
