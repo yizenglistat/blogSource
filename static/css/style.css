@@ -469,7 +469,6 @@ table th {
 }
 
 @media screen and (min-width: 980px) {
-  #searchbox, #search-btn {top: 64px;}
   .container {
     margin: 0 auto;
     max-width: 960px;
@@ -486,42 +485,36 @@ table th {
 }
 
 @media screen and (max-width: 768px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-block-mobile {
     display: block !important;
   }
 }
 
 @media screen and (min-width: 769px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-block-tablet {
     display: block !important;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 979px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-block-tablet-only {
     display: block !important;
   }
 }
 
 @media screen and (max-width: 979px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-block-touch {
     display: block !important;
   }
 }
 
 @media screen and (min-width: 980px) and (max-width: 1179px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-block-desktop-only {
     display: block !important;
   }
 }
 
 @media screen and (min-width: 1180px) {
-  #searchbox, #search-btn {top: 64px;}
   .container {
     max-width: 1200px;
   }
@@ -538,7 +531,6 @@ table th {
 }
 
 @media screen and (max-width: 768px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-flex-mobile {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -547,7 +539,6 @@ table th {
 }
 
 @media screen and (min-width: 769px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-flex-tablet {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -556,7 +547,6 @@ table th {
 }
 
 @media screen and (min-width: 769px) and (max-width: 979px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-flex-tablet-only {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -565,7 +555,6 @@ table th {
 }
 
 @media screen and (max-width: 979px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-flex-touch {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -574,7 +563,6 @@ table th {
 }
 
 @media screen and (min-width: 980px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-flex-desktop {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -583,7 +571,6 @@ table th {
 }
 
 @media screen and (min-width: 980px) and (max-width: 1179px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-flex-desktop-only {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -592,7 +579,6 @@ table th {
 }
 
 @media screen and (min-width: 1180px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-flex-widescreen {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -605,49 +591,42 @@ table th {
 }
 
 @media screen and (max-width: 768px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-inline-mobile {
     display: inline !important;
   }
 }
 
 @media screen and (min-width: 769px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-inline-tablet {
     display: inline !important;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 979px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-inline-tablet-only {
     display: inline !important;
   }
 }
 
 @media screen and (max-width: 979px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-inline-touch {
     display: inline !important;
   }
 }
 
 @media screen and (min-width: 980px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-inline-desktop {
     display: inline !important;
   }
 }
 
 @media screen and (min-width: 980px) and (max-width: 1179px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-inline-desktop-only {
     display: inline !important;
   }
 }
 
 @media screen and (min-width: 1180px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-inline-widescreen {
     display: inline !important;
   }
@@ -658,14 +637,12 @@ table th {
 }
 
 @media screen and (max-width: 768px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-inline-block-mobile {
     display: inline-block !important;
   }
 }
 
 @media screen and (min-width: 769px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-inline-block-tablet {
     display: inline-block !important;
   }
@@ -678,28 +655,24 @@ table th {
 }
 
 @media screen and (max-width: 979px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-inline-block-touch {
     display: inline-block !important;
   }
 }
 
 @media screen and (min-width: 980px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-inline-block-desktop {
     display: inline-block !important;
   }
 }
 
 @media screen and (min-width: 980px) and (max-width: 1179px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-inline-block-desktop-only {
     display: inline-block !important;
   }
 }
 
 @media screen and (min-width: 1180px) {
-  #searchbox, #search-btn {top: 64px;}
   .is-inline-block-widescreen {
     display: inline-block !important;
   }
