@@ -398,6 +398,9 @@ body {
   font-size: 1rem;
   line-height: 1.428571428571429;
   padding-bottom:0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 code {
@@ -6509,10 +6512,11 @@ a.panel-block:hover {
   bottom: 0px;
   left: 0px;
   right: 0px;
-  margin-bottom: 50px;
-  height: 0px;
-/*  background-color: #f5f7fa;
-  padding: 40px 20px 80px;*/
+  margin-bottom: 100px;
+  margin-top: auto;
+  height: 2em;
+  position: relative;
+  width:100%;
 }
 
 code,
