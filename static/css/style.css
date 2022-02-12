@@ -393,7 +393,7 @@ body {
   color: #42464c;
   font-size: 1rem;
   line-height: 1.428571428571429;
-  padding-bottom:20px;
+  padding-bottom:0px;
 }
 
 code {
@@ -6506,8 +6506,8 @@ a.panel-block:hover {
   bottom: 0px;
   left: 0px;
   right: 0px;
-  margin-bottom: 0px;
-  height: 20px;
+  margin-bottom: 50px;
+  height: 0px;
 /*  background-color: #f5f7fa;
   padding: 40px 20px 80px;*/
 }
