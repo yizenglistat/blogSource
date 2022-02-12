@@ -21,7 +21,7 @@
 
           {{ if $active}}
             <a id="nav-anchor" class="nav-item nav-active" href="{{ .URL }}"> 
-            <h1 id="nav-heading" class="title is-4" style="font-weight: bold;font-size: 20px">{{ .Name }}</h1> 
+            <h1 id="nav-heading" class="title is-4" style="font-weight: bold;">{{ .Name }}</h1> 
           </a>
           {{ else }}
           <a id="nav-anchor" class="nav-item" href="{{ .URL }}"> 
@@ -31,46 +31,14 @@
         {{ end }}
       </div>
       
-
-
-
-      <!-- <div class="nav-right">
-      <nav id="nav-items" class="nav-item level is-mobile">
-      <div class="container">
-      <form style="padding-top: 15px">      
-            <input type="search" name='s' id="search-query" placeholder="search within blog">
-      </form>
-      <div id="search-results" style="display: block">
-      </div>
-      </div>
-      </nav>
-      </div>
-      <script id="search-result-template" type="text/x-js-template">
-    <div id="summary-${key}">
-      <h4><a href="${link}">${title}</a></h4>
-      <p>${snippet}</p>
-      ${ isset tags }<p>Tags: ${tags}</p>${ end }
-      ${ isset categories }<p>Categories: ${categories}</p>${ end }
-    </div>
-</script> -->
-
-<!--       <div class="nav-right" >
+      <div class="nav-right" >
         <nav id="nav-items" class="nav-item level is-mobile" >
-          {{- $social := ( .Site.Params.social ) -}}
-          {{- range $platform := $social.config.platforms -}}
-          {{- with $username := ( index $social $platform ) -}}
-          <a class="level-item" aria-label="{{ $platform }}" href='{{ print ( index $.Site.Data.theme.social.base $platform ) $username }}'
-            target='_blank' rel='noopener'>
-            <span class="icon">
-                {{- partial "svg/icons" $platform -}}
-
-            </span>
-          </a>
-          {{- end -}}
-          {{- end -}}
+          <button class="level-item" style="margin-right: 1em">
+            {{- partial "svg/icons" "next" -}}
+          </button>
         </nav>
       </div>
-    </nav> -->
+    </nav>
 
 
 
@@ -101,9 +69,9 @@
     </nav> -->
     
 
-<!--     <div class="nav-center">
-      <div class="grad" style="width:80%;"></div>
-    </div> -->
+    <div class="nav-center">
+      <div class="grad" style="width:80%;margin-top: 5em"></div>
+    </div>
   </div>
 
 
