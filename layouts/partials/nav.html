@@ -8,12 +8,14 @@
           {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
           
           {{ $active = or $active (eq .Name $current.Title) }}
-          
-          {{ $active = or $active (and (eq .Name "Home") (or (eq $current.Section "") (eq $current.Section "post"))) }}
+                    
+          {{ $active = or $active (and (eq .Name "Home")  (eq $current.Section "posts")) }}
           
           {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
           
           {{ $active = or $active (and (eq .Name "Search") (eq $current.Section "search")) }}
+
+
 
           {{ if $active}}
             <a id="nav-anchor" class="nav-item nav-active" href="{{ .URL }}"> 

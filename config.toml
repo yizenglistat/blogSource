@@ -71,6 +71,6 @@ hrefTargetBlank = true
 	[[menu.nav]]
 	identifier = "home"
 	name = "Home"
-	url = "/post/"
+	url = "/posts/"
 	weight = 1
 
