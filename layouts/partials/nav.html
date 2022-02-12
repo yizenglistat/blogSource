@@ -13,6 +13,8 @@
           
           {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
           
+          {{ $active = or $active (and (eq .Name "Series") (eq $current.Section "categories")) }}
+
           {{ $active = or $active (and (eq .Name "Search") (eq $current.Section "search")) }}
 
 

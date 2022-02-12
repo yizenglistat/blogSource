@@ -4,6 +4,7 @@ linktitle: Testing D
 title: Testing D
 weight: 1
 tags: ["Pytorch", "Neural Networks"]
+categories: ["Series 1"]
 next: /testing-b
 prev: /testing-c
 ---

@@ -3,7 +3,20 @@
 <section class="section">
   <div class="container">
 
-    {{- $pages := . -}}
+<h1 class="content">
+    {{- $type := .Type }}
+    {{- range $key, $value := .Data.Terms.Alphabetical }}
+    {{- $name := .Name }}
+    {{- $count := .Count }}
+    {{- with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+    <li style="list-style: disc">
+        <a href="{{ .Permalink }}">{{ .Name }} <sup><strong>({{ $count }})</strong></sup> </a>
+    </li>
+    {{- end }}
+    {{- end }}
+</h1>
+
+   <!--  {{- $pages := . -}}
     {{- if .IsHome -}}
     {{- $pages = .Site.RegularPages -}}
     {{- else -}}
@@ -26,7 +39,7 @@
           </li>
         </h1>
       
-    {{end}}
+    {{end}} -->
 
 <!--     {{ range sort .Pages }}
     <article>

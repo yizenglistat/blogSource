@@ -4,6 +4,7 @@ linktitle: Testing E
 title: Testing E
 weight: 1
 tags: ["Pytorch", "Neural Networks"]
+categories: ["Series 2"]
 ---
 
 This is a test file for summary!

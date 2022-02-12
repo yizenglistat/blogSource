@@ -4,6 +4,7 @@ linktitle: Testing H
 title: Testing H
 weight: 1
 tags: ["Pytorch", "Neural Networks"]
+categories: ["Series 3"]
 next: /testing-b
 prev: /testing-c
 ---

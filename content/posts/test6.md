@@ -4,6 +4,7 @@ linktitle: Testing F
 title: Testing F
 weight: 10
 tags: ["Pytorch", "GAN"]
+categories: ["Series 2"]
 next: /testing-c
 prev: /testing-a
 ---

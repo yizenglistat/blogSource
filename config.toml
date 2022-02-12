@@ -39,7 +39,8 @@ kofi = "yizenglistat"
 platforms = ["github","kofi","email","rss"]
 
 [taxonomies]
-tag ="tags"
+   tag = "tags"
+   category = "categories"
 
 [blackfriday]
 hrefTargetBlank = true
@@ -58,11 +59,11 @@ hrefTargetBlank = true
 	name = "Search"
 	url = "/search/"
 	weight = 4
-	# [[menu.nav]]
-	# identifier = "series"
-	# name = "Series"
-	# url = "/series/"
-	# weight = 3
+	[[menu.nav]]
+	identifier = "categories"
+	name = "Series"
+	url = "/categories/"
+	weight = 3
 	[[menu.nav]]
 	identifier = "tags"
 	name = "Tags"

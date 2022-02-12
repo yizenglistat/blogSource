@@ -4,6 +4,7 @@ linktitle: Testing G
 title: Testing G
 weight: 10
 tags: ["Python", "Neural Networks"]
+categories: ["Series 3"]
 next: /testing-a
 prev: /testing-b
 ---
