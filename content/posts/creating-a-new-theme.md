@@ -7,6 +7,7 @@ prev: /testing-a
 title: A Testing Article
 weight: 10
 tags: ["Python", "Neural Networks"]
+categories: ["DL Series"]
 ---
 
 This is a test file for summary!

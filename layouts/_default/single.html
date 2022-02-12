@@ -6,17 +6,30 @@
         <h1 class="title">{{ .Title }}</h1>
     <h2 class="subtitle tags is-6 ">
       Est. {{ math.Round (div (countwords .Content) 220.0) }} min(s)
+      <span class="icon is-small is-marginless">{{ partial "svg/icons" "tag" }}</span>
       {{ if .Params.tags }}
       {{ partial "tags" .Params.tags }}
       {{ end }}
+      <span class="icon is-small is-marginless">{{ partial "svg/icons" "category" }}</span>
+      <div class="series">
+      {{ if .Params.categories }}
+      {{ partial "categories" .Params.categories }}
+      {{ end }}
+      </div>
     </h2>
+    
     
     
     {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
     {{ partial "adsense" . }}
     {{ end }}
+
+
     <div class="content">
       {{ .Content }}
+      
+
+
       {{ if .Site.Params.Info.related }}
       <div class="related">{{ partial "related" . }}</div>
       {{ end }}
