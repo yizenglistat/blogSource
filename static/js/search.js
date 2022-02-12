@@ -7,7 +7,7 @@ function executeSearch(searchQuery){
     if(result.length > 0){
       populateResults(result);
     }else{
-      $('#searchResults').append("<p>Oops! not found.</p>");
+      $('#mysearchResults').append("<p>Oops! not found.</p>");
     }
   });
 }
@@ -40,7 +40,7 @@ function populateResults(result){
     var templateDefinition = $('#search-result-template').html();
     //replace values
     var output = render(templateDefinition,{key:key,title:value.item.title,link:value.item.permalink,tags:value.item.tags,categories:value.item.categories,snippet:snippet});
-    $('#searchResults').append(output);
+    $('#mysearchResults').append(output);
 
     $.each(snippetHighlights,function(snipkey,snipvalue){
       $("#summary-"+key).mark(snipvalue);
@@ -104,5 +104,5 @@ if(searchQuery){
   $("#searchInput").val(searchQuery);
   executeSearch(searchQuery);
 }else {
-  $('#searchResults').append("<p>Please enter a word or phrase above</p>");
+  $('#mysearchResults').append("<p>Please enter a word or phrase above</p>");
 }

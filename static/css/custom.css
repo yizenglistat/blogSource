@@ -1,4 +1,4 @@
-#searchbox {
+#mysearchbox {
 /*    visibility: hidden;*/
 
     display: inline-block;
@@ -7,7 +7,7 @@
     padding: 0;
   }
 
-  #searchbox input {
+  #mysearchbox input {
     padding: 4px;
     width: 100%;
     height: 31px;
@@ -22,7 +22,7 @@
   }
 
 
-#searchResults li {
+#mysearchResults li {
   list-style: none;
   margin-left: 0em;
   background-color: none;
@@ -30,14 +30,14 @@
   border:2px solid #f2f2f0;
 }
 
-#searchResults li .title {
+#mysearchResults li .title {
   font-size: 1.1em;
   margin: 0;
   display: inline-block;
 
 }
 
-#searchResults {
+#mysearchResults {
   visibility: inherit;
   display: inline-block;
   width: 320px;
@@ -47,7 +47,7 @@
 
 }
 
-#searchResults a {
+#mysearchResults a {
   text-decoration: none !important;
   padding: 10px;
   display: inline-block;
@@ -56,13 +56,13 @@
   font-weight: bold;
 }
 
-#searchResults a:hover, #searchResults a:focus {
+#mysearchResults a:hover, #searchResults a:focus {
   outline: 0;
   background-color: #f2f2f0;
   color: #23ad51;
 }
 
-#search-btn {
+#mysearch-btn {
   position: absolute;
   top: 10px;
   right: 20px;
@@ -70,7 +70,7 @@
 }
 
 @media (max-width:683px) {
-  #searchbox, #search-btn {
+  #mysearchbox, #mysearch-btn {
     top: 64px;
   }
 }
