@@ -11,6 +11,13 @@
             </span>
             <strong>PREV</strong>
           </a>
+          {{ else }}
+          <a class="button" href="">
+            <span class="icon is-small is-marginless" style="opacity: 0.35">
+              {{ partial "svg/icons" "prev" }}
+            </span>
+            <strong style="opacity: 0.35">PREV</strong>
+          </a>
           {{ end }}
         </div>
       </div>
@@ -53,6 +60,13 @@
           <a class="button" href="{{ .Paginator.Next.URL }}">
             <strong>NEXT</strong>
             <span class="icon is-small is-marginless">
+              {{ partial "svg/icons" "next" }}
+            </span>
+          </a>
+          {{else}}
+          <a class="button" href="">
+            <strong style="opacity: 0.35">NEXT</strong>
+            <span class="icon is-small is-marginless" style="opacity: 0.35">
               {{ partial "svg/icons" "next" }}
             </span>
           </a>
