@@ -20,7 +20,7 @@ authorEmail = "1994yizeng@gmail.com" # Author email
 customCSS = ["css/custom.css"]
 
 [params.info]
-adsense = "" # Adsense ID (ID only, without ca-pub-)
+adsense = "9941714392478176" # Adsense ID (ID only, without ca-pub-)
 enableSocial = true # Adds OpenGraph and Twitter cards
 homeTitle = "Blog" # Title for home page
 poweredby = true # Adds powered by hugo and kiss below Copyright
