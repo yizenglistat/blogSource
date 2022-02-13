@@ -1,9 +1,14 @@
 {{ partial "header" . }}
 {{ partial "nav" . }}
 
+
 <section class="section">
   <div class="container">
-        <h1 class="title">{{ .Title }}</h1>
+    {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
+    {{ partial "adsense" . }}
+    {{ end }}
+
+    <h1 class="title">{{ .Title }}</h1>
     <h2 class="subtitle tags is-6 ">
       Est. {{ math.Round (div (countwords .Content) 220.0) }} min(s)
       <span class="icon is-small is-marginless">{{ partial "svg/icons" "tag" }}</span>
