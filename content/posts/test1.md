@@ -1,18 +1,24 @@
 ---
-date: 2012-09-28
+date: 2022-02-13
 linktitle: Testing A
-title: Testing A
+title: How does Word2vec work in NLP tasks? 
 weight: 1
 draft: false
-tags: ["Python", "Word2vec"]
+tags: ["NLP","Word2vec"]
 categories:
-next: /
-prev: /
 ---
 
-This is a test file for summary!
-
+A simple tutorial for Word2vec with mathematical/statistical details explained. You might need basic Calculus and Algebra to fully understand the content. 
 
 <!--more-->
 
-MORE
+
+# A quick introduction!
+
+# What are word vectors representations!
+
+# A quick introduction!
+
+# A quick introduction!
+
+
