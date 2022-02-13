@@ -260,7 +260,7 @@ q:before {
 a {
   font-size: 100%;
   background: 0 0;
-  color: #2077b2;
+  color: none;
   text-decoration: none;
   -webkit-transition: none 86ms ease-out;
   transition: none 86ms ease-out;
@@ -2521,16 +2521,20 @@ a.box:active {
   word-break: break-word;
 }
 
+
+
 .subtitle em,
 .subtitle span,
 .title em,
 .title span {
+
   font-weight: 300;
 }
 
 .subtitle a:hover,
 .title a:hover {
   border-bottom: 1px solid;
+
 }
 
 .subtitle strong,
@@ -2551,7 +2555,8 @@ a.box:active {
 }
 
 .title strong {
-  color: Black;
+  color: black;
+
 }
 
 .title code {
