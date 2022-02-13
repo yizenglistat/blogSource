@@ -30,10 +30,12 @@
       </div>
     </article>
     {{ end }}
+  {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
+  {{ partial "adsense" . }}
+  {{ end }}
   </div>
+
 </section>
 {{ partial "pager" . }}
-{{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
-{{ partial "adsense" . }}
-{{ end }}
+
 {{ partial "footer" . }}
