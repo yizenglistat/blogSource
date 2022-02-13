@@ -43,19 +43,6 @@ body.dark-mode .title a {
   color: #f5f5f5;
 }
 
-body.dark-mode .grad {
-        height: 0.8px;
-        background-color: #E6E6E6;
-        width: 66.0em;
-        margin: 0 auto;
-        background-image: linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
-        background-image: -o-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
-        background-image: -moz-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
-        background-image: -webkit-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
-        background-image: -ms-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
-        background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, gray), color-stop(0.95, white) );
-}
-
 
 body.dark-mode .subtitle.is-6 a:hover{
   color:#23ad51;
@@ -65,12 +52,15 @@ body.dark-mode .nav-active{
   text-decoration-color: #f5f5f5;
 }
 
+
 body.dark-mode .nav-item a.is-active,
 body.dark-mode .nav-item a:hover,
 body.dark-mode a.nav-item.is-active,
 body.dark-mode a.nav-item:hover {
   color: #23ad51;
 }
+
+
 
 body.dark-mode .pagination a {
   color:#23ad51;
@@ -164,10 +154,11 @@ body.dark-mode .content h6{
   color: #f5f5f5
 }
 
-
-body.dark-mode .subtitle,
-body.dark-mode .title {
-  color: #f5f5f5
+body.dark-mode .nav-item a,
+body.dark-mode  a.nav-item {
+  color: #f5f5f5;
+/*  transition: all 500ms;
+  font-size: 5px;*/
 }
 
 
@@ -180,21 +171,38 @@ body.dark-mode .title {
     padding: 0;
   }
 
-  #mysearchbox input {
-    padding: 4px;
-    width: 100%;
-    height:40px;
-    font-size: 1.2em;
-    color: #3068e8;
-    font-weight: bold;
-    border-radius: 7px;
-    border: 1.5px solid gray;
-    outline: none;
-    text-align: left;
-    display: inline-block;
-  }
 
+#mysearchbox input {
+  padding: 4px;
+  width: 100%;
+  height:40px;
+  font-size: 1.2em;
+  color: #3068e8;
+  font-weight: bold;
+  border-radius: 7px;
+  border: 1.5px solid gray;
+  outline: none;
+  text-align: left;
+  display: inline-block;
+}
 
+body.dark-mode #mysearchbox textarea {
+  background-color : red; 
+}
+
+body.dark-mode #mysearchbox input {
+  padding: 4px;
+  width: 100%;
+  height:40px;
+  font-size: 1.2em;
+  color: #23ad51;
+  font-weight: bold;
+  border-radius: 7px;
+  border: 1.5px solid gray;
+  outline: none;
+  text-align: left;
+  display: inline-block;
+}
 
 
 #mysearchResults li {
@@ -203,6 +211,10 @@ body.dark-mode .title {
   background-color: none;
   text-align: left;
   border:2px solid #f2f2f0;
+}
+
+body.dark-mode #mysearchResults li {
+  background-color: rgb(45, 45, 45);
 }
 
 #mysearchResults li .title {
@@ -227,14 +239,25 @@ body.dark-mode .title {
   padding: 10px;
   display: inline-block;
   width: 100%;
-  color: #3068e8;
+  color: rgb(45, 45, 45);
   font-weight: bold;
+}
+
+body.dark-mode #mysearchResults a {
+  color: #f5f5f5;
 }
 
 #mysearchResults a:hover, #searchResults a:focus {
   outline: 0;
   background-color: #f2f2f0;
   color: #23ad51;
+}
+
+body.dark-mode #mysearchResults a:hover, 
+body.dark-mode #searchResults a:focus {
+  outline: 0;
+  background-color: rgb(80, 80, 80);
+  color: #3068e8;
 }
 
 #mysearch-btn {
@@ -248,4 +271,8 @@ body.dark-mode .title {
   #mysearchbox, #mysearch-btn {
     top: 64px;
   }
+}
+
+body.dark-mode .mymark{
+  color:#23ad51
 }

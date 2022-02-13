@@ -1,3 +1,5 @@
+
+
 function executeSearch(searchQuery){
   $.getJSON( "/index.json", function( data ) {
     var pages = data;
@@ -43,7 +45,7 @@ function populateResults(result){
     $('#mysearchResults').append(output);
 
     $.each(snippetHighlights,function(snipkey,snipvalue){
-      $("#summary-"+key).mark(snipvalue);
+      $("#summary-"+key).mark(snipvalue, {"className":"mymark"});
     });
 
   });
@@ -84,7 +86,7 @@ var fuseOptions = {
   shouldSort: true,
   includeMatches: true,
   threshold: 0.0,
-  tokenize:true,
+  tokenize: true,
   location: 0,
   distance: 100,
   maxPatternLength: 32,

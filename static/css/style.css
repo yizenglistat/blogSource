@@ -7,6 +7,11 @@
   color:red;
 }
 
+.mymark{
+  color:#3068e8;
+  font-weight: bold;
+}
+
 
 .pagination{
   font-weight: bold;
@@ -2527,14 +2532,12 @@ a.box:active {
 .subtitle span,
 .title em,
 .title span {
-
   font-weight: 300;
 }
 
 .subtitle a:hover,
 .title a:hover {
   border-bottom: 1px solid;
-
 }
 
 .subtitle strong,
@@ -2589,11 +2592,15 @@ a.box:active {
   font-weight: 5;
 }
 
+.mytitle{
+  font-size: 18px;
+  font-weight: 5;
+}
+
 .nav-active{
   text-decoration: underline;
   text-underline-offset:5px;
 }
-
 
 .title.is-4 code,
 .title.is-5 {
@@ -4999,11 +5006,14 @@ a.nav-item {
 a.nav-item.is-active,
 a.nav-item:hover {
   color: #3068e8;
-  text-decoration: underline;
-  text-underline-offset:5px;
+  
+/*  text-decoration: underline;
+  text-underline-offset:5px;*/
 /*  font-size:20px;
   font-size-adjust: 20px;*/
 }
+
+
 
 .nav-item a.is-tab,
 a.nav-item.is-tab {
@@ -6599,7 +6609,7 @@ article+article {
 }
 
 .subtitle {
-  color: #69707a;
+  color: black;
 }
 
 .title {
