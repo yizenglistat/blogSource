@@ -1,3 +1,7 @@
+body.dark-mode .svg-fill{
+  fill:#23ad51;
+}
+
 body.dark-mode,
 body.dark-mode .section{
     background: rgb(45, 45, 45);

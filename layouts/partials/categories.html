@@ -1,13 +1,14 @@
 
 
 {{ range first 1 . }}
-<a class="subtitle is-6" href="{{ "/categories/" | relURL }}{{ . | urlize }}/">{{ . }}</a>
+<a class="subtitle is-6" href="{{ "/categories/" | relURL }}{{ . | urlize }}/">Series {{ . }}</a>
 {{ end }}
 
-
+<!-- 
 
 {{ if gt (len .) 1 }}
   {{ range after 1 . }}
   | <a class="subtitle is-6" href="{{ "/categories/" | relURL }}{{ . | urlize }}/">{{ . }}</a>
   {{ end }}
 {{ end }}
+ -->
