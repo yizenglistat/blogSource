@@ -4,9 +4,9 @@
 
 <section class="section">
   <div class="container">
-    {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
+<!--     {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
     {{ partial "adsense" . }}
-    {{ end }}
+    {{ end }} -->
 
     <h1 class="title">{{ .Title }}</h1>
     <h2 class="subtitle tags is-6 ">
@@ -25,9 +25,9 @@
     
     
     
-    {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
+<!--     {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
     {{ partial "adsense" . }}
-    {{ end }}
+    {{ end }} -->
 
 
     <div class="content">
@@ -39,9 +39,9 @@
       <div class="related">{{ partial "related" . }}</div>
       {{ end }}
     </div>
-    {{ if and (.Site.Params.Info.adsense)  (.Params.adsenseBottom) }}
+<!--     {{ if and (.Site.Params.Info.adsense)  (.Params.adsenseBottom) }}
     {{ partial "adsense" . }}
-    {{ end}}
+    {{ end}} -->
   </div>
 </section>
 {{ if (and (.Site.Params.Info.codeCopy) (findRE "<pre" .Content 1)) }}
