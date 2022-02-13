@@ -8,7 +8,12 @@
       <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
       <h1 class="subtitle tags is-6">
         {{ .Date.Format "Jan 2, 2006" }}
+        {{ if .Params.tags }}
+        <span class="icon is-small is-marginless">{{ partial "svg/icons" "tag" }}</span>
+        {{ partial "tags" .Params.tags }}
+        {{ end }}
         {{ if .Params.categories }}
+        <span class="icon is-small is-marginless">{{ partial "svg/icons" "category" }}</span>
         {{ partial "categories" .Params.categories }}
         {{ end }}
       </h1>

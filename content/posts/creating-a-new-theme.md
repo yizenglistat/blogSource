@@ -2,6 +2,7 @@
 author: "Michael Henderson"
 date: 2021-09-28
 linktitle: Creating a New Theme
+draft: true
 next: /testing-b
 prev: /testing-a
 title: A Testing Article

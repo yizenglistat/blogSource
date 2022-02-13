@@ -15,9 +15,10 @@
       {{ if .Params.tags }}
       {{ partial "tags" .Params.tags }}
       {{ end }}
-      <span class="icon is-small is-marginless">{{ partial "svg/icons" "category" }}</span>
+      
       <div class="series">
       {{ if .Params.categories }}
+      <span class="icon is-small is-marginless">{{ partial "svg/icons" "category" }}</span>
       {{ partial "categories" .Params.categories }}
       {{ end }}
       </div>

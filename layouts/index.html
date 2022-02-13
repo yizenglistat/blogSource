@@ -16,8 +16,15 @@
       <h2 class="subtitle tags is-6">
         {{ .Date.Format "Jan 2, 2006" }}
         {{ if .Params.tags }}
+        <span class="icon is-small is-marginless">{{ partial "svg/icons" "tag" }}</span>
         {{ partial "tags" .Params.tags }}
         {{ end }}
+        <p class="series">
+        {{ if .Params.categories }}
+        <span class="icon is-small is-marginless">{{ partial "svg/icons" "category" }}</span>
+        {{ partial "categories" .Params.categories }}
+        {{ end }}
+        </p>
       </h2>
       
       <div class="content">
@@ -30,9 +37,9 @@
       </div>
     </article>
     {{ end }}
-  {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
+<!--   {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
   {{ partial "adsense" . }}
-  {{ end }}
+  {{ end }} -->
   </div>
 
 </section>

@@ -2,6 +2,10 @@
   display: inline-block;
 }
 
+.series{
+  display: inline-block;
+}
+
 .nav-search{
   padding-top: 10px;
   color:red;

@@ -61,11 +61,11 @@ hrefTargetBlank = true
 	name = "Search"
 	url = "/search/"
 	weight = 4
-	[[menu.nav]]
-	identifier = "categories"
-	name = "Series"
-	url = "/categories/"
-	weight = 3
+	# [[menu.nav]]
+	# identifier = "categories"
+	# name = "Series"
+	# url = "/categories/"
+	# weight = 3
 	[[menu.nav]]
 	identifier = "tags"
 	name = "Tags"

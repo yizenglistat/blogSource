@@ -3,6 +3,7 @@ date: 2012-09-28
 linktitle: Testing C
 title: Testing C
 weight: 10
+draft: true
 tags: ["Python", "Neural Networks"]
 categories: ["Series 1"]
 next: /testing-a
