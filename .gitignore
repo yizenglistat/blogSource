@@ -2,6 +2,9 @@ themes/
 
 public/
 
+
+.github/
+
 .gitmodules
 
 *.lock
