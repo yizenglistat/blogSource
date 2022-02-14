@@ -1440,7 +1440,7 @@ a.box:active {
 }
 
 .content p {
-  text-align: justify;
+/*  text-align: justify;*/
 }
 
 .content blockquote:not(:last-child),
@@ -1449,6 +1449,8 @@ a.box:active {
 .content ul:not(:last-child) {
   margin-bottom: 1em;
 }
+
+
 
 .content h1{
   color: black;
@@ -6607,6 +6609,7 @@ html {
 .content h6:not(:first-child),
 article+article {
   margin-top: 80px;
+
 }
 
 .content {

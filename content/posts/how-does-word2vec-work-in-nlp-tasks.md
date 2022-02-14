@@ -1,6 +1,6 @@
 ---
 date: 2022-02-13
-linktitle: Testing A
+linktitle: how-does-word2vec-work-in-nlp-tasks 
 title: How does Word2vec work in NLP tasks? 
 weight: 1
 draft: false
