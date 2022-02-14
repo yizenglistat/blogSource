@@ -1,5 +1,12 @@
 public/
-.gitmodule
+.gitmodules
+
+*.lock
 
 gh-pages*
 personal_token
+
+yarn.lock
+*.json
+
+index.json
