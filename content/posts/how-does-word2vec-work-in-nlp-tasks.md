@@ -8,7 +8,7 @@ tags: ["NLP","Word2vec"]
 categories:
 ---
 
-A simple tutorial for Word2vec with mathematical/statistical details explained. You might need basic Calculus and Algebra to fully understand the content. 
+A simple tutorial for Word2vec with mathematical/statistical details explained. 
 
 <!--more-->
 
@@ -23,14 +23,14 @@ A simple tutorial for Word2vec with mathematical/statistical details explained. 
 some introduction about the history transforming words to vectors. why localist representations bad and why distributed representations adopted?
 
 
-## The idea behind word2vec 
+## 2. The word2vec model
 
 Given a corpus [^1] of texts, 
 
 [^1]: This term in NLP refers to a large body (of texts). 
 
-#### The probability $\mbox{P}(\mbox{o} \mid \mbox{c})$ 
+### 2.1 The probability $\mbox{P}(\mbox{o} \mid \mbox{c})$ 
 
-#### Minimize the loss function $J(\theta)$
+### 2.2 Minimize the loss function $J(\theta)$
 
-## Implementation in Pytorch
+## 3. Visualization

@@ -1464,22 +1464,22 @@ a.box:active {
 }
 .content h3{
   color: black;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 .content h4{
   color: black;
-  font-weight: 650;
+  font-weight: 550;
   margin-bottom: 20px;
 }
 .content h5{
   color: black;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 .content h6{
   color: black;
-  font-weight: 550;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 
