@@ -10,9 +10,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: true 
-          fetch-depth: 1   
+        # with:
+        #   submodules: true 
+        #   fetch-depth: 1   
       
       # - name: Update theme
       #   run: git submodule update --init --recursive
