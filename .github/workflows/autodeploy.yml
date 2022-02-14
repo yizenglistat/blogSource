@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # - uses: actions/checkout@v2
-        # with:
-        #   submodules: true 
-        #   fetch-depth: 1   
+      - uses: actions/checkout@v2
+        with:
+          submodules: false 
+          fetch-depth: 1   
       
       # - name: Update theme
       #   run: git submodule update --init --recursive
