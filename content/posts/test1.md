@@ -18,7 +18,14 @@ A simple tutorial for Word2vec with mathematical/statistical details explained. 
 # What are word vectors representations!
  -->
 
+## A quick introduction
 
-### How to embed/transform/represent a word to a vector by word2vec?
+## How to embed/transform/represent a word to a vector by word2vec?
 
-Given a corpus of texts
+Given a corpus of texts, 
+
+#### The probability $\mbox{P}(\cdot|\cdot)$ 
+
+#### Minimize the loss function $J(\theta)$
+
+## Implementation in Pytorch
