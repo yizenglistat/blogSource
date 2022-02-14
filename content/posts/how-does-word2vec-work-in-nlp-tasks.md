@@ -18,13 +18,18 @@ A simple tutorial for Word2vec with mathematical/statistical details explained. 
 # What are word vectors representations!
  -->
 
-## A quick introduction
+## 1. A quick introduction 
 
-## How to embed/transform/represent a word to a vector by word2vec?
+some introduction about the history transforming words to vectors. why localist representations bad and why distributed representations adopted?
 
-Given a corpus of texts, 
 
-#### The probability $\mbox{P}(\cdot|\cdot)$ 
+## The idea behind word2vec 
+
+Given a corpus [^1] of texts, 
+
+[^1]: This term in NLP refers to a large body (of texts). 
+
+#### The probability $\mbox{P}(\mbox{o} \mid \mbox{c})$ 
 
 #### Minimize the loss function $J(\theta)$
 
