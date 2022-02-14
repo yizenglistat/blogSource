@@ -1,3 +1,10 @@
+code.has-jax {
+    -webkit-font-smoothing: antialiased;
+    background: inherit !important;
+    border: none !important;
+    font-size: 100%;
+}
+
 .svg-fill{
   fill:#3068e8;
 }
@@ -1443,16 +1450,37 @@ a.box:active {
   margin-bottom: 1em;
 }
 
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
+.content h1{
   color: black;
-  font-weight: 300;
+  font-weight: 800;
   margin-bottom: 20px;
 }
+.content h2{
+  color: black;
+  font-weight: 750 ;
+  margin-bottom: 20px;
+}
+.content h3{
+  color: black;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.content h4{
+  color: black;
+  font-weight: 650;
+  margin-bottom: 20px;
+}
+.content h5{
+  color: black;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.content h6{
+  color: black;
+  font-weight: 550;
+  margin-bottom: 20px;
+}
+
 
 .content blockquote {
   background-color: #f5f7fa;
