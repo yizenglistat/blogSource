@@ -4,11 +4,11 @@ linktitle: how-does-word2vec-work-in-nlp-tasks
 title: How does Word2vec work in NLP tasks? 
 weight: 1
 draft: false
-tags: ["NLP","Word2vec"]
+tags: ["NLP","Word2vec","Statistics"]
 categories:
 ---
 
-A simple tutorial for Word2vec with mathematical/statistical details explained. 
+A simple tutorial for Word2vec with statistical details explained. 
 
 <!--more-->
 
