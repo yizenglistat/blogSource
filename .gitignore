@@ -1,4 +1,7 @@
+themes/
+
 public/
+
 .gitmodules
 
 *.lock
