@@ -2709,14 +2709,22 @@ a.box:active {
 .subtitle.is-6 code {
   font-size: 14px;
   color:#23ad51;
-  transition: all 500ms;
+}
+
+.subtitle.is-6 a{
+  background-color: #f2f2f0;
+  border-radius: 7px;
+  padding: 3px;
+  text-decoration: none;
 }
 
 .subtitle.is-6 a:hover{
-  color:#3068e8;
-  font-size: 15px;
-  font-size-adjust: 20px;
+  background-color: #3068e8;
+  color:white;
+  font-size: 14px;
 }
+
+
 
 
 .subtitle.tags,

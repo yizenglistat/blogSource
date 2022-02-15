@@ -1,7 +1,8 @@
 ---
 date: 2022-02-13
+lastmod: 2022-02-14
 linktitle: how-does-word2vec-work-in-nlp-tasks 
-title: How does Word2vec work in NLP tasks? 
+title: Explore the Word2vec in NLP 
 weight: 1
 draft: false
 tags: ["NLP","Word2vec","Statistics"]
@@ -31,6 +32,6 @@ Given a corpus [^1] of texts,
 
 ### 2.1 The probability $\mbox{P}(\mbox{o} \mid \mbox{c})$ 
 
-### 2.2 Minimize the loss function $J(\theta)$
+### 2.2 The loss function $J(\theta)$
 
 ## 3. Visualization

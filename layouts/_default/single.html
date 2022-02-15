@@ -10,7 +10,12 @@
 
     <h1 class="title">{{ .Title }}</h1>
     <h2 class="subtitle tags is-6 ">
-      Est. {{ math.Round (div (countwords .Content) 220.0) }} min(s)
+      {{ $date := .Date.Format "Jan 2, 2006" }}
+      {{ $lastmod := .Lastmod.Format "Jan 2, 2006" }}
+      {{if ne $date $lastmod}}
+        Edited on {{ .Lastmod.Format "Jan 2, 2006" }}
+      {{end}}
+      ⏱{{ math.Round (div (countwords .Content) 220.0) }} min
       <span class="icon is-small is-marginless">{{ partial "svg/icons" "tag" }}</span>
       {{ if .Params.tags }}
       {{ partial "tags" .Params.tags }}
