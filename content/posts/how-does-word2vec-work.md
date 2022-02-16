@@ -1,11 +1,11 @@
 ---
 date: 2022-02-13
 lastmod: 2022-02-14
-linktitle: how-does-word2vec-work-in-nlp-tasks 
+linktitle: how-does-word2vec-work 
 title: Explore the Word2vec in NLP 
 weight: 1
 draft: false
-tags: ["NLP","Word2vec","Statistics"]
+tags: ["word2vec","statistics"]
 categories:
 ---
 
