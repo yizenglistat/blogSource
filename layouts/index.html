@@ -16,7 +16,7 @@
       <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
       <h2 class="subtitle tags is-6">
         {{ .Date.Format "Jan 2, 2006" }}
-        ⏱{{ math.Round (div (countwords .Content) 220.0) }} min
+        ⏱ {{ math.Round (div (countwords .Content) 220.0) }} min
         {{ if .Params.tags }}
         <span class="icon is-small is-marginless">{{ partial "svg/icons" "tag" }}</span>
         {{ partial "tags" .Params.tags }}
