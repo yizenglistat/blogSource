@@ -2,6 +2,7 @@
 {{ partial "nav" . }}
 <section class="section">
   <div class="container">
+    <hr style="margin-top: -5em; margin-bottom:2em">
     {{ $paginator := .Paginate (where .Data.Pages "Params.hidden" "ne" true) }}
     {{ range sort .Paginator.Pages }}
     <article>

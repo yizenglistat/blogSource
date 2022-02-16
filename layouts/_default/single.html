@@ -1,14 +1,13 @@
 {{ partial "header" . }}
 {{ partial "nav" . }}
-
-
 <section class="section">
   <div class="container">
+    <hr style="margin-top: -5em; margin-bottom:2em">
 <!--     {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
     {{ partial "adsense" . }}
     {{ end }} -->
 
-    <h1 class="title">{{ .Title }}</h1>
+    <h1 class="title" style="font-size: 24px;">{{ .Title }}</h1>
     <h2 class="subtitle tags is-6 ">
       {{ $date := .Date.Format "Jan 2, 2006" }}
       {{ $lastmod := .Lastmod.Format "Jan 2, 2006" }}

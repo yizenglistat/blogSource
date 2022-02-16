@@ -65,14 +65,14 @@ hrefTargetBlank = true
 	# name = "Series"
 	# url = "/categories/"
 	# weight = 3
-	[[menu.nav]]
-	identifier = "tags"
-	name = "Tags"
-	url = "/tags/"
-	weight = 2
+	# [[menu.nav]]
+	# identifier = "tags"
+	# name = "Tags"
+	# url = "/tags/"
+	# weight = 2
 	[[menu.nav]]
 	identifier = "home"
-	name = "Home"
+	name = "Writings"
 	url = "/posts/"
 	weight = 1
 

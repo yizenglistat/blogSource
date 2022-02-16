@@ -1,3 +1,11 @@
+body.dark-mode .subscribeform{
+  background-color: #8b8c80;
+}
+
+body.dark-mode .subscribebutton{
+  background:#23ad51;
+}
+
 body.dark-mode .svg-fill{
   fill:#23ad51;
 }
@@ -175,7 +183,7 @@ body.dark-mode  a.nav-item {
 /*    visibility: hidden;*/
 
     display: inline-block;
-    width: 320px;
+    width: 100%;
     margin: 0 10px 0 0;
     padding: 0;
   }
@@ -236,9 +244,9 @@ body.dark-mode #mysearchResults li {
 #mysearchResults {
   visibility: inherit;
   display: inline-block;
-  width: 320px;
+  width: 100%;
   margin: 0;
-  max-height: calc(100vh - 120px);
+  max-height: 100vh;/*calc(100vh - 120px);*/
   overflow: hidden;
 
 }

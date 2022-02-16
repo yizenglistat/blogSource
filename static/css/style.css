@@ -1,3 +1,30 @@
+.subscribeform{
+  background-color: #f2f2f0;
+  margin-left: 21em;
+  margin-right: 21em; 
+  margin-top:1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 8px;
+}
+
+.subscribeinput{
+  width: 80%;
+  text-align: left;
+  border-radius: 5px;
+  boder:0;
+}
+
+.subscribebutton{
+  margin-top: 1em;
+  background:#3068e8;
+  text-align: center;
+  border-radius: 5px;
+  boder:0;
+  color: white;
+  font-weight: bold;
+}
+
 code.has-jax {
     -webkit-font-smoothing: antialiased;
     background: inherit !important;
@@ -872,7 +899,7 @@ a.box:active {
   -ms-flex-align: center;
   align-items: center;
   border: 0px solid #d3d6db;
-  border-radius: 3px;
+  border-radius: 2px;
   color: #082fbf;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -6656,7 +6683,11 @@ article+article {
 }
 
 .title {
-  font-size: 24px;
+  font-size: 18px;
+}
+
+.title .article-title {
+  font-size: 20px;
 }
 
 .title a {

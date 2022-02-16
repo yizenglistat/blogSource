@@ -1,7 +1,7 @@
 <section class="section">
   <div class="container">
     {{ $current := . }}
-    <nav id="nav-main" class="nav">
+    <nav id="nav-main" class="nav" style="margin-top: -3em">
       <div id="nav-name" class="nav-left">
         {{ range .Site.Menus.nav }}
           
@@ -9,7 +9,7 @@
           
           {{ $active = or $active (eq .Name $current.Title) }}
                     
-          {{ $active = or $active (and (eq .Name "Home")  (eq $current.Section "posts")) }}
+          {{ $active = or $active (and (eq .Name "Writings")  (eq $current.Section "posts")) }}
           
           {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
           
