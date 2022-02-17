@@ -183,7 +183,7 @@ body.dark-mode  a.nav-item {
 
 #mysearchbox input {
   padding: 4px;
-  width: 100%;
+  width: 80%;
   height:40px;
   font-size: 1.2em;
   color: #3068e8;
@@ -236,7 +236,7 @@ body.dark-mode #mysearchResults li {
 #mysearchResults {
   visibility: inherit;
   display: inline-block;
-  width: 100%;
+  width: 80%;
   margin: 0;
   max-height: 100vh;/*calc(100vh - 120px);*/
   overflow: hidden;
@@ -301,7 +301,7 @@ body.dark-mode .widget_blog_subscription{
   position: relative;
   overflow: hidden;
   background-color: #F6F6F2;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 
@@ -325,7 +325,7 @@ body.dark-mode .widget_blog_subscription{
   outline: none;
   border: 0;
   text-align: left;
-  border-radius: 8px;
+  border-radius: 5px;
   font-size: 12px;
 }
 
@@ -348,7 +348,7 @@ body.dark-mode .widget_blog_subscription input[type="submit"] {
 }
 
 .widget_blog_subscription input[type="submit"] {
-  border-radius: 8px;
+  border-radius: 5px;
   margin: 0 0 20px 0;
   background-color: #3068e8;
   color: #fff;
@@ -383,13 +383,13 @@ body.dark-mode .widget_blog_subscription input[type="submit"]:hover {
 .widget_blog_subscription_header {
   display: block;
   margin: 18px auto;
-  width: 70%;
+  width: 50%;
   max-width: 480px;
   min-width: 320px;
   position: relative;
   overflow: hidden;
   background-color: #F6F6F2;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 body.dark-mode .widget_blog_subscription_header{
@@ -416,7 +416,7 @@ body.dark-mode .widget_blog_subscription_header{
   outline: none;
   border: 0;
   text-align: left;
-  border-radius: 8px;
+  border-radius: 5px;
   font-size: 12px;
 }
 
