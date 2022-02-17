@@ -380,21 +380,20 @@ body.dark-mode .widget_blog_subscription input[type="submit"]:hover {
 
 /*#######################################*/
 
-
-
-
-
-
 .widget_blog_subscription_header {
   display: block;
   margin: 18px auto;
-  width: 50%;
+  width: 70%;
   max-width: 480px;
   min-width: 320px;
   position: relative;
   overflow: hidden;
   background-color: #F6F6F2;
   border-radius: 8px;
+}
+
+body.dark-mode .widget_blog_subscription_header{
+  background-color: darkgray;
 }
 
 .subscribe-blog{
@@ -441,14 +440,14 @@ body.dark-mode .widget_blog_subscription_header input[type="submit"] {
 
 .widget_blog_subscription_header input[type="submit"] {
   display: flex;
-  flex:2;
+  flex:1;
   align-items: stretch;
   flex-basis: 0;
   height:auto;
   display:block;  
   margin: 20px 20px;
   padding: 2px 10px !important;
-  border-radius: 8px;
+  border-radius: 5px;
   background-color: #3068e8;
   color: #fff;
   text-align: center;

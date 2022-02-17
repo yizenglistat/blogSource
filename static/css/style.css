@@ -1532,7 +1532,7 @@ a.box:active {
   align-items: center;
   background-color: #fff;
   border: 1px solid #d3d6db;
-  border-radius: 3px;
+  border-radius: 1px;
   color: #23ad51;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
