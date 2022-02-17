@@ -384,23 +384,15 @@ body.dark-mode .widget_blog_subscription input[type="submit"]:hover {
 
 .widget_blog_subscription_header {
   display: block;
-  margin: 50px auto;
+  margin: 20px auto;
   width: 60%;
   max-width: 490px;
   min-width: 320px;
   position: relative;
   overflow: hidden;
-  background-color: #F6F6F2;
   border-radius: 5px;
   padding: 50px;
-  background-color: #fff;
-  background-size: 100% 1em;
-  background-image: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.05) 79px, #abced4 79px, #abced4 81px, rgba(0, 0, 0, 0.03) 81px),
-                  -webkit-linear-gradient(#eee .05em, transparent .05em);
-  background-image: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.05) 79px, #abced4 79px, #abced4 81px, rgba(0, 0, 0, 0.03) 81px),
-                  -moz-linear-gradient(#eee .05em, transparent .05em);
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 79px, #83B3DB 79px, #83B3DB 81px, rgba(0, 0, 0, 0.03) 81px),
-                  linear-gradient(#eee .05em, transparent .05em);
+  background-color: #F6F6F2;
 }
 .widget_blog_subscription_header p {
   margin: 0;
