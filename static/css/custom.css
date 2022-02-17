@@ -39,7 +39,17 @@ body.dark-mode .content a:not(.button){
   color:#23ad51
 }*/
 
+body.dark-mode .content strong{
+  color: #FEFFEC;
+}
 
+body.dark-mode a{
+  color: #23ad51;
+}
+
+body.dark-mode a:hover{
+  color: #3068e8;
+}
 
 body.dark-mode .title a {
   color: #f5f5f5;
@@ -53,7 +63,7 @@ body.dark-mode .subtitle.is-6 a{
 body.dark-mode .subtitle.is-6 a:hover{
   background-color: #23ad51;
   text-decoration: none !important;
-  color: white;
+  color: #F5F5F5;
   border-bottom: 0;
 }
 
@@ -287,7 +297,7 @@ body.dark-mode .widget_blog_subscription{
 
 .widget_blog_subscription {
   display: block;
-  margin: 20px auto;
+  margin: 0px auto;
   width: 50%;
   max-width: 480px;
   min-width: 320px;

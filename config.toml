@@ -56,11 +56,11 @@ hrefTargetBlank = true
 # for menu
 
 [menu]
-	[[menu.nav]]
-	identifier = "search"
-	name = "Search"
-	url = "/search/"
-	weight = 4
+	# [[menu.nav]]
+	# identifier = "search"
+	# name = "Search"
+	# url = "/search/"
+	# weight = 4
 	# [[menu.nav]]
 	# identifier = "categories"
 	# name = "Series"
