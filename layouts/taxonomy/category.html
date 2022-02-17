@@ -19,7 +19,7 @@
         {{ partial "categories" .Params.categories }}
         {{ end }}
       </h1>
-      <div class="content">
+      <div class="content" style="opacity: 0.5;margin-top: -1em;">
         {{ .Summary | plainify | safeHTML }}
         {{ if .Truncated }}
         <a class="button is-link" href="{{ .Permalink }}" style="height:28px">
