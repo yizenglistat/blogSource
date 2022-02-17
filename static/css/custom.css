@@ -387,7 +387,7 @@ body.dark-mode .widget_blog_subscription input[type="submit"]:hover {
 
 .widget_blog_subscription_header {
   display: block;
-  margin: 20px auto;
+  margin: 5px auto;
   width: 50%;
   max-width: 480px;
   min-width: 320px;
@@ -410,7 +410,7 @@ body.dark-mode .widget_blog_subscription input[type="submit"]:hover {
 
 .widget_blog_subscription_header input[type="text"] {
   margin: 20px 20px;
-  padding: 10px 10px !important;
+  padding: 5px 10px !important;
   text-align: center;
   width: 100% !important;
   max-width: calc(100% - 10px);
@@ -447,7 +447,7 @@ body.dark-mode .widget_blog_subscription_header input[type="submit"] {
   height:auto;
   display:block;  
   margin: 20px 20px;
-  padding: 10px 10px !important;
+  padding: 5px 10px !important;
   border-radius: 8px;
   background-color: #3068e8;
   color: #fff;
