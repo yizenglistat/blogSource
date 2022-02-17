@@ -1,54 +1,3 @@
-.subscribeform{
-  background-color: #F6F6F2;
-  margin-left: 21em;
-  margin-right: 21em; 
-  margin-top:1em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
-  max-width: 480px;
-  min-width: 320px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column; 
-}
-
-.subscribeinput{
-  width: 80%;
-  text-align: left;
-  border-radius: 5px;
-  boder:0;
-}
-
-.subscribebutton{
-  margin-top: 1em;
-  background:#3068e8;
-  text-align: center;
-  border-radius: 5px;
-  boder:0;
-  color: white;
-  font-weight: bold;
-}
-
-@media (max-width:683px) {
-.subscribeform{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position: relative;   
-}
-}
-
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-.subscribeform{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position: relative;   
-}
-}
 
 code.has-jax {
     -webkit-font-smoothing: antialiased;
@@ -6721,7 +6670,7 @@ article+article {
 
 
 .title.notfound {
-  font-size: 20vw;
+  font-size: 10vw;
 }
 
 code {

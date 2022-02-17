@@ -11,7 +11,12 @@
 	  		<div style="text-align: center"><button style="border:0" class="subscribebutton">submit</button></div>
 	  	</div> -->
 
-	  	{{partial "subscribe" .}}
+	  	<section class="widget widget_blog_subscription_header">
+			<form action="#" method="post" accept-charset="utf-8" class="subscribe-blog">
+				<p><input type="text" name="email" style="width: 95%;" placeholder="example@domain.com" value="" id="subscribe-field"></p>
+				<p><input type="submit" value="Get email updates!"></p>
+			</form>
+</section>
 
 	  	<hr style="margin-bottom:-1em;margin-top:2em;">
 	</div>
