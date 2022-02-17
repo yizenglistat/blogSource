@@ -188,7 +188,7 @@ body.dark-mode  a.nav-item {
   font-size: 1.2em;
   color: #3068e8;
   font-weight: bold;
-  border-radius: 7px;
+  border-radius: 5em;
   border: 1.5px solid gray;
   outline: none;
   text-align: left;
@@ -210,7 +210,8 @@ body.dark-mode #mysearchbox input {
   margin-left: 0em;
   background-color: none;
   text-align: left;
-  border:2px solid #F6F6F2;
+  border:0px solid #F6F6F2;
+
 }
 
 body.dark-mode #mysearchResults li {
@@ -251,6 +252,7 @@ body.dark-mode #mysearchResults a {
   outline: 0;
   background-color: #F6F6F2;
   color: #23ad51;
+  border-radius: 5em;
 }
 
 body.dark-mode #mysearchResults a:hover, 
