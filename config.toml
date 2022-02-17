@@ -38,7 +38,7 @@ kofi = "yizenglistat"
 twitter = "yizenglistat"
 
 [params.social.config]
-platforms = ["github","twitter","email","rss"]
+platforms = ["github","twitter","email"]
 
 [taxonomies]
    tag = "tags"

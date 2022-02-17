@@ -13,7 +13,7 @@
     {{ range sort .Paginator.Pages.Reverse }}
     {{if ne .Title "Search"}}
     <article>
-      <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
+      <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a>{{ if .Draft }} [draft]{{ end }}</h1>
       <h2 class="subtitle tags is-6">
         {{ .Date.Format "Jan 2, 2006" }}
         ⏱ {{ math.Round (div (countwords .Content) 220.0) }} min

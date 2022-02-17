@@ -1,3 +1,6 @@
+#footerlink{
+  color: #232b2b;
+}
 
 code.has-jax {
     -webkit-font-smoothing: antialiased;
@@ -5016,6 +5019,7 @@ a.box:active {
   top: 1.2em;
 }
 
+
 .nav-item {
   -ms-flex-align: center;
   align-items: center;
@@ -6587,6 +6591,17 @@ a.panel-block:hover {
   margin-bottom: 100px;
   margin-top: auto;
   height: 2em;
+  position: relative;
+  width:100%;
+}
+
+.footer-extend {
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: -16em;
+  margin-top: auto;
+  height: 1em;
   position: relative;
   width:100%;
 }
