@@ -437,8 +437,8 @@ body.dark-mode .widget_blog_subscription_header input[type="submit"] {
 }
 
 .widget_blog_subscription_header input[type="submit"] {
-  display: flex;
-  align-items: stretch;
+  height:auto;
+  display:block;  
   margin: 20px 20px;
   padding: 10px 10px !important;
   border-radius: 8px;
