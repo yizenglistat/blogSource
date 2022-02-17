@@ -4,7 +4,7 @@ linktitle: generative-models-literature-review
 title: Textual Generative Models Reviews
 weight: 1
 draft: true
-tags: ["GAN", "Neural Networks"]
+tags: ["GAN", "neural networks"]
 categories: 
 <!-- next: /testing-c
 prev: /testing-a -->

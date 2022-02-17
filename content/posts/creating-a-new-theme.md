@@ -7,7 +7,7 @@ next: /testing-b
 prev: /testing-a
 title: A Testing Article
 weight: 10
-tags: ["Python", "Neural Networks"]
+tags: ["python", "neural networks"]
 categories: ["DL Series"]
 ---
 
