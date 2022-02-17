@@ -399,16 +399,16 @@ body.dark-mode .widget_blog_subscription input[type="submit"]:hover {
 
 .subscribe-blog{
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   align-items: center;
 }
 
-
-.widget_blog_subscription_header input[type="text"] {
+.subscribe-flex{
   display: flex;
   flex:1;
   flex-direction:column;
+}
+
+.widget_blog_subscription_header input[type="text"] {
   margin: 20px 20px;
   padding: 10px 10px !important;
   text-align: center;
