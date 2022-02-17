@@ -1,11 +1,3 @@
-body.dark-mode .subscribeform{
-  background-color: #8b8c80;
-}
-
-body.dark-mode .subscribebutton{
-  background:#23ad51;
-}
-
 body.dark-mode .svg-fill{
   fill:#23ad51;
 }
@@ -54,7 +46,7 @@ body.dark-mode .title a {
 }
 
 body.dark-mode .subtitle.is-6 a{
-  background-color: #8b8c80;
+  background-color: darkgray;
   color:#3068e8;
 }
 
@@ -227,7 +219,7 @@ body.dark-mode #mysearchbox input {
   margin-left: 0em;
   background-color: none;
   text-align: left;
-  border:2px solid #f2f2f0;
+  border:2px solid #F6F6F2;
 }
 
 body.dark-mode #mysearchResults li {
@@ -266,7 +258,7 @@ body.dark-mode #mysearchResults a {
 
 #mysearchResults a:hover, #searchResults a:focus {
   outline: 0;
-  background-color: #f2f2f0;
+  background-color: #F6F6F2;
   color: #23ad51;
 }
 
@@ -293,3 +285,89 @@ body.dark-mode #searchResults a:focus {
 body.dark-mode .mymark{
   color:#23ad51
 }
+
+body.dark-mode .widget_blog_subscription{
+  background-color: darkgray;
+}
+
+.widget_blog_subscription {
+  display: block;
+  margin: 20px auto;
+  width: 50%;
+  max-width: 480px;
+  min-width: 320px;
+  position: relative;
+  overflow: hidden;
+  background-color: #F6F6F2;
+  border-radius: 8px;
+}
+
+.widget_blog_subscription p {
+  margin: 0;
+  text-align: center;
+}
+
+.widget_blog_subscription p:first-child {
+  margin: 20px 0px 0;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.widget_blog_subscription input[type="text"] {
+  margin: 20px 30px;
+  padding: 10px 10px !important;
+  text-align: center;
+  width: 100% !important;
+  max-width: calc(100% - 90px);
+  outline: none;
+  border: 0;
+  text-align: left;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.widget_blog_subscription input[type="text"]::-webkit-input-placeholder {
+  color: lightgray;
+}
+.widget_blog_subscription input[type="text"]:-moz-placeholder {
+  color: lightgray;
+}
+.widget_blog_subscription input[type="text"]::-moz-placeholder {
+  color: lightgray;
+}
+
+.widget_blog_subscription input[type="text"]:-ms-input-placeholder {
+  color: lightgray;
+}
+
+body.dark-mode .widget_blog_subscription input[type="submit"] {
+  background-color: #23ad51;
+}
+
+.widget_blog_subscription input[type="submit"] {
+  border-radius: 8px;
+  margin: 0 0 20px 0;
+  background-color: #3068e8;
+  color: #fff;
+  padding: 5px 5px !important;
+  text-align: center;
+  width: 30%;
+  max-width: 100%;
+  outline: none;
+  border: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-transition: .1s all ease-in-out;
+  -moz-transition: .1s all ease-in-out;
+  -o-transition: .1s all ease-in-out;
+  transition: .1s all ease-in-out;
+}
+.widget_blog_subscription input[type="submit"]:hover {
+  background-color: #23ad51;
+}
+
+body.dark-mode .widget_blog_subscription input[type="submit"]:hover {
+  background-color: #3068e8;
+}
+
