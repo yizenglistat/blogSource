@@ -46,7 +46,7 @@ body.dark-mode .title a {
 }
 
 body.dark-mode .subtitle.is-6 a{
-  background-color: darkgray;
+  background-color: #414a4c;
   color:#3068e8;
 }
 
@@ -200,17 +200,8 @@ body.dark-mode #mysearchbox textarea {
 }
 
 body.dark-mode #mysearchbox input {
-  padding: 4px;
-  width: 100%;
-  height:40px;
-  font-size: 1.2em;
   color: #23ad51;
-  font-weight: bold;
-  border-radius: 7px;
-  border: 1.5px solid gray;
-  outline: none;
-  text-align: left;
-  display: inline-block;
+
 }
 
 
@@ -287,7 +278,7 @@ body.dark-mode .mymark{
 }
 
 body.dark-mode .widget_blog_subscription{
-  background-color: darkgray;
+  background-color: #414a4c;
 }
 
 
@@ -393,7 +384,7 @@ body.dark-mode .widget_blog_subscription input[type="submit"]:hover {
 }
 
 body.dark-mode .widget_blog_subscription_header{
-  background-color: darkgray;
+  background-color: #414a4c;
 }
 
 .subscribe-blog{
