@@ -332,6 +332,14 @@ body.dark-mode #sign-in form input[type="submit"] {
   font-size:10px;
 }
 
+#sign-in form input[type="submit"]:hover{
+  background:#23ad51;
+}
+
+body.dark-mode #sign-in form input[type="submit"]:hover{
+  background:#3068e8;
+}
+
 @media only screen and (max-width: 750px) {
   #sign-in {
     max-width: 70%;

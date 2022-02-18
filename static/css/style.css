@@ -2724,8 +2724,8 @@ a.box:active {
 }
 
 .nav-active{
-/*  text-decoration: overline;
-  text-underline-offset:5px;*/
+  text-decoration: underline;
+  text-underline-offset:5px;
   text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
   boder:0;
 }
