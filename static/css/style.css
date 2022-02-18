@@ -1,6 +1,14 @@
+.myform{
+  max-width: 100%;
+}
+
+.utterances {
+  max-width: 100%;
+}
+
 .messagealert {
   padding: 10px;
-  background-color: #F6F6F2;
+  background-color: #f5f8fa;
   color: #23ad51;
   text-align: center;
   padding: 2em 0px 2em 0px;
@@ -9,7 +17,7 @@
   margin: 0 auto;
   margin-top: 5%;
   position: relative;
-  box-shadow: 1px 5px 10px 5px #888888;
+  box-shadow: 1px 1px 2rem rgba(0,0,0,.3);
   z-index: 1;
 }
 
@@ -18,7 +26,7 @@ body.dark-mode .messagealert {
 }
 
 body.dark-mode .messagealert p{
-  color: #F6F6F2;
+  color: #f5f8fa;
 }
 
 .messagealert strong{
@@ -2745,7 +2753,7 @@ a.box:active {
 }
 
 .subtitle.is-6 a{
-  background-color: #F6F6F2;
+  background-color: #f5f8fa;
   border-radius: 7px;
   padding: 3px;
   text-decoration: none;
@@ -6845,7 +6853,7 @@ img[src$="#r"] {
 .related li {
   font-size: 17px;
   color:black;
-  background-color: #F6F6F2;
+  background-color: #f5f8fa;
   border-radius: 20px;
   display: inline-block;
   padding: 15px;

@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+.wrapper {
+  position: realtive;
+  max-height: 100%;
+}
+
+.fas.fa-envelope {
+  color: #fff;
+  font-size: 2rem;
+  background: #333;
+  padding: 1rem;
+  border-radius: 100%;
+  margin: 0 0 1rem 0;
+}
+
+body.dark-mode .card-content{
+  background-color: #7D7C7C;
+}
+
+.card-content {
+  max-width: 100%;
+  background-color: #f5f8fa;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 1rem;
+  padding: 4rem 4rem;
+  text-align: center;
+}
+
+.card-content h1 {
+  margin: 0 0 1rem 0;
+}
+
+
+.card-content p {
+  font-size: .8rem;
+  margin: 0 0 2rem 0;
+}
+
+body.dark-mode .card-content h1 strong{
+  color: #F6F6F2;
+}
+
+input {
+  padding: .8rem 1rem;
+  width: 60%;
+  border-radius: 5rem;
+  outline: none;
+  border: .1rem solid #d1d1d1;
+  font-size: .7rem;
+}
+
+::placeholder {
+  color: #d1d1d1;
+}
+
+.subscribe-btn {
+  padding: .8rem 2rem;
+  border-radius: 5rem;
+  max-width: 30%;
+  background: #3068e8;
+  color: #fff;
+  font-size: .7rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+body.dark-mode .subscribe-btn {
+  background: #23ad51;
+}
+
+</style>
+
+<section class="section">
+<div class = "container">
+<div class="wrapper" style="margin-top: 4em; margin-bottom: -12em">
+  <form class="card-content" action="https://sendy.yizengli.com/subscribe" method="POST" accept-charset="utf-8">
+    <div class="container">
+      <h1>Join us getting updates on <strong>Statistics</strong>, <strong>ML</strong>/<strong>DL</strong> papers.</h1>
+    </div>
+    <div class="form-input">
+      <input type="email" name="email" id="email" placeholder="domain@email.com">
+      <input type="hidden" name="list" value="LXqH0yHzTvfMjFPcgvsicQ"/>
+      <input type="hidden" name="subform" value="yes"/>
+      <input class="subscribe-btn" type="submit" id="submit" value="SUBSCRIBE">
+    </div>
+  </form>
+</div>
+</div>
+</section>

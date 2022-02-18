@@ -1,5 +1,5 @@
 body.dark-mode #footerlink{
-  color: #F6F6F2;
+  color: #f5f8fa;
 }
 
 body.dark-mode .svg-fill{
@@ -58,6 +58,7 @@ body.dark-mode a:hover{
 body.dark-mode .title a {
   color: #f5f5f5;
 }
+
 
 body.dark-mode .subtitle.is-6 a{
   background-color: #7D7C7C;
@@ -220,7 +221,7 @@ body.dark-mode #mysearchbox input {
   margin-left: 0em;
   background-color: none;
   text-align: left;
-  border:0px solid #F6F6F2;
+  border:0px solid #f5f8fa;
 
 }
 
@@ -260,7 +261,7 @@ body.dark-mode #mysearchResults a {
 
 #mysearchResults a:hover, #searchResults a:focus {
   outline: 0;
-  background-color: #F6F6F2;
+  background-color: #f5f8fa;
   color: #23ad51;
   border-radius: 5em;
 }
@@ -291,8 +292,8 @@ body.dark-mode .mymark{
 
 
 #sign-in {
-  background-color: #F6F6F2;
-  max-width: 80%;
+  background-color: #f5f8fa;
+  max-width: 100%;
   margin: 0em auto;
   text-align: center;
   margin-bottom: 0%;
@@ -319,13 +320,13 @@ body.dark-mode .mymark{
 
 body.dark-mode #sign-in form input[type="submit"] {
   background: #23ad51;
-  color: #F6F6F2;
+  color: #f5f8fa;
 }
 
 #sign-in form input[type="submit"] {
   width: 30%;
   background: #3068e8;
-  color: #F6F6F2;
+  color: #f5f8fa;
   font-weight: 550;
   margin-top: 3%;
   font-size:10px;
