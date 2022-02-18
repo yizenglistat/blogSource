@@ -330,6 +330,7 @@ body.dark-mode #sign-in form input[type="submit"] {
   margin-top: 3%;
   font-size:10px;
 }
+
 @media only screen and (max-width: 750px) {
   #sign-in {
     max-width: 70%;
