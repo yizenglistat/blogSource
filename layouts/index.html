@@ -16,7 +16,7 @@
         <a href="/tags/{{ .Name }}" class= "itemtag"> {{replace .Name "-" " "}}<sup>({{.Count}})</sup></a>
         {{ $total = add $total .Count}}
         {{end}}
-        <a href="/tags/" class="alltag" style="padding: 3px;">all tags ({{$total}}).</a> Alternatively navigate via <a href="/search">search</a>.
+        <a href="/tags/" class="alltag" style="padding: 3px;">all tags ({{$total}})</a>. Alternatively navigate via <a href="/search">search</a>.
     <hr style="margin-bottom:0em;margin-top:2em;">
   </div>
 </section>
