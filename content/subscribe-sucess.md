@@ -1,6 +1,4 @@
 ---
-title: hidden
-sitemap:
-  priority : 0.1
+title: subscribe-success
 layout: "subscribe-success"
 ---
