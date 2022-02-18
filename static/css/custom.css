@@ -60,7 +60,7 @@ body.dark-mode .title a {
 }
 
 body.dark-mode .subtitle.is-6 a{
-  background-color: #36454F;
+  background-color: #7D7C7C;
   color:#3068e8;
 }
 
@@ -209,10 +209,6 @@ body.dark-mode  a.nav-item {
   display: inline-block;
 }
 
-body.dark-mode #mysearchbox textarea {
-  background-color : red; 
-}
-
 body.dark-mode #mysearchbox input {
   color: #23ad51;
 
@@ -272,7 +268,7 @@ body.dark-mode #mysearchResults a {
 body.dark-mode #mysearchResults a:hover, 
 body.dark-mode #searchResults a:focus {
   outline: 0;
-  background-color: rgb(80, 80, 80);
+  background-color: #7D7C7C;
   color: #3068e8;
 }
 
@@ -368,5 +364,5 @@ body.dark-mode #sign-in form input[type="submit"] {
 
 
 body.dark-mode #sign-in {
-  background-color: #3b444b;
+  background-color: #7D7C7C;
 }

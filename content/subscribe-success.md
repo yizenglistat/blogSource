@@ -1,7 +1,7 @@
 ---
-title: Newsletter
+title: hidden
 draft: true
 sitemap:
   priority : 0.1
-layout: "newsletter"
+layout: "subscribe-success"
 ---

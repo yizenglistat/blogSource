@@ -1,4 +1,7 @@
 ---
-title: subscribe-already
+title: hidden
+draft: true
+sitemap:
+  priority : 0.1
 layout: "subscribe-already"
 ---

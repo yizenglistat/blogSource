@@ -1,5 +1,36 @@
+.messagealert {
+  padding: 10px;
+  background-color: #F6F6F2;
+  color: #23ad51;
+  text-align: center;
+  padding: 2em 0px 2em 0px;
+  border-radius: 3em;
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 5%;
+  position: relative;
+  box-shadow: 1px 5px 10px 5px #888888;
+  z-index: 1;
+}
+
+body.dark-mode .messagealert {
+  background-color: #7D7C7C;
+}
+
+body.dark-mode .messagealert p{
+  color: #F6F6F2;
+}
+
+.messagealert strong{
+  color: #23ad51;
+}
+
+.messagealert p{
+  color: black;
+}
+
 #footerlink{
-  color: #3b444b;
+  color: #7D7C7C;
 }
 
 code.has-jax {
@@ -119,7 +150,7 @@ table th {
 }
 
 strong {
-  color: #3b444b;
+  color: #7D7C7C;
 }
 
 .container,
@@ -1468,32 +1499,32 @@ a.box:active {
 
 
 .content h1{
-  color: #3b444b;
+  color: #7D7C7C;
   font-weight: 800;
   margin-bottom: 20px;
 }
 .content h2{
-  color: #3b444b;
+  color: #7D7C7C;
   font-weight: 750 ;
   margin-bottom: 20px;
 }
 .content h3{
-  color: #3b444b;
+  color: #7D7C7C;
   font-weight: 600;
   margin-bottom: 20px;
 }
 .content h4{
-  color: #3b444b;
+  color: #7D7C7C;
   font-weight: 550;
   margin-bottom: 20px;
 }
 .content h5{
-  color: #3b444b;
+  color: #7D7C7C;
   font-weight: 500;
   margin-bottom: 20px;
 }
 .content h6{
-  color: #3b444b;
+  color: #7D7C7C;
   font-weight: 500;
   margin-bottom: 20px;
 }
@@ -2607,7 +2638,7 @@ a.box:active {
 }
 
 .title strong {
-  color: #3b444b;
+  color: #7D7C7C;
 
 }
 
@@ -2688,7 +2719,7 @@ a.box:active {
 }
 
 .subtitle strong {
-  color: #3b444b;
+  color: #7D7C7C;
 }
 
 .subtitle+.title {
@@ -3117,7 +3148,7 @@ a.box:active {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  color: #3b444b;
+  color: #7D7C7C;
   display: flex;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
@@ -6599,9 +6630,9 @@ a.panel-block:hover {
   bottom: 0px;
   left: 0px;
   right: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 10em;
   margin-top: auto;
-  height: 2em;
+  height: 4em;
   position: relative;
   width:100%;
 }
@@ -6679,7 +6710,7 @@ article+article {
 }
 
 .subtitle {
-  color: #3b444b;
+  color: #7D7C7C;
 }
 
 .title {
@@ -6691,7 +6722,7 @@ article+article {
 }
 
 .title a {
-  color: #3b444b;
+  color: #7D7C7C;
 }
 
 
