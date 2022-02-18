@@ -1,3 +1,27 @@
+.alltag{
+  background-color: #3068e8;
+  color: #F6F6F2;
+  border-radius: 3px;
+  padding: 3px;
+  margin:auto;
+}
+
+body.dark-mode .alltag{
+  background-color: #23ad51;
+  color: #F6F6F2;
+}
+
+.itemtag{
+  background-color:#F6F6F2;
+  border-radius: 3px;
+  padding: 3px;
+  margin:auto;
+}
+
+body.dark-mode .itemtag{
+  background-color:#232b2b;
+}
+
 .myform{
   max-width: 100%;
 }
@@ -2748,7 +2772,7 @@ a.box:active {
 .subtitle.is-5 code,
 .subtitle.is-6,
 .subtitle.is-6 code {
-  font-size: 14px;
+  font-size: 12px;
   color:#23ad51;
 }
 
@@ -2762,7 +2786,7 @@ a.box:active {
 .subtitle.is-6 a:hover{
   background-color: #3068e8;
   color:white;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 

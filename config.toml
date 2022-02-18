@@ -7,7 +7,7 @@ title = "Blog"
 #copyright = "&copy; <a href=\"https://github.com/yizenglistat\">Yizeng Li</a> 2017"
 disqusShortname = "yizengli"
 googleAnalytics = "UA-125871484-1"
-Paginate = 3 # Number of posts per page
+Paginate = 5 # Number of posts per page
 enableRobotsTXT = true
 
 [params.rss] # Adding this tag enables RSS feed
@@ -66,11 +66,11 @@ hrefTargetBlank = true
 	# name = "Series"
 	# url = "/categories/"
 	# weight = 3
-	# [[menu.nav]]
-	# identifier = "newsletter"
-	# name = "Newsletter"
-	# url = "/newsletter/"
-	# weight = 2
+	[[menu.nav]]
+	identifier = "newsletter"
+	name = "Newsletter"
+	url = "/newsletter/"
+	weight = 2
 	[[menu.nav]]
 	identifier = "home"
 	name = "Writing"
