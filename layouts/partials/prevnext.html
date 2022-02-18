@@ -1,0 +1,21 @@
+<section>
+<div style="display:flex;justify-content: space-between; max-width: 100%">
+<div class="level-item">
+	{{with .PrevInSection}}
+		<a class="button" href="{{ .Permalink }}">
+			<span class="icon is-small is-marginless">{{ partial "svg/icons" "prev" }}</span>
+			<strong style="font-size: 15px">{{ .Title }}</strong>
+		</a>
+	{{end}}
+</div>
+<div class="level-item">
+	{{with .NextInSection}}
+		<a class="button" href="{{ .Permalink }}">
+			<strong style="font-size: 15px">{{ .Title }}</strong>
+			<span class="icon is-small is-marginless">{{ partial "svg/icons" "next" }}</span>
+		</a>
+	{{end}}
+</div>
+</div>
+
+</section>

@@ -30,7 +30,7 @@ body.dark-mode .messagealert p{
 }
 
 #footerlink{
-  color: #7D7C7C;
+  color: #232b2b;
 }
 
 code.has-jax {
@@ -85,19 +85,6 @@ code.has-jax {
   color: white
 }
 
-.grad {
-        height: 0.8px;
-        background-color: #E6E6E6;
-        width: 66.0em;
-        margin: 0 auto;
-        background-image: linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
-        background-image: -o-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
-        background-image: -moz-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
-        background-image: -webkit-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
-        background-image: -ms-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
-        background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, gray), color-stop(0.95, white) );
-}
-
 .card,
 .highlight,
 .highlight pre,
@@ -150,7 +137,7 @@ table th {
 }
 
 strong {
-  color: #7D7C7C;
+  color: #232b2b;
 }
 
 .container,
@@ -1499,32 +1486,32 @@ a.box:active {
 
 
 .content h1{
-  color: #7D7C7C;
+  color: #232b2b;
   font-weight: 800;
   margin-bottom: 20px;
 }
 .content h2{
-  color: #7D7C7C;
+  color: #232b2b;
   font-weight: 750 ;
   margin-bottom: 20px;
 }
 .content h3{
-  color: #7D7C7C;
+  color: #232b2b;
   font-weight: 600;
   margin-bottom: 20px;
 }
 .content h4{
-  color: #7D7C7C;
+  color: #232b2b;
   font-weight: 550;
   margin-bottom: 20px;
 }
 .content h5{
-  color: #7D7C7C;
+  color: #232b2b
   font-weight: 500;
   margin-bottom: 20px;
 }
 .content h6{
-  color: #7D7C7C;
+  color: #232b2b;
   font-weight: 500;
   margin-bottom: 20px;
 }
@@ -2638,7 +2625,7 @@ a.box:active {
 }
 
 .title strong {
-  color: #7D7C7C;
+  color: #232b2b;
 
 }
 
@@ -2719,7 +2706,7 @@ a.box:active {
 }
 
 .subtitle strong {
-  color: #7D7C7C;
+  color: #232b2b;
 }
 
 .subtitle+.title {
@@ -3148,7 +3135,7 @@ a.box:active {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  color: #7D7C7C;
+  color: #232b2b;
   display: flex;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
@@ -6710,7 +6697,7 @@ article+article {
 }
 
 .subtitle {
-  color: #7D7C7C;
+  color: #232b2b;
 }
 
 .title {
@@ -6722,7 +6709,7 @@ article+article {
 }
 
 .title a {
-  color: #7D7C7C;
+  color: #232b2b;
 }
 
 
