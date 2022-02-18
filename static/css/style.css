@@ -6599,9 +6599,9 @@ a.panel-block:hover {
   bottom: 0px;
   left: 0px;
   right: 0px;
-  margin-bottom: -16em;
+  margin-bottom: 0px;
   margin-top: auto;
-  height: 1em;
+  height: 6em;
   position: relative;
   width:100%;
 }
