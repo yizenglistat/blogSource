@@ -1,5 +1,5 @@
 <section>
-<div style="display:flex;justify-content: space-between; max-width: 100%">
+<div style="display:flex;justify-content: flex-end; max-width: 100%;flex-wrap: wrap;align-content: center;">
 <div class="level-item">
 	{{with .PrevInSection}}
 		<a class="button" href="{{ .Permalink }}">
@@ -8,7 +8,7 @@
 		</a>
 	{{end}}
 </div>
-<div class="level-item">
+<div class="level-item" style="margin-left: auto;">
 	{{with .NextInSection}}
 		<a class="button" href="{{ .Permalink }}">
 			<strong style="font-size: 15px">{{ .Title }}</strong>
