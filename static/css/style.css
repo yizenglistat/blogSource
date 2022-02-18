@@ -1,13 +1,27 @@
 .alltag{
-  background-color: #3068e8;
+  background-color: #F6F6F2;
   color: #F6F6F2;
   border-radius: 3px;
   padding: 3px;
-  margin:auto;
+  margin: auto;
 }
 
-body.dark-mode .alltag{
+a:hover.alltag{
+  background-color: #3068e8;
+  color: #F6F6F2;
+}
+
+a.alltag{
+  color:#23ad51;
+}
+
+body.dark-mode a:hover.alltag{
   background-color: #23ad51;
+  color: #F6F6F2;
+}
+
+body.dark-mode a.alltag{
+  background-color: #7D7C7C;
   color: #F6F6F2;
 }
 
@@ -15,14 +29,23 @@ body.dark-mode .alltag{
   background-color:#F6F6F2;
   border-radius: 3px;
   padding: 3px;
-  margin:auto;
+  margin: auto;
 }
 
 body.dark-mode #itemtag{
   background-color:#232b2b;
 }
 
+body.dark-mode a:hover#itemtag {
+  background-color:#23ad51;
+  color: #F6F6F2;
+}
+
 body.dark-mode a{
+  color:#F6F6F2;
+}
+
+body.dark-mode a:hover{
   color:#F6F6F2;
 }
 
