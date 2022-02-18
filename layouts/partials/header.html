@@ -19,9 +19,7 @@
 {{- range .Site.Params.Assets.customCSS -}}
 <link rel='stylesheet' href='{{ . | absURL }}'>
 {{- end -}}
-
-<script src="/js/mark.js"></script>
-
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -50,6 +48,15 @@ function myFunction() {
 {{ partial "mathjax.html" . }}
 
 </head>
+
+
+
+
+
+
+
+
+
 <body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

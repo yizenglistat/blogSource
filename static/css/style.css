@@ -1,5 +1,5 @@
 #footerlink{
-  color: #232b2b;
+  color: #3b444b;
 }
 
 code.has-jax {
@@ -119,7 +119,7 @@ table th {
 }
 
 strong {
-  color: #232b2b;
+  color: #3b444b;
 }
 
 .container,
@@ -1468,32 +1468,32 @@ a.box:active {
 
 
 .content h1{
-  color: #232b2b;
+  color: #3b444b;
   font-weight: 800;
   margin-bottom: 20px;
 }
 .content h2{
-  color: #232b2b;
+  color: #3b444b;
   font-weight: 750 ;
   margin-bottom: 20px;
 }
 .content h3{
-  color: #232b2b;
+  color: #3b444b;
   font-weight: 600;
   margin-bottom: 20px;
 }
 .content h4{
-  color: #232b2b;
+  color: #3b444b;
   font-weight: 550;
   margin-bottom: 20px;
 }
 .content h5{
-  color: #232b2b;
+  color: #3b444b;
   font-weight: 500;
   margin-bottom: 20px;
 }
 .content h6{
-  color: #232b2b;
+  color: #3b444b;
   font-weight: 500;
   margin-bottom: 20px;
 }
@@ -2607,7 +2607,7 @@ a.box:active {
 }
 
 .title strong {
-  color: #232b2b;
+  color: #3b444b;
 
 }
 
@@ -2688,7 +2688,7 @@ a.box:active {
 }
 
 .subtitle strong {
-  color: #232b2b;
+  color: #3b444b;
 }
 
 .subtitle+.title {
@@ -3117,7 +3117,7 @@ a.box:active {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  color: #232b2b;
+  color: #3b444b;
   display: flex;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
@@ -6679,7 +6679,7 @@ article+article {
 }
 
 .subtitle {
-  color: #232b2b;
+  color: #3b444b;
 }
 
 .title {
@@ -6691,7 +6691,7 @@ article+article {
 }
 
 .title a {
-  color: #232b2b;
+  color: #3b444b;
 }
 
 
