@@ -332,7 +332,7 @@ body.dark-mode #sign-in form input[type="submit"] {
   color: #F6F6F2;
   font-weight: 550;
   margin-top: 3%;
-  font-size:13px;
+  font-size:10px;
 }
 @media only screen and (max-width: 750px) {
   #sign-in {
@@ -341,7 +341,7 @@ body.dark-mode #sign-in form input[type="submit"] {
 
   #sign-in form input[type="email"] {
     width: 80%;
-    margin-top: 5%;
+    margin-top: 3%;
   }
 
   #sign-in form input[type="submit"] {
@@ -362,12 +362,9 @@ body.dark-mode #sign-in form input[type="submit"] {
   }
 
   #sign-in form input[type="submit"] {
-    width: 55%;
+    width: 40%;
   }
 }
-
-
-
 
 
 body.dark-mode #sign-in {

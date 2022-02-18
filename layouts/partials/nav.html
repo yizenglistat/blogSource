@@ -9,13 +9,15 @@
           
           {{ $active = or $active (eq .Name $current.Title) }}
                     
-          {{ $active = or $active (and (eq .Name "Writings")  (eq $current.Section "posts")) }}
+          {{ $active = or $active (and (eq .Name "Writing")  (eq $current.Section "posts")) }}
           
           {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
           
           {{ $active = or $active (and (eq .Name "Series") (eq $current.Section "categories")) }}
 
           {{ $active = or $active (and (eq .Name "Search") (eq $current.Section "search")) }}
+
+          {{ $active = or $active (and (eq .Name "Newsletter") (eq $current.Section "newsletter")) }}
 
 
 

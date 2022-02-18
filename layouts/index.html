@@ -11,7 +11,7 @@
     {{- end -}}
     {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
     {{ range sort .Paginator.Pages.Reverse }}
-    {{if ne .Title "Search"}}
+    {{if and (and (ne .Title "Search") (ne .Title "Newsletter")) (ne .Title "hidden") }}
     <article>
       <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a>{{ if .Draft }} [draft]{{ end }}</h1>
       <h2 class="subtitle tags is-6">

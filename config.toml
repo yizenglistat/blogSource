@@ -13,7 +13,7 @@ enableRobotsTXT = true
 [params.rss] # Adding this tag enables RSS feed
 includeContent = true # Includes whole content in rss
 authorName = "Yizeng Li" # Author full name
-authorEmail = "1994yizeng@gmail.com" # Author email
+authorEmail = "yizeng@yizengli.com" # Author email
 
 [params.assets]
 customCSS = ["css/custom.css"]
@@ -67,13 +67,13 @@ hrefTargetBlank = true
 	# url = "/categories/"
 	# weight = 3
 	# [[menu.nav]]
-	# identifier = "tags"
-	# name = "Tags"
-	# url = "/tags/"
+	# identifier = "newsletter"
+	# name = "Newsletter"
+	# url = "/newsletter/"
 	# weight = 2
 	[[menu.nav]]
 	identifier = "home"
-	name = "Writings"
+	name = "Writing"
 	url = "/posts/"
 	weight = 1
 
