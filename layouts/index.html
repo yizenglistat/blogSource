@@ -13,7 +13,7 @@
     <hr style="margin-top: -2em;margin-bottom: 2em">
         <h1 class="title is-3">🔖 5 frequent tags </h1><br>
         {{ range first 5 $.Site.Taxonomies.tags.ByCount }}
-        <a href="/tags/{{ .Name }}" class= "itemtag"> {{replace .Name "-" " "}}<sup>({{.Count}})</sup></a>
+        <a href="/tags/{{ .Name }}" id= "itemtag"> {{replace .Name "-" " "}}<sup>({{.Count}})</sup></a>
         {{ $total = add $total .Count}}
         {{end}}
         <a href="/tags/" class="alltag" style="padding: 3px;">all tags ({{$total}})</a>. Alternatively navigate via <a href="/search">search</a>.

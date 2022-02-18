@@ -47,7 +47,7 @@ body.dark-mode .content strong{
   color: #FEFFEC;
 }
 
-body.dark-mode a{
+body.dark-mode div.a{
   color: #23ad51;
 }
 
@@ -62,7 +62,7 @@ body.dark-mode .title a {
 
 body.dark-mode .subtitle.is-6 a{
   background-color: #7D7C7C;
-  color:#3068e8;
+  color:#F6F6F2;
 }
 
 body.dark-mode .subtitle.is-6 a:hover{

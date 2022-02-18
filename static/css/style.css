@@ -11,15 +11,19 @@ body.dark-mode .alltag{
   color: #F6F6F2;
 }
 
-.itemtag{
+#itemtag{
   background-color:#F6F6F2;
   border-radius: 3px;
   padding: 3px;
   margin:auto;
 }
 
-body.dark-mode .itemtag{
+body.dark-mode #itemtag{
   background-color:#232b2b;
+}
+
+body.dark-mode a{
+  color:#F6F6F2;
 }
 
 .myform{
