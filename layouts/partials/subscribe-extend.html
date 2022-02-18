@@ -1,97 +1,165 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
-
 <style type="text/css">
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
 
-.wrapper {
-  position: realtive;
-  max-height: 100%;
+#myownbody {
+    height: 10vh;
+    max-width: text-width;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: -4em;
+    margin-top: 2em;
+    border-radius: 10px;
+    background-color: #F6F6F2;
 }
 
-.fas.fa-envelope {
-  color: #fff;
-  font-size: 2rem;
-  background: #333;
-  padding: 1rem;
-  border-radius: 100%;
-  margin: 0 0 1rem 0;
+#myownbody,
+#singular-form button,
+.container>#singular-form>#input-container>input {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
-body.dark-mode .card-content{
-  background-color: #7D7C7C;
+.myowncontainer {
+    width: 12rem;
+    height: 4rem;
+    padding: 10px;
+    background-color:#3068e8;
+    text-align: center;
+    border-radius: 3rem;
+    overflow: hidden;
+    transition: width .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.card-content {
-  max-width: 100%;
-  background-color: #f5f8fa;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  border-radius: 1rem;
-  padding: 4rem 4rem;
-  text-align: center;
+body.dark-mode .myowncontainer {
+  background-color: #23ad51;
 }
 
-.card-content h1 {
-  margin: 0 0 1rem 0;
+.myowncontainer>#singular-form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color:  #3068e8;
 }
 
-
-.card-content p {
-  font-size: .8rem;
-  margin: 0 0 2rem 0;
+body.dark-mode .myowncontainer>#singular-form {
+    background-color:  #23ad51;
 }
 
-body.dark-mode .card-content h1 strong{
-  color: #F6F6F2;
+.myowncontainer>#singular-form button {
+    width: 9rem;
+    padding: 0;
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    cursor: pointer;
 }
 
-input {
-  padding: .8rem 1rem;
-  width: 60%;
-  border-radius: 5rem;
-  outline: none;
-  border: .1rem solid #d1d1d1;
-  font-size: .7rem;
+.myowncontainer>#singular-form>button#trigger {
+    padding: 0;
+    width: 100%;
+    color: #F6F6F2;
+    background-color: transparent;
+    z-index: 3;
 }
 
-::placeholder {
-  color: #d1d1d1;
+.myowncontainer>#singular-form>#input-container {
+    z-index: 2;
 }
 
-.subscribe-btn {
-  padding: .8rem 2rem;
-  border-radius: 5rem;
-  max-width: 30%;
-  background: #3068e8;
-  color: #fff;
-  font-size: .7rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
+.myowncontainer>#singular-form>#input-container>input {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: #3068e8;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    padding: 0 26% 0 3%;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .4s ease .4s;
 }
 
-body.dark-mode .subscribe-btn {
-  background: #23ad51;
+body.dark-mode .myowncontainer>#singular-form>#input-container>input {
+  background-color: #23ad51;
 }
 
+.myowncontainer>#singular-form>#input-container>button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #3068e8;
+    color: #F6F6F2;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .4s ease .4s;
+}
+
+body.dark-mode .myowncontainer>#singular-form>#input-container>button {
+  background-color: #23ad51;
+}
+
+.myowncontainer>#singular-form>#success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F6F6F2;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.myowncontainer>#singular-form>button#trigger,
+.myowncontainer>#singular-form>#input-container,
+.myowncontainer>#singular-form>#success {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.myowncontainer>#singular-form>button#trigger {
+    transition: all .4s ease;
+}
+
+.myowncontainer>#singular-form>#input-container {
+    transform: scale(1);
+    opacity: 1;
+    transition: all .4s ease .4s;
+}
+
+.myowncontainer>#singular-form>#success {
+    transition: all .2s ease .4s;
+}
+
+.myowncontainer>#singular-form>button#trigger.shown,
+.myowncontainer>#singular-form>#input-container.shown,
+.myowncontainer>#singular-form>#success.shown,
+.myowncontainer>#singular-form>#input-container>button.shown,
+.myowncontainer>#singular-form>#input-container>input.shown {
+    transform: scale(1);
+    opacity: 1;
+    color: #F6F6F2;
+}
 </style>
+<div class="section">
+  <div class="container" id="myownbody">
 
-<section class="section">
-<div class = "container">
-<div class="wrapper" style="margin-top: 4em; margin-bottom: -12em">
-  <form class="card-content" action="https://sendy.yizengli.com/subscribe" method="POST" accept-charset="utf-8">
-    <div class="container">
-      <h1>Join us getting updates on <strong>Statistics</strong>, <strong>ML</strong>/<strong>DL</strong> papers.</h1>
-    </div>
-    <div class="form-input">
-      <input type="email" name="email" id="email" placeholder="domain@email.com" required>
-      <input type="hidden" name="list" value="LXqH0yHzTvfMjFPcgvsicQ"/>
-      <input type="hidden" name="subform" value="yes"/>
-      <button class="subscribe-btn" type="submit" id="submit"> SUBSCRIBE </button>
-    </div>
-  </form>
+    <div class="myowncontainer">
+            <form id="singular-form">
+                <button class="shown" type="button" id="trigger">Subscribe</button>
+                <div id="input-container">
+                    <input type="text" placeholder="domain@email.com">
+                    <button type="button">Send</button>
+                </div>
+              <div id="success">Thank you!</div>
+          </form>
+      </div>
+  </div>
 </div>
-</div>
-</section>
+<script src="{{ "js/subscribe.js" | absURL }}"></script>

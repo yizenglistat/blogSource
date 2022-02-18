@@ -55,6 +55,7 @@
 {{ if (and (.Site.Params.Info.codeCopy) (findRE "<pre" .Content 1)) }}
     <script src="/js/copycode.js"></script>
 {{ end }}
+{{partial "share" .}}
 {{partial "subscribe-extend" .}}
 {{ partial "comment.html" . }}
 {{ partial "footer" . }}
