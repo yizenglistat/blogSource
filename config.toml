@@ -60,20 +60,25 @@ hrefTargetBlank = true
 	# identifier = "search"
 	# name = "Search"
 	# url = "/search/"
-	# weight = 4
+	# weight = 5
 	# [[menu.nav]]
 	# identifier = "categories"
 	# name = "Series"
 	# url = "/categories/"
-	# weight = 3
+	# weight = 4
 	[[menu.nav]]
 	identifier = "newsletter"
 	name = "Newsletter"
 	url = "/newsletter/"
+	weight = 3
+	[[menu.nav]]
+	identifier = "posts"
+	name = "Writing"
+	url = "/posts/"
 	weight = 2
 	[[menu.nav]]
 	identifier = "home"
-	name = "Writing"
-	url = "/posts/"
+	name = "Start"
+	url = "/"
 	weight = 1
 

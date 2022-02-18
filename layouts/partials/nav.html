@@ -19,6 +19,8 @@
 
           {{ $active = or $active (and (eq .Name "Newsletter") (eq $current.Section "newsletter")) }}
 
+          {{ $active = or $active (and (eq .Weight 1) (eq $current.RelPermalink "/")) }}
+
 
 
           {{ if $active}}
