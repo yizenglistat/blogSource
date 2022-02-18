@@ -377,3 +377,13 @@ body.dark-mode #sign-in form input[type="submit"]:hover{
 body.dark-mode #sign-in {
   background-color: #7D7C7C;
 }
+
+
+.flex-left {
+    width: 45%;
+    height: 100vh;
+}
+
+.flex-right {
+    width: 45%;
+}
