@@ -1,6 +1,6 @@
 ---
 title: Newsletter
-draft: true
+draft: false
 sitemap:
   priority : 0.1
 layout: "newsletter"
