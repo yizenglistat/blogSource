@@ -1,5 +1,7 @@
 a.button:hover{
   color:#F6F6F2;
+  background-color: #3068e8;
+  border-radius: 5px;
 }
 
 body.dark-mode a.button:hover{
