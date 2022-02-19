@@ -17,9 +17,8 @@
 	Browse related tags:[
 	{{ range $related_tags}}
 		{{ $clean_tag := replace (. | lower) " " "-" }}
-		<a href="/tags/{{$clean_tag}}" id= "itemtag" class="relatedtag" style="font-size:80% ;font-weight: 100;margin-left: 0;">{{$clean_tag}}</a>
-		
-	{{end}}]
+		<a href="/tags/{{$clean_tag}}" id= "itemtag" class="relatedtag" style="font-size:80% ;font-weight: 100;margin-left: 0;">{{$clean_tag}}</a>		
+	{{end}}] or try <a href="/search" id=searchlogo>🔍search</a>
 
 {{ end }}
 </div>
