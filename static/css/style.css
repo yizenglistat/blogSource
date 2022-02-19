@@ -1072,14 +1072,10 @@ a.box:active {
   text-align: center;
 }
 
-.button:hover {
-  border-color: #aeb1b5;
-}
 
 .button.is-active,
 .button:active,
 .button:focus {
-  border-color: #2077b2;
   outline: 0;
 }
 
@@ -1541,6 +1537,8 @@ a.box:active {
   color: #fff;
 }
 
+
+
 .button.is-link {
   color: #3068e8;
   font-weight: bold;
@@ -1550,8 +1548,8 @@ a.box:active {
 }
 
 .button.is-link:hover {
-  background-color: none;
-  color: #23ad51;
+  background-color: #23ad51;
+  color: #F6F6F2;
 }
 
 .button.is-small {
@@ -2901,14 +2899,19 @@ a.box:active {
   border-radius: 7px;
   padding: 3px;
   text-decoration: none;
+  opacity: 1;
 }
 
 .subtitle.is-6 a:hover{
   background-color: #3068e8;
   color:white;
   font-size: 12px;
+  opacity: 1;
 }
 
+.button:hover{
+  opacity: 1;
+}
 
 
 
@@ -2916,8 +2919,14 @@ a.box:active {
 .subtitle.date {
   line-height: 1.5em;
   color:black;
-  opacity: 0.55;
+  opacity: 0.6;
 }
+
+.subtitle.tags:hover,
+.subtitle.date:hover {
+  opacity: 1;
+}
+
 
 .subtitle.is-normal {
   font-weight: 400;
@@ -4814,6 +4823,15 @@ a.box:active {
 .panel-icon {
   text-align: center;
 }
+
+#mysummary{
+  opacity: 0.6
+}
+
+#mysummary:hover{
+  opacity: 1
+}
+
 
 .media .content:not(:last-child) {
   margin-bottom: 10px;

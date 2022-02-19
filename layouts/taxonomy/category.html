@@ -3,6 +3,22 @@
 <section class="section">
   <div class="container">
     <hr style="margin-top: -5em; margin-bottom:2em">
+
+    {{$tmp := ""}}
+
+      {{range $key, $val := (split .Name " ")}}
+        {{$a := (substr $val 0 1 | upper)}}
+        {{$b := (substr $val 1)}}
+        {{$c := printf "%s" $b | printf "%s%s" $a | printf "%s" }}
+        {{$tmp = printf "%s " $c | printf "%s%s" $tmp | printf "%s"}}
+      {{end}}
+
+      <div style="margin-bottom: 1.5em;display: flex;justify-content: space-between;">  
+    <h1 class= "title is-3">🔖 {{$tmp}}</h1>
+
+    <a href="/categories/" class="button" style="display: flex;margin:0;padding: 3px;font-size: 18px;">Series ↵ </a>
+    </div>
+
     {{ $paginator := .Paginate (where .Data.Pages "Params.hidden" "ne" true) }}
     {{ range sort .Paginator.Pages }}
     <article>
@@ -19,7 +35,7 @@
         {{ partial "categories" .Params.categories }}
         {{ end }}
       </h1>
-      <div class="content" style="opacity: 0.5;margin-top: -1em;">
+      <div class="content" id="mysummary" style="margin-top: -1em;">
         {{ .Summary | plainify | safeHTML }}
         {{ if .Truncated }}
         <a class="button is-link" href="{{ .Permalink }}" style="height:28px">

@@ -1,7 +1,7 @@
 
 
 {{ range first 1 . }}
-<a class="subtitle is-6" href="{{ "/categories/" | relURL }}{{ . | urlize }}/">Series {{ . }}</a>
+<a class="subtitle is-6" style="font-weight: 500;" href="{{ "/categories/" | relURL }}{{ . | urlize }}/">Series {{ . }}</a>
 {{ end }}
 
 <!-- 

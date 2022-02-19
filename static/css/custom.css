@@ -1,3 +1,9 @@
+
+body.dark-mode a#is-3-more:hover{
+  text-decoration: none;
+  color: red;
+}
+
 body.dark-mode #footerlink{
   color: #f5f8fa;
 }

@@ -23,6 +23,7 @@
   switcher.addEventListener("click", function() {
         this.classList.toggle('js-toggle--checked');
         this.classList.add('js-toggle--focus');
+    
     //If dark mode is selected
     if (this.classList.contains('js-toggle--checked')) {
       body.classList.add('dark-mode');
@@ -31,10 +32,11 @@
       loadComment();
     } else {
       body.classList.remove('dark-mode');
-      loadComment();
+      
       setTimeout(function() {
         localStorage.removeItem('darkMode');
       }, 100);
+      loadComment();
     }
   })
 
@@ -44,6 +46,7 @@
         switcher.classList.add('js-toggle--checked');
         body.classList.add('dark-mode');
   }
+
 
 </script>
 

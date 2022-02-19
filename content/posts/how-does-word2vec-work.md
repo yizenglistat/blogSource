@@ -3,6 +3,7 @@ date: 2022-02-13
 lastmod: 2022-02-14
 linktitle: how-does-word2vec-work 
 title: Word2vec Explained 
+pined: true
 weight: 1
 draft: false
 tags: ["word2vec","statistics"]

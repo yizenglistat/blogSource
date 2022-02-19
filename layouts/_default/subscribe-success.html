@@ -1,25 +1,25 @@
 {{ partial "header" . }}
 {{ partial "nav" . }}
 
-<section class="section" style="margin-bottom: -3em; margin-top: -3em">
+<section class="section" style="margin-bottom: 0em; margin-top: -3em">
 	<div class="container">
 		<hr style="margin-top: -2em;margin-bottom: 2em">
 		<h1 class= "title is-3">📬 Newsletter<h1>
 		<p style="font-size: 17px">Thanks for the subscription and stay tuned!</p>
 		<div class="messagealert">
-			<strong >SUCCESS!</strong><br>
-			<p style="margin-top: 2em">Yay! Everything worked perfect! Let's keep in touch.</p>
+			<strong >❤ SUCCESS!</strong><br>
+			<p style="margin-top: 2em">YAY! Everything worked perfect! Let's keep in touch.</p>
 		</div>
 	</div>
 </section>
 
-<section class="section">
+<section class="section" style="opacity: 0.5">
 	<div class="container" style="display: flex;justify-content: center; max-width: text-width;">
 		<a class="button" id= "sortbtn_active" href="/newsletter/"> NEW </a> <a href="/popular/" id= "sortbtn" class="button"> TOP </a>
 	</div>	
 </section>
 
-<section class="section" style="margin-top: -3em">
+<section class="section" style="margin-top: -3em;opacity: 0.5">
 	<div class="container">
     {{ range first 3 (sort .Site.RegularPages.ByDate.Reverse) }}
     <article>

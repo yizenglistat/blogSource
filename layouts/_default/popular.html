@@ -38,7 +38,7 @@
         </p>
       </h2>
       
-      <div class="content" style="opacity: 0.5;margin-top: -1em;">
+      <div class="content" id="mysummary" style="margin-top: -1em;">
         {{ .Summary | plainify | safeHTML }}
         {{ if .Truncated }}
         <a class="button is-link" href="{{ .Permalink }}" style="height:28px">

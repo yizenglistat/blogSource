@@ -1,9 +1,11 @@
 ---
 date: 2012-09-28
+lastmod: 2013-02-02
 linktitle: A Testing file with bot texts
 title: Testing E
 weight: 1
 draft: true
+pined: true
 tags: ["Pytorch", "Neural Networks"]
 categories: ["Series 2"]
 ---
