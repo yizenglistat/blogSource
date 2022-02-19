@@ -1,5 +1,5 @@
 ---
-date: 2012-09-28
+date: 2022-02-17
 linktitle: generative-models-review
 title: Text-to-Text Generator Review
 weight: 1

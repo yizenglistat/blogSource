@@ -86,6 +86,10 @@ body.dark-mode a:hover{
   max-width: 100%;
 }
 
+.utterances-form{
+  background: red;
+}
+
 .messagealert {
   padding: 10px;
   background-color: #f5f8fa;

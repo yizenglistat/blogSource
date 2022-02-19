@@ -1,5 +1,5 @@
 ---
-date: 2012-09-28
+date: 2022-02-16
 linktitle: Bayesian Tree VCM
 title: Bayesian Tree VCM Practice
 weight: 1

@@ -34,7 +34,7 @@
 
 <section class="section" style="margin-top: -3em">
 	<div class="container">
-    {{ range first 3 (sort .Site.RegularPages.ByDate) }}
+    {{ range first 3 (sort .Site.RegularPages.ByDate.Reverse) }}
     <article>
       <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a>{{ if .Draft }} [draft]{{ end }}</h1>
       <h2 class="subtitle tags is-6">
