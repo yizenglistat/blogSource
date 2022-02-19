@@ -1,3 +1,4 @@
+
 a.button:hover{
   color:#F6F6F2;
   background-color: #3068e8;
@@ -6,6 +7,7 @@ a.button:hover{
 
 body.dark-mode a.button:hover{
   color:#F6F6F2;
+  background-color: #23ad51;
 }
 
 
@@ -14,6 +16,17 @@ body.dark-mode a.button:hover{
   padding: 15px;
   margin-left: 20px;
   margin-top: -2em;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#sortbtn_active{
+  background-color: #23ad51;
+  color: #F6F6F2;
+  padding: 15px;
+  margin-left: 20px;
+  margin-top: -2em;
+  border-radius: 5px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
@@ -21,10 +34,25 @@ body.dark-mode #sortbtn{
   background-color: #474848;
 }
 
+body.dark-mode #sortbtn_active{
+  background-color: #3068e8;
+}
+
+
 a#sortbtn:hover{
   background-color: #23ad51;
 }
+
+a#sortbtn_active:hover{
+  background-color: #23ad51;
+}
+
+
 body.dark-mode a#sortbtn:hover{
+  background-color: #3068e8;
+}
+
+body.dark-mode a#sortbtn_active:hover{
   background-color: #3068e8;
 }
 
@@ -44,6 +72,7 @@ a:hover.alltag{
 
 a.alltag{
   color:#23ad51;
+  font-weight: bold;
 }
 
 body.dark-mode a:hover.alltag{
@@ -53,7 +82,27 @@ body.dark-mode a:hover.alltag{
 
 body.dark-mode a.alltag{
   background-color: #7D7C7C;
-  color: #F6F6F2;
+  color: #353535;
+}
+
+#searchlogo{
+  background-color:#F6F6F2;
+  border-radius: 3px;
+  padding: 3px;
+  margin: auto;
+}
+
+body.dark-mode #searchlogo{
+  background-color:#7D7C7C;
+}
+
+body.dark-mode a:hover#searchlogo{
+  background-color:#3068e8;
+}
+
+a:hover#searchlogo{
+  background-color:#23ad51;
+  color:#F6F6F2;
 }
 
 #itemtag{
@@ -63,8 +112,14 @@ body.dark-mode a.alltag{
   margin: auto;
 }
 
+a:hover#itemtag{
+  background-color:#3068e8;
+  color: #F6F6F2;
+}
+
 body.dark-mode #itemtag{
-  background-color:#232b2b;
+  background-color:#7D7C7C;
+  color: #F6F6F2;
 }
 
 body.dark-mode a:hover#itemtag {
@@ -86,10 +141,7 @@ body.dark-mode a:hover{
 
 .utterances {
   max-width: 100%;
-}
-
-.utterances-form{
-  background: red;
+  background: transparent;
 }
 
 .messagealert {
@@ -2864,6 +2916,7 @@ a.box:active {
 .subtitle.date {
   line-height: 1.5em;
   color:black;
+  opacity: 0.55;
 }
 
 .subtitle.is-normal {

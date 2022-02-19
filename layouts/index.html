@@ -16,7 +16,7 @@
   <div class="container" style="line-height: 2;" >
     <hr style="margin-top: -1em;margin-bottom: 2em">
         <h1 class="title is-3" style="margin-bottom: -0.5em">🔖 Top 5 tags </h1><br>
-        <a href="/tags/" class="alltag" style="padding: 3px;">All tags ({{$total}})</a> <p>Alternatively navigate via <a href="/search">search</a>.</p><br>
+        <a href="/tags/" class="alltag" style="padding: 3px;">All tags ({{$total}})</a> Alternatively navigate via <a href="/search" id=searchlogo>🔍search</a>.<br>
         {{ range first 5 $.Site.Taxonomies.tags.ByCount }}
         <a href="/tags/{{ .Name }}" id= "itemtag"> {{replace .Name "-" " "}}</a>
         {{end}}

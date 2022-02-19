@@ -13,8 +13,10 @@
         <input class="js-toggle-screenreader-only" type="checkbox" aria-label="Switch between Dark and Light mode">
     </div>
 </div>
+
 <script>
-    var body = document.body;
+  
+  var body = document.body;
   var switcher = document.getElementsByClassName('js-toggle')[0];
 
   //Click on dark mode icon. Add dark mode classes and wrappers. Store user preference through sessions
@@ -26,8 +28,10 @@
       body.classList.add('dark-mode');
       //Save user preference in storage
       localStorage.setItem('darkMode', 'true');
+      loadComment();
     } else {
       body.classList.remove('dark-mode');
+      loadComment();
       setTimeout(function() {
         localStorage.removeItem('darkMode');
       }, 100);

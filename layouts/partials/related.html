@@ -1,13 +1,25 @@
-{{ $related := .Site.RegularPages.Related . | first 5 }}
-{{ with $related }}
-<div></div>
+<style type="text/css">
 
-<h3>Related Posts:</h3>
-<ul>
+</style>
+<div class="container"style="line-height: 2;">
+
+{{ $related_tags := slice}}
+
+{{ $related := .Site.RegularPages.Related . }}
+
+{{ with $related }}
+
 	{{ range . }}
-	<li>
-	<a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
-	</li>
+
+		{{ $related_tags = union $related_tags .Params.tags }}
+		
 	{{ end }}
-</ul>
+	Browse related tags:[
+	{{ range $related_tags}}
+		{{ $clean_tag := replace (. | lower) " " "-" }}
+		<a href="/tags/{{$clean_tag}}" id= "itemtag" class="relatedtag" style="font-size:80% ;font-weight: 100;margin-left: 0;">{{$clean_tag}}</a>
+		
+	{{end}}]
+
 {{ end }}
+</div>
