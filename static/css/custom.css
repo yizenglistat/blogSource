@@ -51,6 +51,10 @@ body.dark-mode div.a{
   color: #23ad51;
 }
 
+body.dark-mode p a{
+  color: #23ad51;
+}
+
 body.dark-mode a:hover{
   color: #3068e8;
 }
@@ -212,7 +216,11 @@ body.dark-mode  a.nav-item {
 
 body.dark-mode #mysearchbox input {
   color: #23ad51;
+}
 
+
+body.dark-mode #mysearchbox input, textarea {
+  background: #474848;
 }
 
 
@@ -269,7 +277,7 @@ body.dark-mode #mysearchResults a {
 body.dark-mode #mysearchResults a:hover, 
 body.dark-mode #searchResults a:focus {
   outline: 0;
-  background-color: #7D7C7C;
+  background-color: #474848;
   color: #3068e8;
 }
 
@@ -316,6 +324,11 @@ body.dark-mode .mymark{
   padding-left: 3%;
   margin-top: 3%;
   color: #000;
+}
+
+
+body.dark-mode #sign-in form input[type="email"], textarea{
+  background-color: #474848;
 }
 
 body.dark-mode #sign-in form input[type="submit"] {
@@ -375,15 +388,5 @@ body.dark-mode #sign-in form input[type="submit"]:hover{
 
 
 body.dark-mode #sign-in {
-  background-color: #7D7C7C;
-}
-
-
-.flex-left {
-    width: 45%;
-    height: 100vh;
-}
-
-.flex-right {
-    width: 45%;
+  background-color: #353535;
 }

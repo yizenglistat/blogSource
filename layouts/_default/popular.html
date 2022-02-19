@@ -1,17 +1,3 @@
-<style type="text/css">
-
-#sortbtn{
-	background-color: #F6F6F2;
-	padding: 20px;
-	margin-left: 50px;
-	margin-top: -2em;
-}
-
-#sortbtn div.a{
-	background-color: #3068e8;
-}
-
-</style>
 
 {{ partial "header" . }}
 {{ partial "nav" . }}
@@ -34,7 +20,7 @@
 
 <section class="section" style="margin-top: -3em">
 	<div class="container">
-    {{ range first 3 (sort .Site.RegularPages.ByDate) }}
+    {{ range first 3 (sort .Site.RegularPages.ByWeight.Reverse) }}
     <article>
       <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a>{{ if .Draft }} [draft]{{ end }}</h1>
       <h2 class="subtitle tags is-6">

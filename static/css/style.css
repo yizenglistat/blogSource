@@ -1,3 +1,32 @@
+a.button:hover{
+  color:#F6F6F2;
+}
+
+body.dark-mode a.button:hover{
+  color:#F6F6F2;
+}
+
+
+#sortbtn{
+  background-color: #F6F6F2;
+  padding: 20px;
+  margin-left: 50px;
+  margin-top: -2em;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+body.dark-mode #sortbtn{
+  background-color: #474848;
+}
+
+a#sortbtn:hover{
+  background-color: #23ad51;
+}
+body.dark-mode a#sortbtn:hover{
+  background-color: #3068e8;
+}
+
+
 .alltag{
   background-color: #F6F6F2;
   color: #F6F6F2;
@@ -73,7 +102,7 @@ body.dark-mode a:hover{
 }
 
 body.dark-mode .messagealert {
-  background-color: #7D7C7C;
+  background-color: #474848;
 }
 
 body.dark-mode .messagealert p{
@@ -81,6 +110,10 @@ body.dark-mode .messagealert p{
 }
 
 .messagealert strong{
+  color: #23ad51;
+}
+
+body.dark-mode .messagealert strong{
   color: #23ad51;
 }
 
@@ -6722,7 +6755,7 @@ html {
 .content h5:not(:first-child),
 .content h6:not(:first-child),
 article+article {
-  margin-top: 40px;
+  margin-top:30px;
 
 }
 
