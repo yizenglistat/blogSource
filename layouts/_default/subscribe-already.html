@@ -13,4 +13,43 @@
 	</div>
 </section>
 
+<section class="section">
+	<div class="container" style="display: flex;justify-content: center; max-width: text-width;">
+		<a class="button" id= "sortbtn_active" href="/newsletter/"> NEW </a> <a href="/popular/" id= "sortbtn" class="button"> TOP </a>
+	</div>	
+</section>
+
+<section class="section" style="margin-top: -3em">
+	<div class="container">
+    {{ range first 3 (sort .Site.RegularPages.ByDate.Reverse) }}
+    <article>
+      <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a>{{ if .Draft }} [draft]{{ end }}</h1>
+      <h2 class="subtitle tags is-6">
+        {{ .Date.Format "Jan 2, 2006" }}
+        ⏱ {{ math.Round (div (countwords .Content) 220.0) }} min
+        {{ if .Params.tags }}
+        <span class="icon is-small is-marginless">{{ partial "svg/icons" "tag" }}</span>
+        {{ partial "tags" .Params.tags }}
+        {{ end }}
+        <p class="series">
+        {{ if .Params.categories }}
+        <span class="icon is-small is-marginless">{{ partial "svg/icons" "category" }}</span>
+        {{ partial "categories" .Params.categories }}
+        {{ end }}
+        </p>
+      </h2>
+      
+      <div class="content" style="opacity: 0.5;margin-top: -1em;">
+        {{ .Summary | plainify | safeHTML }}
+        {{ if .Truncated }}
+        <a class="button is-link" href="{{ .Permalink }}" style="height:28px">
+          Read
+        </a>
+        {{ end }}
+      </div>
+    </article>
+    {{end}}
+	</div>
+</section>
+
 {{ partial "footer" . }}
