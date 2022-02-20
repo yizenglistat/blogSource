@@ -1,4 +1,5 @@
 
+
 a.button:hover{
   color:#F6F6F2;
   background-color: #3068e8;
@@ -195,7 +196,8 @@ code.has-jax {
 }
 
 .svg-fill{
-  fill:#3068e8;
+  fill:#474848;
+  stroke:#474848;
 }
 
 .series{

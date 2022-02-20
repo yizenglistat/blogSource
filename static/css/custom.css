@@ -9,7 +9,8 @@ body.dark-mode #footerlink{
 }
 
 body.dark-mode .svg-fill{
-  fill:#23ad51;
+  fill:#F6F6F2;
+  stroke: #F6F6F2
 }
 
 body.dark-mode,
@@ -50,7 +51,7 @@ body.dark-mode .content a:not(.button){
 }*/
 
 body.dark-mode .content strong{
-  color: #FEFFEC;
+  color: #F6F6F2;
 }
 
 body.dark-mode div.a{
