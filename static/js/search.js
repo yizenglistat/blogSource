@@ -103,10 +103,11 @@ var fuseOptions = {
 
 
 var searchQuery = param("s");
-
 if(searchQuery){
+
   $("#searchInput").val(searchQuery);
   executeSearch(searchQuery);
+
 }else {
   $('#mysearchResults').append("<p>Please enter a word or phrase above</p>");
 }
