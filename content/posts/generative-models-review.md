@@ -6,7 +6,7 @@ title: Text-to-Text Generator Review
 weight: 1
 pined: true
 draft: false
-tags: ["generator", "review"]
+tags: ["generator", "review", "lstm"]
 categories: ["kill seq2seq"]
 <!-- next: /testing-c
 prev: /testing-a -->
