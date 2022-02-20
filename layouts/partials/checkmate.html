@@ -1,0 +1,105 @@
+<style type="text/css">
+  
+#card {
+  position: relative;
+  width: 320px;
+  display: block;
+  margin: 40px auto;
+  text-align: center;
+}
+#upper-side {
+  padding: 2em;
+  background-color: #23ad51;
+  display: block;
+  opacity: 0.9;
+  color: #fff;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+#contBtn {
+
+  position: relative;
+  top: 1.5em;
+  text-decoration: none;
+  background-color: #23ad51;
+  color: #fff;
+  margin: auto;
+  padding: .8em 3em;
+  -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+  -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+  box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+  border-radius: 25px;
+  -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+
+#checkmark {
+  font-weight: lighter;
+  fill: #fff;
+  margin: -3.5em auto auto 20px;
+}
+
+#status {
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1em;
+  margin-top: -.2em;
+  margin-bottom: 0;
+}
+
+#lower-side {
+  padding: 2em 2em 5em 2em;
+  background: #353535;
+  display: block;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+body.dark-mode #lower-side {
+  background: #F6F6F2;
+  opacity: 0.8;
+}
+
+
+#message {
+  margin-top: -.5em;
+  color: #F6F6F2;
+  letter-spacing: 1px;
+} 
+body.dark-mode #message {
+  color: #232b2b;
+}
+#contBtn:hover {
+  -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+  -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+  box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+  -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+  background: #3068e8;
+}
+</style>
+
+<div id='card' class="animated fadeIn" style="margin-bottom: 0px">
+  <div id='upper-side'>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="#F6F6F2" fill="#F6F6F2"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.393 7.5l-5.643 5.784-2.644-2.506-1.856 1.858 4.5 4.364 7.5-7.643-1.857-1.857z"/></svg>
+      <h3 id='status' style="margin-top: 1em">Success</h3>
+  </div>
+  
+  <div id='lower-side'>
+    <p id='message'>
+      Congratulations, you have successfully subscribed!
+    </p>
+    <a href="/" id="contBtn">Home↵</a>
+  </div>
+</div>
+
+
+
+

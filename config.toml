@@ -35,7 +35,7 @@ disqusOnDemand = true  # Load Disqus comments on click
 
 [params.social]
 github = "yizenglistat"
-email = "1994yizeng@gmail.com"
+email = "yizeng@yizengli.com"
 rss = "index.xml" # Add this to show RSS button in social.
 kofi = "yizenglistat"
 twitter = "yizenglistat"

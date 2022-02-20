@@ -100,6 +100,10 @@ body.dark-mode a:hover#searchlogo{
   background-color:#3068e8;
 }
 
+body.dark-mode a#searchlogo{
+  color: #F6F6F2;
+}
+
 a:hover#searchlogo{
   background-color:#23ad51;
   color:#F6F6F2;
