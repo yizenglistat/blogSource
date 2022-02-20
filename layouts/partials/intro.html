@@ -1,8 +1,14 @@
 <section class="section" style="margin-bottom: -3em; margin-top: -3em">
 	
+	{{$quotes := slice "Never say never!" "Don't settle for mediocrity!" "Its supposed to be hard!" "Keep it up!" "Go for it!" "Keep your chin up!" "Hang in there!" "Rooting for you!"}}
+	
+	{{$num := seq 7 | shuffle | first 1 }}
+	{{$num = sub (index $num 0 | int) 1}}
+
+
 	<div class="container">
 		<hr style="margin-top: -2em;margin-bottom: 2em">
-		<h1 class="title is-3">{{partial "svg/icons-extend.html" (now.Weekday | lower)}} Aging like wines!<h1>
+		<h1 class="title is-3">{{partial "svg/icons-extend.html" (now.Weekday | lower)}} {{index $quotes $num}}<h1>
 		<p style="font-size: 17px">I write about statistics, machine learing and deep learning. Browse recent updates in <a href="/newsletter">newsletter</a> or navigate via <a href="/tags">tags</a> or <a href="/search">search</a>.</p> 
 		{{partial "subscribe.html" .}}
 	  	<hr style="margin-bottom:0em;margin-top:4.5em;">
