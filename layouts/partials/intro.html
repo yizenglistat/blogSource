@@ -8,7 +8,7 @@
 
 	<div class="container">
 		<hr style="margin-top: -2em;margin-bottom: 2em">
-		<h1 class="title is-3">{{partial "svg/icons-extend.html" (now.Weekday | lower)}} {{index $quotes $num}}<h1>
+		<h1 class="title is-3">{{partial "svg/icons-extend.html" ("Sunday" | lower)}} {{index $quotes $num}}<h1>
 		<p style="font-size: 17px">I write about statistics, machine learing and deep learning. Browse recent updates in <a href="/newsletter">newsletter</a> or navigate via <a href="/tags">tags</a> or <a href="/search">search</a>.</p> 
 		{{partial "subscribe.html" .}}
 	  	<hr style="margin-bottom:0em;margin-top:4.5em;">
