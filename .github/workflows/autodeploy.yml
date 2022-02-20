@@ -1,5 +1,5 @@
 
-name: Deploy gh-pages
+name: Github
 
 on:
   push:
