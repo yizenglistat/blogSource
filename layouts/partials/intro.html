@@ -1,6 +1,6 @@
 <section class="section" style="margin-bottom: -3em; margin-top: -3em">
 	
-	{{$quotes := slice "Never say never!" "Don't settle for mediocrity!" "Its supposed to be hard!" "Keep it up!" "Go for it!" "Keep your chin up!" "Hang in there!" "Rooting for you!"}}
+	{{$quotes := slice "Never say never!" "Don't settle for mediocrity!" "Its supposed to be hard!" "Keep it up!" "Go for it!" "Keep your chin up!" "Hang in there!" "Rooting for you!" "Confidence is the key!" "Stay there!" "You will shine!" "Nobody is perfect." "I am no stranger. Just a friend you haven't met." "You deserve it!" "I ain't scare nothing!" "Be diisciplined" "Focus, my friend." "Mindset!"}}
 	
 	{{$num := seq (len $quotes) | shuffle | first 1 }}
 	{{$num = sub (index $num 0 | int) 1}}
@@ -9,7 +9,7 @@
 	<div class="container">
 		<hr style="margin-top: -2em;margin-bottom: 2em">
 		<h1 class="title is-3">♡ {{index $quotes $num}}<h1>
-		<p style="font-size: 17px">I write about statistics, machine learing and deep learning. Browse recent updates in <a href="/newsletter">newsletter</a> or navigate via <a href="/tags">tags</a> or <a href="/search">search</a>.</p> 
+		<p style="font-size: 17px">I write about statistics, machine learing and deep learning. Browse recent updates in <a href="/newsletter">newsletter</a> or navigate via <a href="/tags">tags</a>, <a href="/categories">series</a> or <a href="/search">search</a>.</p> 
 		{{partial "subscribe.html" .}}
 	  	<hr style="margin-bottom:0em;margin-top:4.5em;">
 	</div>
