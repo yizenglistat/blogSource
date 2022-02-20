@@ -83,7 +83,7 @@ body.dark-mode a:hover.alltag{
 
 body.dark-mode a.alltag{
   background-color: #7D7C7C;
-  color: #353535;
+  color: #F6F6F2;
 }
 
 #searchlogo{
@@ -2804,7 +2804,7 @@ a.box:active {
 
 .title.is-2 code,
 .title.is-3 {
-  font-size: 28px;
+  font-size: 23px;
 }
 
 .title.is-3 code,
