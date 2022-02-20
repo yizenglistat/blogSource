@@ -26,7 +26,10 @@
       {{ partial "categories" .Params.categories }}
       {{ end }}
       </div>
-
+      {{if .Params.code}}
+        <span class="icon is-small is-marginless">{{ partial "svg/icons" "github" }}</span>
+        <a class = "subtitle is-6" href= {{.Params.code}}>code</a>
+        {{end}}
     </h2>
     
     
