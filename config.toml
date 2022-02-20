@@ -9,6 +9,9 @@ googleAnalytics = "UA-125871484-1"
 Paginate = 4 # Number of posts per page
 enableRobotsTXT = true
 
+[params.selected]
+numPosts = 3
+
 [params.rss] # Adding this tag enables RSS feed
 includeContent = true # Includes whole content in rss
 authorName = "Yizeng Li" # Author full name
