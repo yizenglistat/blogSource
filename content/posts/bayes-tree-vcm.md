@@ -7,7 +7,7 @@ title: Bayesian Tree VCM Practice
 weight: 1
 draft: false
 tags: ["bayesian", "vcm", "decision tree"]
-categories:
+categories: ["group testing"]
 ---
 
 A paper review on a Bayesian tree-based varying coefficient model.

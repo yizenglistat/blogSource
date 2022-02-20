@@ -7,7 +7,7 @@ pined: true
 weight: 1
 draft: false
 tags: ["word2vec","statistics"]
-categories:
+categories: ["kill seq2seq"]
 ---
 
 A tutorial for Word2vec with statistical details explained. 

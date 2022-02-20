@@ -2,7 +2,7 @@
 	
 	{{$quotes := slice "Never say never!" "Don't settle for mediocrity!" "Its supposed to be hard!" "Keep it up!" "Go for it!" "Keep your chin up!" "Hang in there!" "Rooting for you!"}}
 	
-	{{$num := seq 7 | shuffle | first 1 }}
+	{{$num := seq (len $quotes) | shuffle | first 1 }}
 	{{$num = sub (index $num 0 | int) 1}}
 
 

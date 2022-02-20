@@ -7,7 +7,7 @@ weight: 1
 pined: true
 draft: false
 tags: ["generator", "review"]
-categories: 
+categories: ["kill seq2seq"]
 <!-- next: /testing-c
 prev: /testing-a -->
 ---
