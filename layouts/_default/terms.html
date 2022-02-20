@@ -1,56 +1,87 @@
+<style type="text/css">
+#contBtn {
+  top: 0em;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #F6F6F2;
+  color: #23ad51;
+  padding: .5em 2px;
+  border-radius: 10px;
+  -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+a#contBtn:hover {
+  -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+  background: #23ad51;
+  color:#F6F6F2;
+}
+
+body.dark-mode #contBtn{
+  background-color: #7D7C7C;
+  color: #F6F6F2;
+}
+
+body.dark-mode a#contBtn:hover{
+  background: #3068e8;
+  color:#F6F6F2;
+}
+
+</style>
+
 {{ partial "header" . }}
 {{ partial "nav" . }}
+
+{{ $letters := split "ABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
 <section class="section">
   <div class="container">
-    <hr style="margin-top: -5em; margin-bottom:2em">
-<h1 class="content">
-    {{- $type := .Type }}
-    {{- range $key, $value := .Data.Terms.Alphabetical }}
-    {{- $name := .Name }}
-    {{- $count := .Count }}
-    {{- with $.Site.GetPage (printf "/%s/%s" $type $name) }}
-    <li style="list-style: disc">
-        <a href="{{ .Permalink }}">{{ .Name }} <sup><strong>({{ $count }})</strong></sup> </a>
-    </li>
-    {{- end }}
-    {{- end }}
+    
+    <hr style="margin-top: -5em; margin-bottom:1em">
+    
+    <div>
+    <h1 class="content">
+      {{- $type := .Type }}
+      
+      {{- range $key, $value := .Data.Terms.Alphabetical }}
+        
+        {{- $name := .Name }}
+        {{- $count := .Count }}
+        
+        {{- with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+
+            {{ $firstChar := substr .Name 0 1 | upper }}
+            {{ if $firstChar | in $letters }}
+                  <div style="display: flex;flex-direction: row;justify-content: space-between;">
+                  <div style="display: inline-block;">
+                  <a href={{.Permalink}}>{{ .Title }}</a>
+                  </div>
+                  <div style="display: flex;margin-left: auto;">
+                  {{ $curLetter := $.Scratch.Get "curLetter" }}
+                  {{ if ne $firstChar $curLetter }}
+                        {{ $.Scratch.Set "curLetter" $firstChar }}
+                        <h3 class="subtitle is-6">{{ $firstChar }}</h3>
+                  {{ end }}
+                  </div>
+                  </div>
+            {{ end }}
+        {{ end }}
+      {{ end }}
 </h1>
 
-   <!--  {{- $pages := . -}}
-    {{- if .IsHome -}}
-    {{- $pages = .Site.RegularPages -}}
-    {{- else -}}
-    {{ $pages = .Pages -}}
-    {{- end -}}
-    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
-    
-    {{ range $.Site.Taxonomies.tags.ByCount }}
-      
-        <h1 class='content'>
-          <li>
-          <a href="/tags/{{ .Name }}"> 
-            {{ if in .Name "-" }}
-            {{replace .Name "-" " " | title}}
-            {{ else }}
-            {{ .Name | title}}
-            {{ end }}          
-            ({{ .Count }})
-          </a>
-          </li>
-        </h1>
-      
-    {{end}} -->
-
-<!--     {{ range sort .Pages }}
-    <article>
-      <h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}{{ partial "taxonomies_count" . }}</a>{{ if .Draft }} ::Draft{{ end }}</h2>
-    </article>
-    {{ end }} -->
-  </div>
-
-      
+</div>
 
 
+    <div style="display: flex;margin-top:1em">
+      <a id="contBtn" href="/">Home ↵</a>
+      <button onclick="topFunction()"  class="button" style="padding:0px;margin-left: auto;order: 2">⇪Top</button>
+    </div>
+
+</div>
 </section>
 <!-- {{ partial "pager" . }} -->
 {{ partial "footer" . }}
