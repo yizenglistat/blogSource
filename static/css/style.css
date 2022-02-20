@@ -13,6 +13,7 @@ body.dark-mode a.button:hover{
 
 #sortbtn{
   background-color: #F6F6F2;
+  color: #F6F6F2;
   padding: 15px;
   margin-left: 20px;
   margin-top: -2em;
@@ -21,7 +22,7 @@ body.dark-mode a.button:hover{
 }
 
 #sortbtn_active{
-  background-color: #23ad51;
+  background-color: #3068e8;
   color: #F6F6F2;
   padding: 15px;
   margin-left: 20px;
@@ -35,7 +36,8 @@ body.dark-mode #sortbtn{
 }
 
 body.dark-mode #sortbtn_active{
-  background-color: #3068e8;
+  background-color: #23ad51;
+  color: #F6F6F2;
 }
 
 
@@ -196,6 +198,17 @@ code.has-jax {
 
 .svg-fill{
   fill:#474848;
+  stroke:#474848;
+}
+
+.svg-fill-active{
+  fill:#F6F6F2;
+  stroke:#F6F6F2;
+}
+
+
+body.dark-mode .svg-fill-active{
+    fill:#474848;
   stroke:#474848;
 }
 
