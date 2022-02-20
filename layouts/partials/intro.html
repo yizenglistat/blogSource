@@ -4,8 +4,9 @@
 	
 	{{$num := seq (len $quotes) | shuffle | first 1 }}
 	{{$num = sub (index $num 0 | int) 1}}
-
-
+	{{$num = add (printf "%d" now.Weekday | int) $num}}
+	{{$num = mod (len $quotes) $num}}
+	
 	<div class="container">
 		<hr style="margin-top: -2em;margin-bottom: 2em">
 		<h1 class="title is-3">♡ {{index $quotes $num}}<h1>
