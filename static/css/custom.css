@@ -455,9 +455,10 @@ body.dark-mode #sign-in {
 }
 
 body.dark-mode  .subbtn:hover{
-  background: #23ad51; 
+  background: #23ad51;
+
 }
 
 body.dark-mode .subbtn{
-  background: #3068e8; 
+  background: #23ad51;
 }
