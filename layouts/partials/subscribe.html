@@ -1,9 +1,14 @@
 
 <div id="sign-in" style="margin-top: 2em;margin-bottom: -2em;">
-	<form action="https://sendy.yizengli.com/subscribe" method="POST" accept-charset="utf-8">
+	<form style="display: flex;flex-direction: row;justify-content: space-around;" action="https://sendy.yizengli.com/subscribe" method="POST" accept-charset="utf-8">
 		<input type="email" name="email" placeholder="domain@example.com" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+		
+		<!-- <input style="border-radius: 6px;" type="submit" id="submit" value="SUBMIT"> -->
 		<input type="hidden" name="list" value="LXqH0yHzTvfMjFPcgvsicQ"/>
 		<input type="hidden" name="subform" value="yes"/>
-		<input style="border-radius: 6px;" type="submit" id="submit" value="SUBMIT">
+		<button class="subbtn" id="submit">
+			SUBMIT
+		</button>
+		
     </form>
 </div>

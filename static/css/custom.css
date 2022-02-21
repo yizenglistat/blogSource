@@ -427,3 +427,17 @@ and (max-width: 812px){
 body.dark-mode #sign-in {
   background-color: #353535;
 }
+
+
+.subbtn{
+  font-size: 9px; 
+  padding: 1.2vh; 
+  margin-top: 2vh; 
+  margin-bottom: 1.2vh; 
+  margin-right: 1%; 
+  background: #3068e8; 
+  color: #F6F6F2; 
+  border:none; 
+  border-radius: 6px;
+  font-weight: 550;
+}
