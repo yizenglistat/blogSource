@@ -9,7 +9,10 @@ function executeSearch(searchQuery){
     if(result.length > 0){
       populateResults(result);
     }else{
-      $('#mysearchResults').append("<p>Oops! not found.</p>");
+      // $('#mysearchResults').append("<p>Oops! not found.</p>");
+      document.getElementById("notfound").style.visibility = 'visible';
+      document.getElementById("searchTags").style.visibility = 'visible';
+      document.getElementById("searchSeries").style.visibility = 'visible';
     }
   });
 }

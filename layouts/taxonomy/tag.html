@@ -1,9 +1,7 @@
 {{ partial "header" . }}
 {{ partial "nav" . }}
-<section class="section">
+<section class="section" style="margin-top: -2.3em;">
   <div class="container">
-    <hr style="margin-top: -5em; margin-bottom:2em">
-    
       {{$tmp := ""}}
 
       {{range $key, $val := (split .Name " ")}}
