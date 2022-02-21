@@ -337,7 +337,7 @@ body.dark-mode .mymark{
   border: none;
   padding: 1.2vh;
   margin-top: 2vh;
-  margin-bottom: 1.2vh;
+  margin-bottom: 0.5vh;
   margin-right: 1%;
   width: 100%;
 }
@@ -437,10 +437,10 @@ body.dark-mode #sign-in {
   font-size: 8px;
   padding-top: 5px;
   padding-bottom: 5px; 
-  padding-left: 10px;
-  padding-right: 10px; 
+  padding-left: 13px;
+  padding-right: 13px; 
   margin-top: 2vh; 
-  margin-bottom: 1.2vh; 
+  margin-bottom: 0.5vh; 
   margin-right: 1%; 
   background: #3068e8; 
   color: #F6F6F2; 
