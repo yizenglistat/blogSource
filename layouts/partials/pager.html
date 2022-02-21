@@ -5,18 +5,18 @@
       <div class="level-left">
         <div class="level-item">
           {{ if .Paginator.HasPrev }}
-          <a class="button" href="{{ .Paginator.Prev.URL }}">
+          <a class="button" href="{{ .Paginator.Prev.URL }}" style="font-size: 15px;font-weight: bold">
             <span class="icon is-small is-marginless">
               {{ partial "svg/icons" "prev" }}
             </span>
-            <strong>PREV</strong>
+            PREV
           </a>
           {{ else }}
-          <a class="button">
-            <span class="icon is-small is-marginless" style="opacity: 0.1">
+          <a class="button" style="opacity: 0.1;font-size: 15px;font-weight: bold">
+            <span class="icon is-small is-marginless">
               {{ partial "svg/icons" "prev" }}
             </span>
-            <strong style="opacity: 0.1">PREV</strong>
+            PREV
           </a>
           {{ end }}
         </div>
@@ -57,16 +57,16 @@
       <div class="level-right is-marginless">
         <div class="level-item">
           {{ if .Paginator.HasNext }}
-          <a class="button" href="{{ .Paginator.Next.URL }}">
-            <strong>NEXT</strong>
+          <a class="button" href="{{ .Paginator.Next.URL }}" style="font-size: 15px;font-weight: bold">
+            NEXT
             <span class="icon is-small is-marginless">
               {{ partial "svg/icons" "next" }}
             </span>
           </a>
           {{else}}
-          <a class="button">
-            <strong style="opacity: 0.1">NEXT</strong>
-            <span class="icon is-small is-marginless" style="opacity: 0.1">
+          <a class="button" style="opacity: 0.1; font-size: 15px;font-weight: bold">
+            NEXT
+            <span class="icon is-small is-marginless">
               {{ partial "svg/icons" "next" }}
             </span>
           </a>

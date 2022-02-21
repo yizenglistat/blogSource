@@ -9,16 +9,16 @@ body.dark-mode a:hover strong{
 <div style="display:flex;justify-content:space-between; max-width: 100%;flex-wrap: wrap;align-content: center;">
 <div class="level-item">
 	{{with .PrevInSection}}
-		<a class="button" href="{{ .Permalink }}">
+		<a class="button" href="{{ .Permalink }}" style="font-size: 15px;font-weight: bold">
 			<span class="icon is-small is-marginless">{{ partial "svg/icons" "prev" }}</span>
-			<strong style="font-size: 15px">{{ .Title }}</strong>
+			{{ .Title }}
 		</a>
 	{{end}}
 </div>
 <div class="level-item" style="margin-left: auto;order:1;">
 	{{with .NextInSection}}
-		<a class="button" href="{{ .Permalink }}">
-			<strong style="font-size: 15px">{{ .Title }}</strong>
+		<a class="button" href="{{ .Permalink }}" style="font-size: 15px;font-weight: bold">
+			{{ .Title }}
 			<span class="icon is-small is-marginless">{{ partial "svg/icons" "next" }}</span>
 		</a>
 	{{end}}

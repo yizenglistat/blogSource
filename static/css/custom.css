@@ -136,6 +136,9 @@ body.dark-mode .related a:not(.button){
   color:#23ad51;
 }
 
+body.dark-mode a.strong{
+  color: red;
+}
 
 body.dark-mode strong,
 body.dark-mode table th {
@@ -149,8 +152,8 @@ body.dark-mode .button:hover {
 }
 
 body.dark-mode .button.is-link:hover {
-  background-color: none;
-  color: #3068e8;
+  background-color: #3068e8;
+  color:#F6F6F2;
 }
 
 body.dark-mode .content a:not(.button):hover {
