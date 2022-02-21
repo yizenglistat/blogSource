@@ -319,13 +319,13 @@ body.dark-mode .mymark{
 
 #sign-in {
   background-color: #f5f8fa;
-  max-width: 100%;
+  max-width: 50%;
   margin: 0em auto;
   text-align: center;
   margin-bottom: 0%;
   margin-top: 3%;
   border-radius: 10px;
-  padding: 2% 2% 2% 2%;
+  padding: 3% 5% 4% 5%;
   z-index: 2;
   position: relative;
 }
@@ -337,6 +337,7 @@ body.dark-mode .mymark{
   margin-top: 2vh;
   margin-bottom: 1.2vh;
   margin-right: 1%;
+  width: 100%;
 }
 
 #sign-in form input[type="email"] {
