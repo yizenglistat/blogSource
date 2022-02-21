@@ -325,15 +325,17 @@ body.dark-mode .mymark{
   margin-bottom: 0%;
   margin-top: 3%;
   border-radius: 10px;
-  padding: 1% 2% 3% 2%;
+  padding: 2% 2% 2% 2%;
   z-index: 2;
   position: relative;
 }
 
 #sign-in form input {
-  border-radius: 10px;
+  border-radius: 6px;
   border: none;
-  padding: 2%;
+  padding: 1.2vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   margin-right: 1%;
 }
 

@@ -62,6 +62,11 @@
 {{ if (and (.Site.Params.Info.codeCopy) (findRE "<pre" .Content 1)) }}
     <script src="/js/copycode.js"></script>
 {{ end }}
-{{partial "subscribe" .}}
+<section class="section">
+  <div class="container">
+    {{partial "subscribe" .}}
+  </div>
+</section>
+
 {{ partial "comment.html" . }}
 {{ partial "footer" . }}
