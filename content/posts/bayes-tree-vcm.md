@@ -5,7 +5,7 @@ linktitle: Bayesian Tree VCM
 pined: true
 title: Bayesian Tree VCM Practice
 weight: 1
-draft: false
+draft: true
 tags: ["bayesian", "vcm", "decision tree"]
 categories: ["group testing"]
 ---

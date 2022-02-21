@@ -5,7 +5,7 @@ linktitle: generative-models-review
 title: Text-to-Text Generator Review
 weight: 1
 pined: true
-draft: false
+draft: true
 tags: ["generator", "review", "lstm"]
 categories: ["kill seq2seq"]
 <!-- next: /testing-c
