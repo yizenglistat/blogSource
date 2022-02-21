@@ -335,14 +335,13 @@ body.dark-mode .mymark{
   border: none;
   padding: 1.2vh;
   margin-top: 2vh;
-  margin-bottom: 2vh;
+  margin-bottom: 1.2vh;
   margin-right: 1%;
 }
 
 #sign-in form input[type="email"] {
   width: 60%;
   padding-left: 3%;
-  margin-top: 3%;
   color: #000;
 }
 
@@ -361,7 +360,6 @@ body.dark-mode #sign-in form input[type="submit"] {
   background: #3068e8;
   color: #f5f8fa;
   font-weight: 550;
-  margin-top: 3%;
   font-size:10px;
 }
 
@@ -380,7 +378,7 @@ body.dark-mode #sign-in form input[type="submit"]:hover{
 
   #sign-in form input[type="email"] {
     width: 80%;
-    margin-top: 3%;
+/*    margin-top: 3%;*/
   }
 
   #sign-in form input[type="submit"] {
@@ -389,20 +387,22 @@ body.dark-mode #sign-in form input[type="submit"]:hover{
 }
 
 @media only screen and (max-width: 635px) {
-  #sign-in {
-    margin-top: 3%;
+  #sign-in form input[type="submit"]{
+/*    margin-top: 3%;*/
   }
+
 }
 
 @media only screen and (max-width: 530px) {
   #sign-in form input[type="email"] {
     width: 80%;
-    margin-bottom: 3%;
-    margin-top: 5%;
+/*    margin-bottom: 3%;
+    margin-top: 5%;*/
   }
 
   #sign-in form input[type="submit"] {
     width: 40%;
+    border-radius: 6px;
   }
 }
 
