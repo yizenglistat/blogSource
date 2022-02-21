@@ -92,6 +92,7 @@ body.dark-mode a.alltag{
   border-radius: 3px;
   padding: 3px;
   margin: auto;
+  font-weight: 550;
 }
 
 body.dark-mode #searchlogo{
