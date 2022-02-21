@@ -431,7 +431,8 @@ body.dark-mode #sign-in {
 
 .subbtn{
   font-size: 9px; 
-  padding: 1.2vh; 
+  padding-left: 20px;
+  padding-right: 20px; 
   margin-top: 2vh; 
   margin-bottom: 1.2vh; 
   margin-right: 1%; 
@@ -440,4 +441,17 @@ body.dark-mode #sign-in {
   border:none; 
   border-radius: 6px;
   font-weight: 550;
+}
+
+.subbtn:hover{
+  background: #23ad51; 
+  color: #F6F6F2; 
+}
+
+body.dark-mode  .subbtn:hover{
+  background: #23ad51; 
+}
+
+body.dark-mode .subbtn{
+  background: #3068e8; 
 }
