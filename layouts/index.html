@@ -45,7 +45,7 @@ body.dark-mode .pluses {
           
           <a href="/tags/" class="alltag" style="padding: 3px;">Tags ({{$total}})</a> Alternatively navigate via <a href="/search" id=searchlogo><svg xmlns="http://www.w3.org/2000/svg" class="svg-fill" width="12" height="12" viewBox="0 0 24 24"><path d="M23.111 20.058l-4.977-4.977c.965-1.52 1.523-3.322 1.523-5.251 0-5.42-4.409-9.83-9.829-9.83-5.42 0-9.828 4.41-9.828 9.83s4.408 9.83 9.829 9.83c1.834 0 3.552-.505 5.022-1.383l5.021 5.021c2.144 2.141 5.384-1.096 3.239-3.24zm-20.064-10.228c0-3.739 3.043-6.782 6.782-6.782s6.782 3.042 6.782 6.782-3.043 6.782-6.782 6.782-6.782-3.043-6.782-6.782zm2.01-1.764c1.984-4.599 8.664-4.066 9.922.749-2.534-2.974-6.993-3.294-9.922-.749z"/></svg> Search</a><br>
           {{ range first 10 $.Site.Taxonomies.tags.ByCount }}
-          <a href="/tags/{{ .Name }}" id= "itemtag"> {{replace .Name "-" " "}}</a>
+          <a href="/tags/{{ .Name }}" id= "itemtag"> {{replace .Name "-" " "}}<sup>({{.Count}})</sup></a>
           {{end}}
           
           </div>
@@ -57,7 +57,7 @@ body.dark-mode .pluses {
           <h1 class="title is-3" style="margin-bottom: -0.5em"><svg class="svg-fill" style="margin-bottom: -3px" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M0 2h8l3 3h10v4h3l-4 13h-20v-20zm22.646 8h-17.907l-3.385 11h17.907l3.385-11zm-2.646-1v-3h-9.414l-3-3h-6.586v15.75l3-9.75h16z"/></svg> Top series </h1><br>
           <a href="/categories/" class="alltag" style="padding: 3px;">Series ({{$total_series}})</a> Alternatively navigate via <a href="/search" id=searchlogo><svg xmlns="http://www.w3.org/2000/svg" class="svg-fill" width="12" height="12" viewBox="0 0 24 24"><path d="M23.111 20.058l-4.977-4.977c.965-1.52 1.523-3.322 1.523-5.251 0-5.42-4.409-9.83-9.829-9.83-5.42 0-9.828 4.41-9.828 9.83s4.408 9.83 9.829 9.83c1.834 0 3.552-.505 5.022-1.383l5.021 5.021c2.144 2.141 5.384-1.096 3.239-3.24zm-20.064-10.228c0-3.739 3.043-6.782 6.782-6.782s6.782 3.042 6.782 6.782-3.043 6.782-6.782 6.782-6.782-3.043-6.782-6.782zm2.01-1.764c1.984-4.599 8.664-4.066 9.922.749-2.534-2.974-6.993-3.294-9.922-.749z"/></svg> Search</a><br>
           {{ range first 1 $.Site.Taxonomies.categories.ByCount }}
-          <a href="/categories/{{ .Name }}" id= "itemtag"> {{replace .Name "-" " "}}</a>
+          <a href="/categories/{{ .Name }}" id= "itemtag"> {{replace .Name "-" " "}}<sup>({{.Count}})</sup></a>
           {{end}}
           </div>
         </div>
