@@ -10,7 +10,7 @@ function executeSearch(searchQuery){
       populateResults(result);
     }else{
       // $('#mysearchResults').append("<p>Oops! not found.</p>");
-      document.getElementById("notfound").style.visibility = 'visible';
+      document.getElementById("notfound").style.display = 'block';
       document.getElementById("searchTags").style.visibility = 'visible';
       document.getElementById("searchSeries").style.visibility = 'visible';
     }
