@@ -427,19 +427,8 @@ video {
   background: 0 0;
 }
 
-pre code{ 
-  color: #353535 !important;
-  background-color: #F3F3F3 !important;
-}
 
-body.dark-mode pre code{
-  color: #F3F3F3 !important;
-  background: #353535 ! important;
-}
 
-.content .highlight pre{
-  color: red !important;
-}
 
 td,
 td img {
@@ -7052,11 +7041,15 @@ body.dark-mode .content td{
   padding: 1em;
   line-height: 1.5;
   background:#353535;
+  color: #353535 !important;
+  background-color: #F3F3F3 !important;
 }
 
 body.dark-mode .content pre code {
-background:#474848;
+  color: #F3F3F3 !important;
+  background: #353535 ! important;
 }
+
 
 .content li pre,
 .content li table {
