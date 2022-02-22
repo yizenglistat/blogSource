@@ -16,7 +16,7 @@ function addCopyButtons(clipboard) {
                     button.innerText = 'copy';
                 }, 2000);
             }, function (error) {
-                button.innerText = 'Error';
+                button.innerText = 'error';
             });
         });
         var pre = codeBlock.parentNode;

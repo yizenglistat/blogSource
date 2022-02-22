@@ -2815,6 +2815,7 @@ a.box:active {
   margin-top: -10px;
 }
 
+
 .title.is-1 {
   font-size: 48px;
 }
@@ -7035,6 +7036,11 @@ body.dark-mode .content td{
   font-size: 90%;
   padding: 1em;
   line-height: 1.5;
+  background:#353535;
+}
+
+body.dark-mode .content pre code {
+background:#474848;
 }
 
 .content li pre,
@@ -7101,9 +7107,19 @@ div.subtitle.tags {
   font-size: 0.6em;
 }
 
+body.dark-mode .copy-code-button {
+  border-color: #7D7C7C;
+  background-color: #F3F3F3;
+}
+body.dark-mode .copy-code-button:hover {
+background: #23ad51
+}
+
 .copy-code-button:hover {
   cursor: pointer;
-  background-color: #F2F2F2;
+  background-color: #3068e8;
+  color:#F3F3F3;
+  border-color: black;
 }
 
 .copy-code-button:focus {
@@ -7117,5 +7133,4 @@ div.subtitle.tags {
 
 .highlight pre {
   margin: 0;
-  background-color: red;
 }
