@@ -141,9 +141,9 @@ body.dark-mode a.strong{
 }
 
 body.dark-mode strong,
-body.dark-mode table td th {
+body.dark-mode .content table td th {
   color:  #F3F3F3;
-
+  background-color: #474848;
 }
 
 
