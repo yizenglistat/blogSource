@@ -9,8 +9,8 @@ body.dark-mode #footerlink{
 }
 
 body.dark-mode .svg-fill{
-  fill:#F6F6F2;
-  stroke: #F6F6F2
+  fill:#F3F3F3;
+  stroke: #F3F3F3
 }
 
 body.dark-mode,
@@ -51,7 +51,7 @@ body.dark-mode .content a:not(.button){
 }*/
 
 body.dark-mode .content strong{
-  color: #F6F6F2;
+  color: #F3F3F3;
 }
 
 body.dark-mode div.a{
@@ -73,7 +73,7 @@ body.dark-mode .title a {
 
 body.dark-mode .subtitle.is-6 a{
   background-color: #7D7C7C;
-  color:#F6F6F2;
+  color:#F3F3F3;
 }
 
 body.dark-mode .subtitle.is-6 a:hover{
@@ -141,9 +141,11 @@ body.dark-mode a.strong{
 }
 
 body.dark-mode strong,
-body.dark-mode table th {
-  color: #3068e8;
+body.dark-mode table td th {
+  color:  #F3F3F3;
+
 }
+
 
 body.dark-mode .button.is-active,
 body.dark-mode .button:focus,
@@ -153,7 +155,7 @@ body.dark-mode .button:hover {
 
 body.dark-mode .button.is-link:hover {
   background-color: #3068e8;
-  color:#F6F6F2;
+  color:#F3F3F3;
 }
 
 body.dark-mode .content a:not(.button):hover {
@@ -343,7 +345,7 @@ body.dark-mode .mymark{
 }
 
 #sign-in form input[type="email"] {
-  width: 60%;
+  width: 75%;
   padding-left: 3%;
   color: #000;
   font-size: 12px;
@@ -443,7 +445,7 @@ body.dark-mode #sign-in {
   margin-bottom: 0.5vh; 
   margin-right: 1%; 
   background: #3068e8; 
-  color: #F6F6F2; 
+  color: #F3F3F3; 
   border:none; 
   border-radius: 6px;
   font-weight: 550;
@@ -451,7 +453,7 @@ body.dark-mode #sign-in {
 
 .subbtn:hover{
   background: #23ad51; 
-  color: #F6F6F2; 
+  color: #F3F3F3; 
 }
 
 body.dark-mode  .subbtn:hover{
