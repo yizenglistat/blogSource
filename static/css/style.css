@@ -427,6 +427,20 @@ video {
   background: 0 0;
 }
 
+pre code{ 
+  color: #353535 !important;
+  background-color: #F3F3F3 !important;
+}
+
+body.dark-mode pre code{
+  color: #F3F3F3 !important;
+  background: #353535 ! important;
+}
+
+.content .highlight pre{
+  color: red !important;
+}
+
 td,
 td img {
   vertical-align: top;
@@ -7002,17 +7016,17 @@ code {
 
 .content th{
   padding: 2px;
-  border-bottom: 1px solid #3068e8;
+  border-bottom: 1.5px solid #3068e8;
 }
 
 body.dark-mode .content th{
-  border-bottom: 1px solid #23ad51;
-  background: #474848;
+  border-bottom: 1.5px solid #23ad51;
+  background: #353535;
   color:#F3F3F3;
 }
 
 body.dark-mode .content td{
-  background: #474848;
+  background: #353535;
   color:#F3F3F3;
 }
 
