@@ -7,7 +7,7 @@ weight: 1
 pined: true
 draft: true
 tags: ["generator", "review", "lstm"]
-categories: ["kill seq2seq"]
+categories: ["ace seq2seq"]
 <!-- next: /testing-c
 prev: /testing-a -->
 ---

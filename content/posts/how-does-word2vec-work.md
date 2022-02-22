@@ -7,7 +7,7 @@ pined: true
 weight: 1
 draft: false
 tags: ["word2vec","statistics"]
-categories: ["kill seq2seq"]
+categories: ["ace seq2seq"]
 code: https://yizengli.com/404.html
 ---
 
