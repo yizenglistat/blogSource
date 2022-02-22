@@ -1,4 +1,4 @@
-<section class="section footer" style="margin-bottom: 1em">
+<section class="section footer" style="margin-bottom: 3em">
   <div class="container has-text-centered">
     <hr style="margin-top:-2.5em;margin-bottom: 1em">
     <p>{{ .Site.Copyright | safeHTML }}</p>
@@ -7,7 +7,7 @@
   	
   	{{- range $platform := $social.config.platforms -}}
   	{{- with $username := ( index $social $platform ) -}}
-    <a class="level-item" aria-label="{{ $platform }}" href='{{ print ( index $.Site.Data.theme.social.base $platform ) $username }}'
+    <a class="level-item" style="opacity: 0.8" aria-label="{{ $platform }}" href='{{ print ( index $.Site.Data.theme.social.base $platform ) $username }}'
             target='_blank' rel='noopener'>
             <span class="icon" style="padding-left: 8px;">
                 {{- partial "svg/icons" $platform -}} 
@@ -15,7 +15,7 @@
           </a>
     {{end}}
     {{end}}
-    <p class="level-item" style="padding-top:5px;font-size: 12px"> © Yizeng Li 2022 • Feedback • <a href="/index.xml" id="footerlink">RSS</a> • All Rights Reserved</p>
+    <p class="level-item" style="opacity: 0.6; padding-top:5px;font-size: 12px"> © Yizeng Li 2022 • Feedback • <a href="/index.xml" id="footerlink">RSS</a> • All Rights Reserved</p>
     {{ end }}
   </div>
 </section>

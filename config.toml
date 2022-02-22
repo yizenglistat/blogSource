@@ -15,8 +15,8 @@ showHot = false
 
 [params.rss] # Adding this tag enables RSS feed
 includeContent = true # Includes whole content in rss
-authorName = "Yizeng Li" # Author full name
-authorEmail = "yizeng@yizengli.com" # Author email
+authorName = "Yizeng Li"
+authorEmail = "yizeng@yizengli.com"
 
 [params.assets]
 customCSS = ["css/custom.css"]
@@ -28,7 +28,7 @@ utterancesIssueTerm = "pathname"
 [params.info]
 adsense = "9941714392478176" # Adsense ID (ID only, without ca-pub-)
 enableSocial = true # Adds OpenGraph and Twitter cards
-homeTitle = "yizengli.com" # Title for home page
+homeTitle = "Blog" # Title for home page
 poweredby = true # Adds powered by hugo and kiss below Copyright
 related = true # Includes related articles at the bottom of the article
 codeCopy = true # Add copy button above code blocks
