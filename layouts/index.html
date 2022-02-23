@@ -39,15 +39,18 @@ body.dark-mode .pluses {
 <section class="section" style="margin-bottom: -2em; margin-top: -3em">
   <div class="container" style="line-height: 2;" >
 <!--     <hr style="margin-top: -1em;margin-bottom: 2em"> -->
+
         <div style="display: flex;flex-wrap: wrap;">
           
           <div>
           <h1 class="title is-3" style="margin-bottom: -1em"><svg class = "svg-fill" style="margin-bottom: -5px;margin-right: -3px" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.434 22.586l7.859-7.858.707.707-8.565 8.565-.001-.001v.001l-12.434-12.434.707-.707 11.727 11.727zm-.033-1.7l-12.401-12.405v-8.481h8.441l12.445 12.401-8.485 8.485zm-4.373-19.886h-7.028v7.067l11.401 11.405 7.07-7.07s-7.534-7.506-11.443-11.402zm-1.598 2.594c.78.78.78 2.048 0 2.828-.781.781-2.048.781-2.829 0-.78-.78-.78-2.048 0-2.828.781-.781 2.048-.781 2.829 0zm-.707.707c.39.39.39 1.024 0 1.414-.391.39-1.024.39-1.414 0-.391-.39-.391-1.024 0-1.414.39-.39 1.023-.39 1.414 0z"/></svg> Top tags </h1><br>
           
-          {{ range first 10 $.Site.Taxonomies.tags.ByCount }}
-          <a href="/tags/{{ .Name }}" id= "itemtag"> {{replace .Name "-" " "}}{{if gt .Count 1}}<sup>({{.Count}})</sup>{{end}}</a>
-          {{end}}<br>
-          For more details, check out <a href="/tags/" class="alltag" style="padding: 3px;">Tags ({{$total}})</a> or <a href="/search" id=searchlogo><svg xmlns="http://www.w3.org/2000/svg" class="svg-fill" width="12" height="12" viewBox="0 0 24 24"><path d="M23.111 20.058l-4.977-4.977c.965-1.52 1.523-3.322 1.523-5.251 0-5.42-4.409-9.83-9.829-9.83-5.42 0-9.828 4.41-9.828 9.83s4.408 9.83 9.829 9.83c1.834 0 3.552-.505 5.022-1.383l5.021 5.021c2.144 2.141 5.384-1.096 3.239-3.24zm-20.064-10.228c0-3.739 3.043-6.782 6.782-6.782s6.782 3.042 6.782 6.782-3.043 6.782-6.782 6.782-6.782-3.043-6.782-6.782zm2.01-1.764c1.984-4.599 8.664-4.066 9.922.749-2.534-2.974-6.993-3.294-9.922-.749z"/></svg> Search</a>
+          {{ range first .Site.Params.selected.toptags $.Site.Taxonomies.tags.ByCount }}
+          <a href="/tags/{{ .Name }}" id= "itemtag" style="font-size: 12px"> {{replace .Name "-" " "}}{{if gt .Count 1}}<sup>({{.Count}})</sup>{{end}}</a>
+          {{end}}
+          {{if gt $total .Site.Params.selected.toptags}}
+          <a href="/tags/" id="my_more">More ({{sub $total .Site.Params.selected.toptags}}) ↩</a>
+          {{end}}
           </div>
           
 
@@ -56,20 +59,29 @@ body.dark-mode .pluses {
           <div style="margin-top: 1em;">
           <h1 class="title is-3" style="margin-bottom: -1em"><svg class="svg-fill" style="margin-bottom: -3px" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M0 2h8l3 3h10v4h3l-4 13h-20v-20zm22.646 8h-17.907l-3.385 11h17.907l3.385-11zm-2.646-1v-3h-9.414l-3-3h-6.586v15.75l3-9.75h16z"/></svg> Top series </h1><br>
           
-          {{ range first 1 $.Site.Taxonomies.categories.ByCount }}
-          <a href="/categories/{{ .Name }}" id= "itemtag"> {{replace .Name "-" " "}}{{if gt .Count 1}}<sup>({{.Count}})</sup>{{end}}</a>
-          {{end}}<br>
-          For more details, check out <a href="/categories/" class="alltag" style="padding: 3px;">Series ({{$total_series}})</a> or <a href="/search" id=searchlogo><svg xmlns="http://www.w3.org/2000/svg" class="svg-fill" width="12" height="12" viewBox="0 0 24 24"><path d="M23.111 20.058l-4.977-4.977c.965-1.52 1.523-3.322 1.523-5.251 0-5.42-4.409-9.83-9.829-9.83-5.42 0-9.828 4.41-9.828 9.83s4.408 9.83 9.829 9.83c1.834 0 3.552-.505 5.022-1.383l5.021 5.021c2.144 2.141 5.384-1.096 3.239-3.24zm-20.064-10.228c0-3.739 3.043-6.782 6.782-6.782s6.782 3.042 6.782 6.782-3.043 6.782-6.782 6.782-6.782-3.043-6.782-6.782zm2.01-1.764c1.984-4.599 8.664-4.066 9.922.749-2.534-2.974-6.993-3.294-9.922-.749z"/></svg> Search</a>
+          {{ range first .Site.Params.selected.topseries $.Site.Taxonomies.categories.ByCount }}
+          <a href="/categories/{{ .Name }}" id= "itemtag" style="font-size: 12px"> {{replace .Name "-" " "}}{{if gt .Count 1}}<sup>({{.Count}})</sup>{{end}}</a>
+          {{end}}
+          {{if gt $total_series .Site.Params.selected.topseries}}
+          <a href="/categories/" id="my_more">More ({{sub $total_series .Site.Params.selected.topseries}}) ↩</a>
+          {{end}}
           </div>
         </div>
-    
+        
+
+        <div id = mysearchbox style="margin-top: 2em;text-align: center;">
+          <form method="GET" action="/search">
+              <input style="max-width: 50%" type="search" name='s' tabindex="0" aria-label="search" id="searchInput" placeholder="☞ search ↵ ">
+          </form>
+        </div>
+
   </div>
 </section>
 {{end}}
 
 <section class="section" >
   <div class="container">
-    <div class="fade_rule" style="margin-bottom:2em;margin-top:-2em;"></div>
+    <div class="fade_rule" style="margin-bottom:2em;margin-top:-1em;"></div>
     
 
     {{- $pages := . -}}
@@ -81,7 +93,7 @@ body.dark-mode .pluses {
     {{if .IsHome}}
     {{ $paginator := .Paginate (where $pages "Params.pined" "eq" true) }}
     <h1 class= "title is-3" style="font-size: 20px;text-align: center;margin-bottom: 1.8em"><svg xmlns="http://www.w3.org/2000/svg" class="svg-fill" width="18" height="18" viewBox="0 0 24 24"><path d="M6.166 16.943l1.4 1.4-4.622 4.657h-2.944l6.166-6.057zm11.768-6.012c2.322-2.322 4.482-.457 6.066-1.931l-8-8c-1.474 1.584.142 3.494-2.18 5.817-3.016 3.016-4.861-.625-10.228 4.742l9.6 9.6c5.367-5.367 1.725-7.211 4.742-10.228z"/></svg>
-    Pinned
+    Feature
     </h1>
     {{else}}
     <h1 class= "title is-3" style="font-size: 20px;text-align: center;margin-bottom: 1.8em"><svg class="svg-fill" style="margin-bottom: -4px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.812 4.819c-.33-.341-.312-.877.028-1.207l3.469-3.365c.17-.164.387-.247.603-.247.219 0 .438.085.604.257l-4.704 4.562zm-5.705 8.572c-.07.069-.107.162-.107.255 0 .194.158.354.354.354.089 0 .178-.033.247-.1l.583-.567-.493-.509-.584.567zm4.924-6.552l-1.994 1.933c-1.072 1.039-1.619 2.046-2.124 3.451l.881.909c1.419-.461 2.442-.976 3.514-2.016l1.994-1.934-2.271-2.343zm5.816-5.958l-5.137 4.982 2.586 2.671 5.138-4.98c.377-.366.566-.851.566-1.337 0-1.624-1.968-2.486-3.153-1.336zm-11.847 12.119h-4v1h4v-1zm9-1.35v1.893c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h12.629l2.062-2h-16.691v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-4.687l-2 1.951z"/></svg>

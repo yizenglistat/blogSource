@@ -12,6 +12,8 @@ enableRobotsTXT = true
 [params.selected]
 numPosts = 3
 showHot = false
+toptags = 10
+topseries = 5
 
 [params.rss] # Adding this tag enables RSS feed
 includeContent = true # Includes whole content in rss
