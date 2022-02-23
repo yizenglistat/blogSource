@@ -48,7 +48,7 @@ body.dark-mode .pluses {
           {{ range first .Site.Params.selected.toptags $.Site.Taxonomies.tags.ByCount }}
           <a href="/tags/{{ .Name }}" id= "itemtag" style="font-size: 12px"> {{replace .Name "-" " "}}{{if gt .Count 1}}<sup>({{.Count}})</sup>{{end}}</a>
           {{end}}
-          {{if gt $total .Site.Params.selected.toptags}}
+          {{if ge $total .Site.Params.selected.toptags}}
           <a href="/tags/" id="my_more">More ({{sub $total .Site.Params.selected.toptags}}) ↩</a>
           {{end}}
           </div>
@@ -62,7 +62,7 @@ body.dark-mode .pluses {
           {{ range first .Site.Params.selected.topseries $.Site.Taxonomies.categories.ByCount }}
           <a href="/categories/{{ .Name }}" id= "itemtag" style="font-size: 12px"> {{replace .Name "-" " "}}{{if gt .Count 1}}<sup>({{.Count}})</sup>{{end}}</a>
           {{end}}
-          {{if gt $total_series .Site.Params.selected.topseries}}
+          {{if ge $total_series .Site.Params.selected.topseries}}
           <a href="/categories/" id="my_more">More ({{sub $total_series .Site.Params.selected.topseries}}) ↩</a>
           {{end}}
           </div>
