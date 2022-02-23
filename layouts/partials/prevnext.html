@@ -10,16 +10,14 @@ body.dark-mode a:hover strong{
 <div class="level-item">
 	{{with .PrevInSection}}
 		<a class="button" href="{{ .Permalink }}" style="font-size: 15px;font-weight: bold">
-			<span class="icon is-small is-marginless">{{ partial "svg/icons" "prev" }}</span>
-			{{ .Title }}
+			◀ {{ .Title }}
 		</a>
 	{{end}}
 </div>
 <div class="level-item" style="margin-left: auto;order:1;">
 	{{with .NextInSection}}
 		<a class="button" href="{{ .Permalink }}" style="font-size: 15px;font-weight: bold">
-			{{ .Title }}
-			<span class="icon is-small is-marginless">{{ partial "svg/icons" "next" }}</span>
+			{{ .Title }} ▶
 		</a>
 	{{end}}
 </div>

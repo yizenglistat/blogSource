@@ -1,6 +1,8 @@
-<section class="section footer-extend">
-  <div class="container">
-    <nav class="level is-mobile" >
+<section class="section footer" style="margin-bottom: 10em;">
+  <div class="container has-text-centered">
+
+    <nav class="level is-mobile" id="pagerspecial">
+      
       <div class="level-left">
         <div class="level-item">
           {{ if .Paginator.HasPrev }}
@@ -15,7 +17,7 @@
         </div>
       </div>
       
-      <div class="container">
+
       <nav class="level is-mobile">
       <div class="level">
         <div class="level-item">
@@ -25,7 +27,7 @@
             
             {{ range $paginator.Pagers }}
             {{if eq . $paginator}}
-            <li class="pagination-item" style="color:white;">
+            <li class="pagination-item" id="pager-item" style="color:white;">
               <a href="{{ .URL }}">
                 {{ .PageNumber }}
               </a>
@@ -45,7 +47,6 @@
       </div>
       </div>
       </nav>
-      </div>
 
       <div class="level-right is-marginless">
         <div class="level-item">
@@ -61,6 +62,40 @@
         </div>
       </div>
     </nav>
-  </div>
 
+    <div class="fade_rule" style="margin-top:2em;margin-bottom: 1em"></div>
+    <p>{{ .Site.Copyright | safeHTML }}</p>
+    {{if .Site.Params.Info.poweredby}}
+    {{- $social := ( .Site.Params.social ) -}}
+  	
+  	{{- range $platform := $social.config.platforms -}}
+  	{{- with $username := ( index $social $platform ) -}}
+    <a class="level-item" style="opacity: 0.8" aria-label="{{ $platform }}" href='{{ print ( index $.Site.Data.theme.social.base $platform ) $username }}'
+            target='_blank' rel='noopener'>
+            <span class="icon" style="padding-left: 8px;">
+                {{- partial "svg/icons" $platform -}} 
+            </span>
+          </a>
+    {{end}}
+    {{end}}
+    <p class="level-item" style="opacity: 0.6; padding-top:5px;font-size: 12px"> © Yizeng Li 2022 • Feedback • <a href="/index.xml" id="footerlink">RSS</a> • All Rights Reserved</p>
+    {{ end }}
+  </div>
 </section>
+{{ if .Site.GoogleAnalytics }}
+{{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
+{{ if .Site.Params.matomoAnalytics }}
+{{- partial "analytics/matomo" . -}}
+{{ end }}
+{{ if .Site.Params.fathomAnalytics }}
+{{- partial "analytics/fathom" . -}}
+{{ end }}
+{{ if .Site.Params.hotjarAnalytics}}
+{{- partial "analytics/hotjar" . -}}
+{{ end }}
+{{ if .Site.Params.plausibleAnalytics}}
+{{- partial "analytics/plausible" . -}}
+{{ end }}
+</body>
+</html>

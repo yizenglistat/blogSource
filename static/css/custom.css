@@ -292,16 +292,16 @@ body.dark-mode #mysearchResults a {
 
 #mysearchResults a:hover, #searchResults a:focus {
   outline: 0;
-  background-color: #f5f8fa;
-  color: #23ad51;
+  color: #F3F3F3;
+  background: #3068e8;
   border-radius: 5em;
 }
 
 body.dark-mode #mysearchResults a:hover, 
 body.dark-mode #searchResults a:focus {
   outline: 0;
-  background-color: #474848;
-  color: #3068e8;
+  background-color:#23ad51;
+  color: #474848;
 }
 
 #mysearch-btn {

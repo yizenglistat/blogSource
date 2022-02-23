@@ -275,6 +275,33 @@ body.dark-mode .svg-fill-active{
 }
 
 
+#pagerspecial a{
+  color:#3068e8;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+body.dark-mode #pagerspecial a{
+  color:#23ad51;
+}
+
+#pagerspecial a:hover{
+  background:#3068e8;
+  color: #F3F3F3;
+}
+
+body.dark-mode #pagerspecial a:hover{
+  background:#23ad51;
+  color: #F3F3F3;
+}
+
+#pager-item a{
+  color: #F3F3F3;
+}
+body.dark-mode #pager-item a{
+  color: #F3F3F3;
+}
+
 .pagination{
   font-weight: bold;
   font-size: 18px;
@@ -290,15 +317,14 @@ body.dark-mode .svg-fill-active{
   opacity: 0.9;
   background-color:#3068e8;
   border-radius: 5px;
-  color: white
 }
 
 .pagination-item a {
-  color: white
+  color: white;
 }
 
 .pagination-item a:hover {
-  color: white
+  color: white;
 }
 
 .card,
@@ -6870,7 +6896,6 @@ a.panel-block:hover {
   left: 0px;
   right: 0px;
   margin-bottom: 2em;
-  margin-top: auto;
   height: 4em;
   position: relative;
   width:100%;
