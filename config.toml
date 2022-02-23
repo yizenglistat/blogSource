@@ -1,7 +1,7 @@
 #baseURL = "https://yizenglistat.github.io/blog/"
 baseURL = "https://yizengli.com/"
 languageCode = 'en-us'
-title = "Blog"
+title = "yizengli.com"
 
 #copyright = "&copy; <a href=\"https://github.com/yizenglistat\">Yizeng Li</a> 2017"
 disqusShortname = "yizengli"
@@ -28,7 +28,7 @@ utterancesIssueTerm = "pathname"
 [params.info]
 adsense = "9941714392478176" # Adsense ID (ID only, without ca-pub-)
 enableSocial = true # Adds OpenGraph and Twitter cards
-homeTitle = "Blog" # Title for home page
+homeTitle = "yizengli.com" # Title for home page
 poweredby = true # Adds powered by hugo and kiss below Copyright
 related = true # Includes related articles at the bottom of the article
 codeCopy = true # Add copy button above code blocks
@@ -85,7 +85,7 @@ hrefTargetBlank = true
 	weight = 2
 	[[menu.nav]]
 	identifier = "home"
-	name = "Start"
+	name = "Root"
 	url = "/"
 	weight = 1
 
