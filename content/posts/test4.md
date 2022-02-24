@@ -4,7 +4,7 @@ lastmod: 2013-02-02
 linktitle: Testing D
 title: Testing D
 weight: 1
-draft: false
+draft: true
 tags: ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6", "tag7", "tag8", "tag9", "tag10", "tag11", "tag12", "tag13", "tag14", "tag15", "tag16", "tag17", "tag18", "pytorch", "neural networks", "python"]
 categories: ["Series 1"]
 next: /testing-b
