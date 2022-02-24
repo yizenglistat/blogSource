@@ -400,6 +400,13 @@ body.dark-mode .mymark{
 
 body.dark-mode #sign-in form input[type="email"], textarea{
   background-color: #474848;
+  font-weight: bold;
+  color: #23ad51;
+}
+
+#sign-in form input[type="email"], textarea{
+  color: #3068e8;
+  font-weight: bold;
 }
 
 body.dark-mode #sign-in form input[type="submit"] {
