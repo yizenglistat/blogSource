@@ -218,6 +218,15 @@ body.dark-mode  a.nav-item {
     padding: 0;
 }
 
+#mysearchbox2 input {
+  color: white;
+}
+
+
+#mysearchbox2 input, textarea {
+  background: white;
+}
+
 body.dark-mode #mysearchbox2 input {
   color: #23ad51;
 }
