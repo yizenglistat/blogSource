@@ -211,6 +211,37 @@ body.dark-mode  a.nav-item {
     padding: 0;
   }
 
+#mysearchbox2{
+   display: inline-block;
+    width: 100%;
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+body.dark-mode #mysearchbox2 input {
+  color: #23ad51;
+}
+
+
+body.dark-mode #mysearchbox2 input, textarea {
+  background: rgb(45,45,45);
+}
+
+#mysearchbox2 input {
+  padding: 4px;
+  width: 100%;
+  height:40px;
+  font-size: 1.2em;
+  color: #3068e8;
+  font-weight: bold;
+  border-radius: 0.1em;
+  border: 0px;
+  /*border-bottom: 1px solid gray;*/
+  outline: none;
+  text-align: left;
+  display: inline-block;
+}
+
 #searchTags {
 /*    visibility: hidden;*/
   
@@ -246,6 +277,12 @@ body.dark-mode #mysearchbox input, textarea {
   background: #474848;
 }
 
+
+@media (max-width:683px) {
+  #mysearchbox, #mysearch-btn {
+    top: 64px;
+  }
+}
 
 #mysearchResults li {
   list-style: none;
