@@ -224,7 +224,7 @@ body.dark-mode  a.nav-item {
 
 
 #mysearchbox2 input, textarea {
-  background: white !important;
+  background: white;
 }
 
 body.dark-mode #mysearchbox2 input {
@@ -233,7 +233,7 @@ body.dark-mode #mysearchbox2 input {
 
 
 body.dark-mode #mysearchbox2 input, textarea {
-  background: rgb(45,45,45) !important;
+  background: rgb(45,45,45);
 }
 
 #mysearchbox2 input {
