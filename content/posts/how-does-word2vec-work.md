@@ -5,7 +5,7 @@ linktitle: how-does-word2vec-work
 title: Word2vec Explained 
 pined: true
 weight: 1
-draft: true
+draft: false
 tags: ["word2vec","statistics"]
 categories: ["ace seq2seq"]
 code: https://yizengli.com/404.html
