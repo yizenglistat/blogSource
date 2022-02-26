@@ -1,24 +1,21 @@
 ---
 date: 2022-02-17
 lastmod: 2022-02-17
-linktitle: generative-models-review
-title: Text-to-Text Generator Review
+linktitle: 
+title: Introduction to GAN
 weight: 1
 pined: true
-draft: true
+draft: false
 tags: ["generator", "review", "lstm"]
 categories: ["ace seq2seq"]
 <!-- next: /testing-c
 prev: /testing-a -->
 ---
 
-A literature review on recent text-to-text generator models.
+A simple explaination for **G**nerative **A**dversarial **N**etwork (GAN). 
 
 <!--more-->
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+![naruto-sasuke](/img/naruto-sasuke.jpg)
+
+The **G**nerative **A**dversarial **N**etwork (GAN) model is used to generate "realistic" new data given a training set. Typically, it has two components: Generator and Discriminator, which have a similar relationship as naruto and sasuke.
