@@ -133,9 +133,9 @@ body.dark-mode .pluses {
       <div class="content" id=mysummary style="margin-top: -1em;">
         {{ .Summary | plainify | safeHTML }}
         {{ if .Truncated }}
-        <a class="button is-link" href="{{ .Permalink }}" style="height:28px">
+        <p style="margin-left:-10px"><a class="button is-link" href="{{ .Permalink }}" style="height:28px">
           Read
-        </a>
+        </a></p>
         {{ end }}
       </div>
       
@@ -182,9 +182,9 @@ body.dark-mode .pluses {
       <div class="content" id="mysummary" style=";margin-top: -1em;">
         {{ .Summary | plainify | safeHTML }}
         {{ if .Truncated }}
-        <a class="button is-link" href="{{ .Permalink }}" style="height:28px">
+        <p style="margin-left:-10px"><a class="button is-link" href="{{ .Permalink }}" style="height:28px">
           Read
-        </a>
+        </a></p>
         {{ end }}
       </div>
     </article>
@@ -226,9 +226,9 @@ body.dark-mode .pluses {
       <div class="content" id="mysummary" style="margin-top: -1em;">
         {{ .Summary | plainify | safeHTML }}
         {{ if .Truncated }}
-        <a class="button is-link" href="{{ .Permalink }}" style="height:28px">
+        <p style="margin-left:-10px"><a class="button is-link" href="{{ .Permalink }}" style="height:28px">
           Read
-        </a>
+        </a></p>
         {{ end }}
       </div>
     </article>

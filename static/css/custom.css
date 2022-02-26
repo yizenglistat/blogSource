@@ -52,6 +52,7 @@ body.dark-mode .content a:not(.button){
 
 body.dark-mode .content strong{
   color: #F3F3F3;
+  background-color: rgb(45,45,45);
 }
 
 body.dark-mode div.a{
@@ -154,8 +155,8 @@ body.dark-mode .button:hover {
 }
 
 body.dark-mode .button.is-link:hover {
-  background-color: #3068e8;
-  color:#F3F3F3;
+  background-color: rgb(45,45,45);
+  color:#3068e8;
 }
 
 body.dark-mode .content a:not(.button):hover {

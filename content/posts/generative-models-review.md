@@ -1,8 +1,8 @@
 ---
 date: 2022-02-17
-lastmod: 2022-02-17
+lastmod: 2022-02-25
 linktitle: 
-title: Introduction to GAN
+title: Can Generator Work Without Discriminator in GAN?
 weight: 1
 pined: true
 draft: false
@@ -12,10 +12,19 @@ categories: ["ace seq2seq"]
 prev: /testing-a -->
 ---
 
-A simple explaination for **G**nerative **A**dversarial **N**etwork (GAN). 
+ In GAN, generator and discriminator work together in generation tasks. But do we really need the discriminator considering the existence of generation models like VAE.
 
 <!--more-->
 
-![naruto-sasuke](/img/naruto-sasuke.jpg)
+The **G**nerative **A**dversarial **N**etwork (GAN) is used to generate "realistic" new data given a training set. 
 
-The **G**nerative **A**dversarial **N**etwork (GAN) model is used to generate "realistic" new data given a training set. Typically, it has two components: Generator and Discriminator, which have a similar relationship as naruto and sasuke.
+Let's start with an example. Suppose we have a vector $z$ sampled from a normal distribution as below.
+
+$$z=\begin{bmatrix}
+-0.3\\\\
+0.4\\\\
+-0.5
+\end{bmatrix}$$
+
+Our target for this example is to generate a long vector so that it could be reshaped into a digital image. 
+

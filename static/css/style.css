@@ -1,3 +1,8 @@
+a:link{
+  height: 26.5px;
+  display: inline-block;
+}
+
 #my_more{
   font-weight: 510; 
   font-size: 12px;
@@ -338,7 +343,7 @@ object {
 }
 
 a {
-  color: #3068e8; 
+  color: #3068e8;
 }
 
 a:hover{
@@ -688,7 +693,7 @@ pre {
 body {
   background-color: red
   color: #42464c;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.428571428571429;
   padding-bottom:0px;
   display: flex;
@@ -1643,8 +1648,8 @@ a.box:active {
 }
 
 .button.is-link:hover {
-  background-color: #23ad51;
-  color: #F3F3F3;
+  background-color: white;
+  color: #23ad51;
 }
 
 .button.is-small {
@@ -1706,7 +1711,7 @@ a.box:active {
 
 .underlineLink a:not(.button){
   text-decoration: underline;
-  text-underline-offset:5px;
+  text-underline-offset:3px;
 }
 
 .nounderlineLink a:not(.button){
@@ -2919,7 +2924,7 @@ a.box:active {
 
 .nav-active{
   text-decoration: underline;
-  text-underline-offset:5px;
+  text-underline-offset:3px;
   text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
   boder:0;
 }
