@@ -49,7 +49,7 @@ body.dark-mode .pluses {
           <a href="/tags/{{ .Name }}" id= "itemtag" style="font-size: 12px"> {{replace .Name "-" " "}}{{if gt .Count 1}}<sup>({{.Count}})</sup>{{end}}</a>
           {{end}}
           {{if ge $total .Site.Params.selected.toptags}}
-          <a href="/tags/" id="my_more">More ({{sub $total .Site.Params.selected.toptags}})</a>
+          <a href="/tags/" id="my_more">More<!--  ({{sub $total .Site.Params.selected.toptags}}) --></a>
           {{end}}
           </div>
           
@@ -63,7 +63,7 @@ body.dark-mode .pluses {
           <a href="/categories/{{ .Name }}" id= "itemtag" style="font-size: 12px"> {{replace .Name "-" " "}}{{if gt .Count 1}}<sup>({{.Count}})</sup>{{end}}</a>
           {{end}}
           {{if ge $total_series .Site.Params.selected.topseries}}
-          <a href="/categories/" id="my_more">More ({{sub $total_series .Site.Params.selected.topseries}})</a>
+          <a href="/categories/" id="my_more">More <!-- ({{sub $total_series .Site.Params.selected.topseries}}) --></a>
           {{end}}
           </div>
         </div>
