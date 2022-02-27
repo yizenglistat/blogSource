@@ -2,7 +2,7 @@
 date: 2022-02-17
 lastmod: 2022-02-25
 linktitle: 
-title: Can Generator Work Without Discriminator in GAN?
+title: GAN, Explained - Part 1
 weight: 1
 pined: true
 draft: false
