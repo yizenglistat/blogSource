@@ -9,6 +9,7 @@ draft: false
 tags: ["word2vec","statistics", "theory"]
 categories: ["ace seq2seq"]
 code: https://yizengli.com/404.html
+images: word2vec-fig1.png
 ---
 
 A tutorial, focused on Skip-Gram, for Word2vec with statistical details explained. 
@@ -171,11 +172,22 @@ J_1(\boldsymbol\theta)
 &= -u_{\textcolor{Cerulean}{\text{want}}}^\top v_{\textcolor{red}{\text{I}}} + \log \sum\limits_{\text{word}\in\text{V}}\exp(u_{\text{word}}^\top v_{\textcolor{red}{\text{I}}}).
 \end{align*}
 $$
-Taking derivative with respect to $v_{\textcolor{red}{\text{I}}}$ yields
+Taking first derivative with respect to $v_{\textcolor{red}{\text{I}}}$ yields
 $$
 \begin{align*}
 \frac{\partial}{\partial v_{\textcolor{red}{\text{I}}}}J_1(\boldsymbol\theta)
 &=-u_{\textcolor{Cerulean}{\text{want}}}+\frac{\sum\limits_{\text{x}\in\text{V}}\frac{\partial}{\partial v_{\textcolor{red}{\text{I}}}}\exp(u_{\text{x}}^\top v_{\textcolor{red}{\text{I}}})}{\sum\limits_{\text{word}\in\text{V}}\exp(u_{\text{word}}^\top v_{\textcolor{red}{\text{I}}})}\\\\
-&=-u_{\textcolor{Cerulean}{\text{want}}}+\frac{\sum\limits_{\text{x}\in\text{V}}\frac{\partial}{\partial v_{\textcolor{red}{\text{I}}}}\exp(u_{\text{x}}^\top v_{\textcolor{red}{\text{I}}})}{\sum\limits_{\text{word}\in\text{V}}\exp(u_{\text{word}}^\top v_{\textcolor{red}{\text{I}}})}
+&=-u_{\textcolor{Cerulean}{\text{want}}}+\frac{\sum\limits_{\text{x}\in\text{V}}u_{\text{x}}\exp(u_{\text{x}}^\top v_{\textcolor{red}{\text{I}}})}{\sum\limits_{\text{word}\in\text{V}}\exp(u_{\text{word}}^\top v_{\textcolor{red}{\text{I}}})}\\\\
+&=-u_{\textcolor{Cerulean}{\text{want}}}+\sum\limits_{\text{x}\in\text{V}}u_{\text{x}}\text{Pr}(x\mid\textcolor{red}{\text{I}})\\\\
+&=-(\text{observed}-\text{expectation}).
+\end{align*}
+$$
+Interestingly, the derivative of center word is just the difference between observed context and (conditional) expectation of context.
+
+Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{want}}}$ yields
+$$
+\begin{align*}
+\frac{\partial}{\partial v_{\textcolor{Cerulean}{\text{want}}}}J_1(\boldsymbol\theta)
+&=
 \end{align*}
 $$
