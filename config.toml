@@ -16,6 +16,7 @@ showHot = false
 toptags = 5
 topseries = 2
 
+
 [params.rss] # Adding this tag enables RSS feed
 includeContent = true # Includes whole content in rss
 authorName = "Yizeng Li"
