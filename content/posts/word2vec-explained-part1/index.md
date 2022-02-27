@@ -61,7 +61,7 @@ $$
 
 The next step is to determine how many contextual information you want, that is controlled by the window size $m$. In this example, let $m=1$ for simplicity. Now at every position of word in the corpus, $t=1,2,\ldots,14$, we will focus on the window with at most $2m+1$ words in it since at the start/end of sentence, the window will be **trimmed** in word2vec.
 
-![word2vec-fig1](word2vec-fig1.png)
+![word2vec-fig1](./word2vec-fig1.png)
 
 In the figure shown above, The highlighted band is referred to $\textcolor{BurntOrange}{\text{window}}$, in which the red word is called $\textcolor{red}{\text{center}}$ word and blue word is called $\textcolor{Cerulean}{\text{context}}$.
 
