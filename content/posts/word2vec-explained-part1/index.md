@@ -44,18 +44,30 @@ Notice the meaning of Apple will be a brand and a fruit respectively under diffe
 Herein, let $V$ be a vocabulary set and $\boldsymbol{\theta}$ represent all model parameters
 $$
 \begin{align*}
-V&=\\{\text{I},\text{want},\text{to},\text{buy},\text{eat},\text{an},\text{Apple},\text{iPhone},\text{now}\\}\\\\
+V&=
+\begin{pmatrix}
+\text{I}\\\\
+\text{want}\\\\
+\text{to}\\\\
+\text{buy}\\\\
+\text{eat}\\\\
+\text{an}\\\\
+\text{Apple}\\\\
+\text{iPhone}\\\\
+\text{now}\\\\
+\end{pmatrix}&
 \boldsymbol{\theta}&=
 \begin{bmatrix}
-\theta_{\text{I},1}&
-\theta_{\text{I},2}&
-\theta_{\text{want},1}&
-\theta_{\text{want},2}&
-\cdots&
-\theta_{\text{iPhone},1} &
-\theta_{\text{iPhone},2} & 
-\theta_{\text{now},1} & \theta_{\text{now},2}
-\end{bmatrix}^\top.
+\theta_{\text{I},1}\\\\
+\theta_{\text{I},2}\\\\
+\theta_{\text{want},1}\\\\
+\theta_{\text{want},2}\\\\
+\vdots\\\\
+\theta_{\text{iPhone},1} \\\\
+\theta_{\text{iPhone},2} \\\\
+\theta_{\text{now},1}\\\\
+\theta_{\text{now},2}\\\\
+\end{bmatrix}.
 \end{align*}
 $$
 
@@ -72,16 +84,16 @@ $$
 \begin{align*}
 L(\boldsymbol{\theta})
 &=\prod\limits_{t=1}^{T=14}\prod\limits_{-m\le j\le m,j\neq0} \text{Pr}(w_{t+j}\mid w_t)\\\\
-&=\text{Pr}(w_{2}\mid w_1) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ t=1\\\\
-&=\text{Pr}(w_{1}\mid w_2)\text{Pr}(w_{3}\mid w_2)~~~~~~~~~~~~~~~~~ t=2\\\\
+&=\text{Pr}(w_{2}\mid w_1) \\\\
+&=\text{Pr}(w_{1}\mid w_2)\text{Pr}(w_{3}\mid w_2)\\\\
 &=\cdots\\\\
-&=\text{Pr}(w_{5}\mid w_6)\text{Pr}(w_{7}\mid w_6)~~~~~~~~~~~~~~~~~ t=6\\\\
-&=\text{Pr}(w_{6}\mid w_7)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ t=7\\\\
-&=\text{Pr}(w_{9}\mid w_8)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ t=7\\\\
-&=\text{Pr}(w_{8}\mid w_9)\text{Pr}(w_{10}\mid w_9)~~~~~~~~~~~~~~~~ t=7\\\\
+&=\text{Pr}(w_{5}\mid w_6)\text{Pr}(w_{7}\mid w_6)\\\\
+&=\text{Pr}(w_{6}\mid w_7)\\\\
+&=\text{Pr}(w_{9}\mid w_8)\\\\
+&=\text{Pr}(w_{8}\mid w_9)\text{Pr}(w_{10}\mid w_9)\\\\
 &=\cdots\\\\
-&=\text{Pr}(w_{12}\mid w_{13})\text{Pr}(w_{14}\mid w_{13})~~~~~~~~~~~ t=13\\\\
-&=\text{Pr}(w_{13}\mid w_{14})~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ t=14
+&=\text{Pr}(w_{12}\mid w_{13})\text{Pr}(w_{14}\mid w_{13})\\\\
+&=\text{Pr}(w_{13}\mid w_{14})
 \end{align*}
 $$
 People in machine learning/deep learning like to minimize a function for no particular reason so we equivalently minimize the negative log-likelihood (divided by a constant is a convention to make it not too large, think about billions of words) and name it loss function $J(\boldsymbol{\theta})$ below
@@ -98,7 +110,8 @@ If we take the $\log(\cdot)$ with respect to $\text{Pr}(\textcolor{Cerulean}{\te
 $$
 \begin{align*}
 \log\text{Pr}(\textcolor{Cerulean}{\text{context}}\mid \textcolor{red}{\text{center}})
-&=\textcolor{Cerulean}{\text{context}}^\top\textcolor{red}{\text{center}}-\log\left [
+&=\textcolor{Cerulean}{\text{context}}^\top\textcolor{red}{\text{center}}\\\\
+&-\log\left [
 \underbrace{\sum\limits_{\text{word}\in\text{V}}\exp(\text{word}^\top\textcolor{red}{\text{center}}}_{\*})\right].
 \end{align*}
 $$
@@ -122,15 +135,15 @@ $$
 \begin{align*}
 \boldsymbol{\theta}&=
 \begin{bmatrix}
-v_{\text{I},1}&
-v_{\text{I},2}&
-\cdots&
-v_{\text{now},1} & 
-v_{\text{now},2} &
-u_{\text{I},1}&
-u_{\text{I},2}&
-\cdots&
-u_{\text{now},1} & 
+v_{\text{I},1}\\\\
+v_{\text{I},2}\\\\
+\vdots\\\\
+v_{\text{now},1} \\\\
+v_{\text{now},2} \\\\
+u_{\text{I},1}\\\\
+u_{\text{I},2}\\\\
+\vdots\\\\
+u_{\text{now},1} \\\\ 
 u_{\text{now},2}
 \end{bmatrix}^\top.
 \end{align*}
