@@ -83,7 +83,7 @@ A natural way in statistics is to maximize the likelihood function
 $$
 \begin{align*}
 L(\boldsymbol{\theta})
-&=\prod\limits_{t=1}^{T=14}\prod\limits_{-m\le j\le m,j\neq0} \text{Pr}(w_{t+j}\mid w_t)\\\\
+&=\prod\limits_{t=1}^{T=14}\prod\limits_{-m\le j\le m}^{j\neq0} \text{Pr}(w_{t+j}\mid w_t)\\\\
 &=\text{Pr}(w_{2}\mid w_1) \\\\
 &=\text{Pr}(w_{1}\mid w_2)\text{Pr}(w_{3}\mid w_2)\\\\
 &=\cdots\\\\
@@ -99,7 +99,7 @@ $$
 People in machine learning/deep learning like to minimize a function for no particular reason so we equivalently minimize the negative log-likelihood (divided by a constant is a convention to make it not too large, think about billions of words) and name it loss function $J(\boldsymbol{\theta})$ below
 $$
 \begin{align*}
-J(\boldsymbol{\theta})&=-\frac{1}{T}\sum\limits_{t=1}^T\sum\limits_{-m\le j\le m,j\neq0}\log \text{Pr}(w_{t+j}\mid w_j).
+J(\boldsymbol{\theta})&=-\frac{1}{T}\sum\limits_{t=1}^T\sum\limits_{-m\le j\le m}^{j\neq0}\log \text{Pr}(w_{t+j}\mid w_j).
 \end{align*}
 $$
 If we have the expression of $\text{Pr}(\cdot\mid\cdot)$ then we simply use (stochastic) gradient descent to minimize $J(\boldsymbol{\theta})$ to find the optimal $\boldsymbol{\theta}$. So, back in word2vec, we want to find a vector for each word so that it is **similar** to vectors of words that appear in similar contexts. As for the similarity of two words, we can use [cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity) (dot product). Hence, we could somehow convert the dot product to probability we assumed above. Considering the output of dot product could be negative, a natural choice is to use $\exp(\cdot)$ to make it positive and then normalize it to be a probability (that is, ranging from 0 to 1). In this way, $\text{Pr}(\textcolor{Cerulean}{\text{context}}\mid \textcolor{red}{\text{center}})$ is expressed as
