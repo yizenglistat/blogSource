@@ -255,23 +255,14 @@ u_{\textcolor{Cerulean}{\text{to}},2}
 \frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{to}}}}J(\boldsymbol\theta)
 \end{bmatrix}
 \end{align*}
-Similarly, we could follow these procedures until the end of corpus which completes one pass (also called one epoch). After many passes or epoches, it may converge to some extend and the average of $v_{\textcolor{red}{\text{center}}}$ and $u_{\textcolor{Cerulean}{\text{context}}}$ would be the learned representation for each word.
+Similarly, we could follow these procedures until the end of corpus which completes one pass (also called one epoch). After many passes or epoches, it may converge to some extend and the average of $v_{\textcolor{red}{\text{center}}}$ and $u_{\textcolor{Cerulean}{\text{context}}}$ would be the learned representation for each word. For example, the representation for word want would be
 
-| Word     | Vector |
-| ----------- | ----------- |
-| I      | $[(u_{\textcolor{Cerulean}{\text{I}},1} +v_{\textcolor{red}{\text{I}},1})/2,(u_{\textcolor{Cerulean}{\text{I}},2} +v_{\textcolor{red}{\text{I}},2})/2]$|
-| want      | $[(u_{\textcolor{Cerulean}{\text{want}},1} +v_{\textcolor{red}{\text{want}},1})/2,(u_{\textcolor{Cerulean}{\text{want}},2} +v_{\textcolor{red}{\text{want}},2})/2]$|
-| to      |$[(u_{\textcolor{Cerulean}{\text{to}},1} +v_{\textcolor{red}{\text{to}},1})/2,(u_{\textcolor{Cerulean}{\text{to}},2} +v_{\textcolor{red}{\text{to}},2})/2]$|
-| buy      |$[(u_{\textcolor{Cerulean}{\text{buy}},1} +v_{\textcolor{red}{\text{buy}},1})/2,(u_{\textcolor{Cerulean}{\text{buy}},2} +v_{\textcolor{red}{\text{buy}},2})/2]$|
-| eat      |$[(u_{\textcolor{Cerulean}{\text{eat}},1} +v_{\textcolor{red}{\text{eat}},1})/2,(u_{\textcolor{Cerulean}{\text{eat}},2} +v_{\textcolor{red}{\text{eat}},2})/2]$|
-| an      |$[(u_{\textcolor{Cerulean}{\text{an}},1} +v_{\textcolor{red}{\text{an}},1})/2,(u_{\textcolor{Cerulean}{\text{an}},2} +v_{\textcolor{red}{\text{an}},2})/2]$|
-| Apple      |$[(u_{\textcolor{Cerulean}{\text{Apple}},1} +v_{\textcolor{red}{\text{Apple}},1})/2,(u_{\textcolor{Cerulean}{\text{Apple}},2} +v_{\textcolor{red}{\text{Apple}},2})/2]$|
-| iPhone      |$[(u_{\textcolor{Cerulean}{\text{iPhone}},1} +v_{\textcolor{red}{\text{iPhone}},1})/2,(u_{\textcolor{Cerulean}{\text{iPhone}},2} +v_{\textcolor{red}{\text{iPhone}},2})/2]$|
-| now      |$[(u_{\textcolor{Cerulean}{\text{now}},1} +v_{\textcolor{red}{\text{now}},1})/2,(u_{\textcolor{Cerulean}{\text{now}},2} +v_{\textcolor{red}{\text{now}},2})/2]$|
+$$\left[\frac{u_{\textcolor{Cerulean}{\text{want}},1} +v_{\textcolor{red}{\text{want}},1}}{2},\frac{u_{\textcolor{Cerulean}{\text{want}},2} +v_{\textcolor{red}{\text{want}},2}}{2}\right].$$
 
+> **Remark.** One take-away is that notice the word Apple has been updated across different contexts (see $t=6$ and $t=13$ in the figure above.), which could be interpreted as the meaning of Apple spread out all over words in the corpus. 
 
 **What's Next?** 
 
-- We could actually use matrix notations to represent everything we did above, which is easier to use in coding.
+- We could actually use matrix notations to represent everything we did above, which is faster in computation/coding.
 - The calculation of normalization factor $Z$ is a burden when billions of words punch you, so an alternative way, called negative sampling, could be used to avoid it.
 - Implementation in Pytorch with another toy example should be fun! 
