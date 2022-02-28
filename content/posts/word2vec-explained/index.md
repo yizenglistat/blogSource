@@ -8,6 +8,7 @@ weight: 1
 draft: false
 tags: ["word2vec","statistics", "theory"]
 categories: ["ace seq2seq"]
+image: word2vec-fig1.png
 ---
 
 A tutorial, focused on Skip-Gram, for Word2vec with statistical details explained. 
