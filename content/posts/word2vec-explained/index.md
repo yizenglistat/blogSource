@@ -257,17 +257,17 @@ u_{\textcolor{Cerulean}{\text{to}},2}
 \end{align*}
 Similarly, we could follow these procedures until the end of corpus which completes one pass (also called one epoch). After many passes or epoches, it may converge to some extend and the average of $v_{\textcolor{red}{\text{center}}}$ and $u_{\textcolor{Cerulean}{\text{context}}}$ would be the learned representation for each word.
 
-| Word     | Vector | Estimate
-| ----------- | ----------- | ----------- |
-| I      | $[\theta_{\text{I},1},\theta_{\text{I},2}]$       | $[(u_{\textcolor{Cerulean}{\text{I}},1} +v_{\textcolor{red}{\text{I}},1})/2,(u_{\textcolor{Cerulean}{\text{I}},2} +v_{\textcolor{red}{\text{I}},2})/2]$|
-| want      | $[\theta_{\text{want},1},\theta_{\text{want},2}]$       |$[(u_{\textcolor{Cerulean}{\text{want}},1} +v_{\textcolor{red}{\text{want}},1})/2,(u_{\textcolor{Cerulean}{\text{want}},2} +v_{\textcolor{red}{\text{want}},2})/2]$|
-| to      | $[\theta_{\text{to},1},\theta_{\text{to},2}]$       |$[(u_{\textcolor{Cerulean}{\text{to}},1} +v_{\textcolor{red}{\text{to}},1})/2,(u_{\textcolor{Cerulean}{\text{to}},2} +v_{\textcolor{red}{\text{to}},2})/2]$|
-| buy      | $[\theta_{\text{buy},1},\theta_{\text{buy},2}]$       |$[(u_{\textcolor{Cerulean}{\text{buy}},1} +v_{\textcolor{red}{\text{buy}},1})/2,(u_{\textcolor{Cerulean}{\text{buy}},2} +v_{\textcolor{red}{\text{buy}},2})/2]$|
-| eat      | $[\theta_{\text{eat},1},\theta_{\text{eat},2}]$       |$[(u_{\textcolor{Cerulean}{\text{eat}},1} +v_{\textcolor{red}{\text{eat}},1})/2,(u_{\textcolor{Cerulean}{\text{eat}},2} +v_{\textcolor{red}{\text{eat}},2})/2]$|
-| an      | $[\theta_{\text{an},1},\theta_{\text{an},2}]$       |$[(u_{\textcolor{Cerulean}{\text{an}},1} +v_{\textcolor{red}{\text{an}},1})/2,(u_{\textcolor{Cerulean}{\text{an}},2} +v_{\textcolor{red}{\text{an}},2})/2]$|
-| Apple      | $[\theta_{\text{Apple},1},\theta_{\text{Apple},2}]$       |$[(u_{\textcolor{Cerulean}{\text{Apple}},1} +v_{\textcolor{red}{\text{Apple}},1})/2,(u_{\textcolor{Cerulean}{\text{Apple}},2} +v_{\textcolor{red}{\text{Apple}},2})/2]$|
-| iPhone      | $[\theta_{\text{iPhone},1},\theta_{\text{iPhone},2}]$       |$[(u_{\textcolor{Cerulean}{\text{iPhone}},1} +v_{\textcolor{red}{\text{iPhone}},1})/2,(u_{\textcolor{Cerulean}{\text{iPhone}},2} +v_{\textcolor{red}{\text{iPhone}},2})/2]$|
-| now      | $[\theta_{\text{now},1},\theta_{\text{now},2}]$       |$[(u_{\textcolor{Cerulean}{\text{now}},1} +v_{\textcolor{red}{\text{now}},1})/2,(u_{\textcolor{Cerulean}{\text{now}},2} +v_{\textcolor{red}{\text{now}},2})/2]$|
+| Word     | Vector |
+| ----------- | ----------- |
+| I      | $[(u_{\textcolor{Cerulean}{\text{I}},1} +v_{\textcolor{red}{\text{I}},1})/2,(u_{\textcolor{Cerulean}{\text{I}},2} +v_{\textcolor{red}{\text{I}},2})/2]$|
+| want      | $[(u_{\textcolor{Cerulean}{\text{want}},1} +v_{\textcolor{red}{\text{want}},1})/2,(u_{\textcolor{Cerulean}{\text{want}},2} +v_{\textcolor{red}{\text{want}},2})/2]$|
+| to      |$[(u_{\textcolor{Cerulean}{\text{to}},1} +v_{\textcolor{red}{\text{to}},1})/2,(u_{\textcolor{Cerulean}{\text{to}},2} +v_{\textcolor{red}{\text{to}},2})/2]$|
+| buy      |$[(u_{\textcolor{Cerulean}{\text{buy}},1} +v_{\textcolor{red}{\text{buy}},1})/2,(u_{\textcolor{Cerulean}{\text{buy}},2} +v_{\textcolor{red}{\text{buy}},2})/2]$|
+| eat      |$[(u_{\textcolor{Cerulean}{\text{eat}},1} +v_{\textcolor{red}{\text{eat}},1})/2,(u_{\textcolor{Cerulean}{\text{eat}},2} +v_{\textcolor{red}{\text{eat}},2})/2]$|
+| an      |$[(u_{\textcolor{Cerulean}{\text{an}},1} +v_{\textcolor{red}{\text{an}},1})/2,(u_{\textcolor{Cerulean}{\text{an}},2} +v_{\textcolor{red}{\text{an}},2})/2]$|
+| Apple      |$[(u_{\textcolor{Cerulean}{\text{Apple}},1} +v_{\textcolor{red}{\text{Apple}},1})/2,(u_{\textcolor{Cerulean}{\text{Apple}},2} +v_{\textcolor{red}{\text{Apple}},2})/2]$|
+| iPhone      |$[(u_{\textcolor{Cerulean}{\text{iPhone}},1} +v_{\textcolor{red}{\text{iPhone}},1})/2,(u_{\textcolor{Cerulean}{\text{iPhone}},2} +v_{\textcolor{red}{\text{iPhone}},2})/2]$|
+| now      |$[(u_{\textcolor{Cerulean}{\text{now}},1} +v_{\textcolor{red}{\text{now}},1})/2,(u_{\textcolor{Cerulean}{\text{now}},2} +v_{\textcolor{red}{\text{now}},2})/2]$|
 
 
 **What's Next?** 
