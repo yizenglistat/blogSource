@@ -194,7 +194,7 @@ Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{want}}}$ 
 &=-v_{\textcolor{red}{\text{I}}} + v_{\textcolor{red}{\text{I}}}\text{Pr}(\textcolor{Cerulean}{\text{want}}\mid\textcolor{red}{\text{I}})
 \end{align*}
 
-Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{outside}}}$, for $u_{\textcolor{Cerulean}{\text{outside}}}$ belongs to $[u_{\textcolor{Cerulean}{\text{I}}}$, $u_{\textcolor{Cerulean}{\text{to}}}$, $u_{\textcolor{Cerulean}{\text{buy}}}$, $u_{\textcolor{Cerulean}{\text{eat}}}$, $u_{\textcolor{Cerulean}{\text{an}}}$, $u_{\textcolor{Cerulean}{\text{Apple}}}$, $u_{\textcolor{Cerulean}{\text{iPhone}}}$, $u_{\textcolor{Cerulean}{\text{now}}}]$, everything outside the $\textcolor{BurntOrange}{\text{window}}$ yields
+Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{outside}}}$, for $u_{\textcolor{Cerulean}{\text{outside}}}$ in $[u_{\textcolor{Cerulean}{\text{I}}}$, $u_{\textcolor{Cerulean}{\text{to}}}$, $u_{\textcolor{Cerulean}{\text{buy}}}$, $u_{\textcolor{Cerulean}{\text{eat}}}$, $u_{\textcolor{Cerulean}{\text{an}}}$, $u_{\textcolor{Cerulean}{\text{Apple}}}$, $u_{\textcolor{Cerulean}{\text{iPhone}}}$, $u_{\textcolor{Cerulean}{\text{now}}}]$, everything outside the $\textcolor{BurntOrange}{\text{window}}$ yields
 \begin{align*}
 \frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{outside}}}}J(\boldsymbol\theta)
 &=\frac{\sum\limits_{\text{x}\in\text{V}}\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{outside}}}}\exp(u_{\text{x}}^\top v_{\textcolor{red}{\text{I}}})}{\sum\limits_{\text{word}\in\text{V}}\exp(u_{\text{word}}^\top v_{\textcolor{red}{\text{I}}})}\\\\
