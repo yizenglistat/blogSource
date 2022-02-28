@@ -54,7 +54,7 @@ V&=
 \text{Apple}\\\\
 \text{iPhone}\\\\
 \text{now}\\\\
-\end{pmatrix}&
+\end{pmatrix}\\\\
 \boldsymbol{\theta}&=
 \begin{bmatrix}
 \theta_{\text{I}}\\\\
@@ -224,7 +224,7 @@ u_{\textcolor{Cerulean}{\text{an}}}\\\\
 u_{\textcolor{Cerulean}{\text{Apple}}}\\\\
 u_{\textcolor{Cerulean}{\text{iPhone}}}\\\\
 u_{\textcolor{Cerulean}{\text{now}}}
-\end{bmatrix}^{\text{new}}
+\end{bmatrix}^{t+1}
 &=
 \begin{bmatrix}
 v_{\textcolor{red}{\text{I}}}\\\\
@@ -245,7 +245,7 @@ u_{\textcolor{Cerulean}{\text{an}}}\\\\
 u_{\textcolor{Cerulean}{\text{Apple}}}\\\\
 u_{\textcolor{Cerulean}{\text{iPhone}}}\\\\
 u_{\textcolor{Cerulean}{\text{now}}}
-\end{bmatrix}^{\text{old}}-\alpha
+\end{bmatrix}^{t}-\alpha
 \begin{bmatrix}
 \frac{\partial}{\partial v_{\textcolor{red}{\text{I}}}}J(\boldsymbol\theta)\\\\
 0\\\\
@@ -317,7 +317,7 @@ u_{\textcolor{Cerulean}{\text{an}}}\\\\
 u_{\textcolor{Cerulean}{\text{Apple}}}\\\\
 u_{\textcolor{Cerulean}{\text{iPhone}}}\\\\
 u_{\textcolor{Cerulean}{\text{now}}}
-\end{bmatrix}^{\text{new}}
+\end{bmatrix}^{t+1}
 &=
 \begin{bmatrix}
 v_{\textcolor{red}{\text{I}}}\\\\
@@ -338,7 +338,7 @@ u_{\textcolor{Cerulean}{\text{an}}}\\\\
 u_{\textcolor{Cerulean}{\text{Apple}}}\\\\
 u_{\textcolor{Cerulean}{\text{iPhone}}}\\\\
 u_{\textcolor{Cerulean}{\text{now}}}
-\end{bmatrix}^{\text{old}}-\alpha
+\end{bmatrix}^{t}-\alpha
 \begin{bmatrix}
 0\\\\
 \frac{\partial}{\partial v_{\textcolor{red}{\text{want}}}}J(\boldsymbol\theta)\\\\
@@ -360,9 +360,9 @@ u_{\textcolor{Cerulean}{\text{now}}}
 \frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{now}}}}J(\boldsymbol\theta)\\\\
 \end{bmatrix}
 \end{align*}
-Similarly, we could follow these procedures until the end of corpus which completes one pass (also called one epoch). After many passes or epoches, it may converge to some extend and the average of $v_{\textcolor{red}{\text{center}}}$ and $u_{\textcolor{Cerulean}{\text{context}}}$ would be the learned representation for each word. For example, the representation for word want would be
+Similarly, we could follow these procedures until the end of corpus which completes one pass (also called one epoch). After many passes or epoches, it may converge to some extend and the average of $v_{\textcolor{red}{\text{center}}}$ and $u_{\textcolor{Cerulean}{\text{context}}}$ would be the learned representation for each word. For example, the representation for word *Apple* would be
 
-$$\left[\frac{u_{\textcolor{Cerulean}{\text{want}},1} +v_{\textcolor{red}{\text{want}},1}}{2},\frac{u_{\textcolor{Cerulean}{\text{want}},2} +v_{\textcolor{red}{\text{want}},2}}{2}\right].$$
+$$\left[\frac{u_{\textcolor{Cerulean}{\text{Apple}},1} +v_{\textcolor{red}{\text{Apple}},1}}{2},\frac{u_{\textcolor{Cerulean}{\text{Apple}},2} +v_{\textcolor{red}{\text{Apple}},2}}{2}\right].$$
 
 > **Remark.** One take-away is that notice the word Apple has been updated across different contexts (see $t=6$ and $t=13$ in the figure above.), which could be interpreted as the meaning of Apple spread out all over words in the corpus. 
 
