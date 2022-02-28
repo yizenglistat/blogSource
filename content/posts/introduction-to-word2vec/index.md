@@ -61,7 +61,7 @@ V&=
 \theta_{\text{want}}\\\\
 \vdots\\\\
 \theta_{\text{iPhone}} \\\\
-\theta_{\text{now}}\\\\
+\theta_{\text{now}}
 \end{bmatrix} 
 =\begin{bmatrix}
 \theta_{\text{I},1}\\\\
@@ -72,7 +72,7 @@ V&=
 \theta_{\text{iPhone},1} \\\\
 \theta_{\text{iPhone},2} \\\\
 \theta_{\text{now},1}\\\\
-\theta_{\text{now},2}\\\\
+\theta_{\text{now},2}
 \end{bmatrix} 
 \end{align*}
 The next step is to determine how much contextual information you want, which is controlled by the $\textcolor{BurntOrange}{\text{window}}$ size $m$. In this example, let $m=1$ for simplicity. Now at every position of word in the corpus, $t=1,2,\ldots,T$ with here $T=14$, we will focus on the $\textcolor{BurntOrange}{\text{window}}$ with **at most** $2m+1$ words since at the start/end of sentence, the $\textcolor{BurntOrange}{\text{window}}$ will be **trimmed** in word2vec.
@@ -141,7 +141,7 @@ v_{\textcolor{red}{\text{I}}}\\\\
 v_{\textcolor{red}{\text{now}}} \\\\
 u_{\textcolor{Cerulean}{\text{I}}}\\\\
 \vdots\\\\
-u_{\textcolor{Cerulean}{\text{now}}} \\\\ 
+u_{\textcolor{Cerulean}{\text{now}}}
 \end{bmatrix}=
 \begin{bmatrix}
 v_{\textcolor{red}{\text{I}},1}\\\\
@@ -191,8 +191,7 @@ Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{want}}}$ 
 \frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{want}}}}J(\boldsymbol\theta)
 &=-v_{\textcolor{red}{\text{I}}} + \frac{\sum\limits_{\text{x}\in\text{V}}\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{want}}}}\exp(u_{\text{x}}^\top v_{\textcolor{red}{\text{I}}})}{\sum\limits_{\text{word}\in\text{V}}\exp(u_{\text{word}}^\top v_{\textcolor{red}{\text{I}}})}\\\\
 &=-v_{\textcolor{red}{\text{I}}} + \frac{v_{\textcolor{red}{\text{I}}}\exp(u_{\textcolor{Cerulean}{\text{want}}}^\top v_{\textcolor{red}{\text{I}}})}{\sum\limits_{\text{word}\in\text{V}}\exp(u_{\text{word}}^\top v_{\textcolor{red}{\text{I}}})}\\\\
-&=-v_{\textcolor{red}{\text{I}}} + v_{\textcolor{red}{\text{I}}}\text{Pr}(\textcolor{Cerulean}{\text{want}}\mid\textcolor{red}{\text{I}})\\\\
-&=-v_{\textcolor{red}{\text{I}}}[1-\text{Pr}(\textcolor{Cerulean}{\text{want}}\mid\textcolor{red}{\text{I}})].
+&=-v_{\textcolor{red}{\text{I}}} + v_{\textcolor{red}{\text{I}}}\text{Pr}(\textcolor{Cerulean}{\text{want}}\mid\textcolor{red}{\text{I}})
 \end{align*}
 
 Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{outside}}}$, for $u_{\textcolor{Cerulean}{\text{outside}}}$ belongs to $[u_{\textcolor{Cerulean}{\text{I}}}$, $u_{\textcolor{Cerulean}{\text{to}}}$, $u_{\textcolor{Cerulean}{\text{buy}}}$, $u_{\textcolor{Cerulean}{\text{eat}}}$, $u_{\textcolor{Cerulean}{\text{an}}}$, $u_{\textcolor{Cerulean}{\text{Apple}}}$, $u_{\textcolor{Cerulean}{\text{iPhone}}}$, $u_{\textcolor{Cerulean}{\text{now}}}]$, everything outside the $\textcolor{BurntOrange}{\text{window}}$ yields
@@ -208,19 +207,13 @@ So we will update corresponding parameters in the current $\textcolor{BurntOrang
 \begin{bmatrix}
 v_{\textcolor{red}{\text{I}}}\\\\
 v_{\textcolor{red}{\text{want}}}\\\\
-v_{\textcolor{red}{\text{to}}}\\\\
-v_{\textcolor{red}{\text{buy}}}\\\\
-v_{\textcolor{red}{\text{eat}}}\\\\
-v_{\textcolor{red}{\text{an}}}\\\\
+\vdots\\\\
 v_{\textcolor{red}{\text{Apple}}}\\\\
 v_{\textcolor{red}{\text{iPhone}}}\\\\
 v_{\textcolor{red}{\text{now}}}\\\\
 u_{\textcolor{Cerulean}{\text{I}}}\\\\
 u_{\textcolor{Cerulean}{\text{want}}}\\\\
-u_{\textcolor{Cerulean}{\text{to}}}\\\\
-u_{\textcolor{Cerulean}{\text{buy}}}\\\\
-u_{\textcolor{Cerulean}{\text{eat}}}\\\\
-u_{\textcolor{Cerulean}{\text{an}}}\\\\
+\vdots\\\\
 u_{\textcolor{Cerulean}{\text{Apple}}}\\\\
 u_{\textcolor{Cerulean}{\text{iPhone}}}\\\\
 u_{\textcolor{Cerulean}{\text{now}}}
@@ -229,25 +222,20 @@ u_{\textcolor{Cerulean}{\text{now}}}
 \begin{bmatrix}
 v_{\textcolor{red}{\text{I}}}\\\\
 v_{\textcolor{red}{\text{want}}}\\\\
-v_{\textcolor{red}{\text{to}}}\\\\
-v_{\textcolor{red}{\text{buy}}}\\\\
-v_{\textcolor{red}{\text{eat}}}\\\\
-v_{\textcolor{red}{\text{an}}}\\\\
+\vdots\\\\
 v_{\textcolor{red}{\text{Apple}}}\\\\
 v_{\textcolor{red}{\text{iPhone}}}\\\\
 v_{\textcolor{red}{\text{now}}}\\\\
 u_{\textcolor{Cerulean}{\text{I}}}\\\\
 u_{\textcolor{Cerulean}{\text{want}}}\\\\
-u_{\textcolor{Cerulean}{\text{to}}}\\\\
-u_{\textcolor{Cerulean}{\text{buy}}}\\\\
-u_{\textcolor{Cerulean}{\text{eat}}}\\\\
-u_{\textcolor{Cerulean}{\text{an}}}\\\\
+\vdots\\\\
 u_{\textcolor{Cerulean}{\text{Apple}}}\\\\
 u_{\textcolor{Cerulean}{\text{iPhone}}}\\\\
 u_{\textcolor{Cerulean}{\text{now}}}
 \end{bmatrix}^{t}-\alpha
 \begin{bmatrix}
-\frac{\partial}{\partial v_{\textcolor{red}{\text{I}}}}J(\boldsymbol\theta)\\\\
+0\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial v_{\textcolor{red}{\text{want}}}}\\\\
 0\\\\
 0\\\\
 0\\\\
@@ -255,16 +243,15 @@ u_{\textcolor{Cerulean}{\text{now}}}
 0\\\\
 0\\\\
 0\\\\
-0\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{I}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{want}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{to}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{buy}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{eat}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{an}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{Apple}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{iPhone}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{now}}}}J(\boldsymbol\theta)\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{I}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{want}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{to}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{buy}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{eat}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{an}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{Apple}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{iPhone}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{now}}}}\\\\
 \end{bmatrix}
 \end{align*}
 
@@ -289,7 +276,8 @@ Taking first derivative with respect to $v_{\textcolor{red}{\text{want}}}$ yield
 Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{inside}}}$ for $u_{\textcolor{Cerulean}{\text{inside}}}$ in $[u_{\textcolor{Cerulean}{\text{I}}}$, $u_{\textcolor{Cerulean}{\text{to}}}]$ within the $\textcolor{BurntOrange}{\text{window}}$ yields
 \begin{align*}
 \frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{inside}}}}J(\boldsymbol\theta)
-=&-v_{\textcolor{red}{\text{want}}}[1-2\text{Pr}(\textcolor{Cerulean}{\text{inside}}\mid\textcolor{red}{\text{want}})].
+=&-v_{\textcolor{red}{\text{want}}}\\\\
+&+2v_{\textcolor{red}{\text{want}}}\text{Pr}(\textcolor{Cerulean}{\text{inside}}\mid\textcolor{red}{\text{want}})].
 \end{align*}
 Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{outside}}}$ for $u_{\textcolor{Cerulean}{\text{outside}}}$ in $[u_{\textcolor{Cerulean}{\text{want}}}$, $u_{\textcolor{Cerulean}{\text{buy}}}$, $u_{\textcolor{Cerulean}{\text{eat}}}$, $u_{\textcolor{Cerulean}{\text{an}}}$, $u_{\textcolor{Cerulean}{\text{Apple}}}$, $u_{\textcolor{Cerulean}{\text{iPhone}}}$, $u_{\textcolor{Cerulean}{\text{now}}}]$ outside the $\textcolor{BurntOrange}{\text{window}}$ yields
 \begin{align*}
@@ -301,19 +289,13 @@ So we will update corresponding parameters in the current $\textcolor{BurntOrang
 \begin{bmatrix}
 v_{\textcolor{red}{\text{I}}}\\\\
 v_{\textcolor{red}{\text{want}}}\\\\
-v_{\textcolor{red}{\text{to}}}\\\\
-v_{\textcolor{red}{\text{buy}}}\\\\
-v_{\textcolor{red}{\text{eat}}}\\\\
-v_{\textcolor{red}{\text{an}}}\\\\
+\vdots\\\\
 v_{\textcolor{red}{\text{Apple}}}\\\\
 v_{\textcolor{red}{\text{iPhone}}}\\\\
 v_{\textcolor{red}{\text{now}}}\\\\
 u_{\textcolor{Cerulean}{\text{I}}}\\\\
 u_{\textcolor{Cerulean}{\text{want}}}\\\\
-u_{\textcolor{Cerulean}{\text{to}}}\\\\
-u_{\textcolor{Cerulean}{\text{buy}}}\\\\
-u_{\textcolor{Cerulean}{\text{eat}}}\\\\
-u_{\textcolor{Cerulean}{\text{an}}}\\\\
+\vdots\\\\
 u_{\textcolor{Cerulean}{\text{Apple}}}\\\\
 u_{\textcolor{Cerulean}{\text{iPhone}}}\\\\
 u_{\textcolor{Cerulean}{\text{now}}}
@@ -322,26 +304,20 @@ u_{\textcolor{Cerulean}{\text{now}}}
 \begin{bmatrix}
 v_{\textcolor{red}{\text{I}}}\\\\
 v_{\textcolor{red}{\text{want}}}\\\\
-v_{\textcolor{red}{\text{to}}}\\\\
-v_{\textcolor{red}{\text{buy}}}\\\\
-v_{\textcolor{red}{\text{eat}}}\\\\
-v_{\textcolor{red}{\text{an}}}\\\\
+\vdots\\\\
 v_{\textcolor{red}{\text{Apple}}}\\\\
 v_{\textcolor{red}{\text{iPhone}}}\\\\
 v_{\textcolor{red}{\text{now}}}\\\\
 u_{\textcolor{Cerulean}{\text{I}}}\\\\
 u_{\textcolor{Cerulean}{\text{want}}}\\\\
-u_{\textcolor{Cerulean}{\text{to}}}\\\\
-u_{\textcolor{Cerulean}{\text{buy}}}\\\\
-u_{\textcolor{Cerulean}{\text{eat}}}\\\\
-u_{\textcolor{Cerulean}{\text{an}}}\\\\
+\vdots\\\\
 u_{\textcolor{Cerulean}{\text{Apple}}}\\\\
 u_{\textcolor{Cerulean}{\text{iPhone}}}\\\\
 u_{\textcolor{Cerulean}{\text{now}}}
 \end{bmatrix}^{t}-\alpha
 \begin{bmatrix}
 0\\\\
-\frac{\partial}{\partial v_{\textcolor{red}{\text{want}}}}J(\boldsymbol\theta)\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial v_{\textcolor{red}{\text{want}}}}\\\\
 0\\\\
 0\\\\
 0\\\\
@@ -349,15 +325,15 @@ u_{\textcolor{Cerulean}{\text{now}}}
 0\\\\
 0\\\\
 0\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{I}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{want}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{to}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{buy}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{eat}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{an}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{Apple}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{iPhone}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{now}}}}J(\boldsymbol\theta)\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{I}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{want}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{to}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{buy}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{eat}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{an}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{Apple}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{iPhone}}}}\\\\
+\frac{\partial J(\boldsymbol\theta)}{\partial u_{\textcolor{Cerulean}{\text{now}}}}\\\\
 \end{bmatrix}
 \end{align*}
 Similarly, we could follow these procedures until the end of corpus which completes one pass (also called one epoch). After many passes or epoches, it may converge to some extend and the average of $v_{\textcolor{red}{\text{center}}}$ and $u_{\textcolor{Cerulean}{\text{context}}}$ would be the learned representation for each word. For example, the representation for word *Apple* would be
