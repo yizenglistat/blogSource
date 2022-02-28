@@ -205,9 +205,8 @@ u_{\textcolor{Cerulean}{\text{want}},2}
 J(\boldsymbol\theta) 
 =&-J_2(\boldsymbol\theta)\\\\
 =& -\log\text{Pr}(w_1|w_2)-\log\text{Pr}(w_3|w_2)\\\\
-=& -\log\text{Pr}(\textcolor{Cerulean}{\text{I}}\mid\textcolor{red}{\text{want}})-\log\text{Pr}(\textcolor{Cerulean}{\text{to}}\mid\textcolor{red}{\text{want}})\\\\
-=&-u_{\textcolor{Cerulean}{\text{I}}}^\top v_{\textcolor{red}{\text{want}}} + \log \sum\limits_{\text{word}\in\text{V}}\exp(u_{\text{word}}^\top v_{\textcolor{red}{\text{want}}})\\\\
-&-u_{\textcolor{Cerulean}{\text{to}}}^\top v_{\textcolor{red}{\text{want}}} + \log \sum\limits_{\text{word}\in\text{V}}\exp(u_{\text{word}}^\top v_{\textcolor{red}{\text{want}}})\\\\
+=& -\log\text{Pr}(\textcolor{Cerulean}{\text{I}}\mid\textcolor{red}{\text{want}})\\\\
+&-\log\text{Pr}(\textcolor{Cerulean}{\text{to}}\mid\textcolor{red}{\text{want}})\\\\
 =&-u_{\textcolor{Cerulean}{\text{I}}}^\top v_{\textcolor{red}{\text{want}}} -u_{\textcolor{Cerulean}{\text{to}}}^\top v_{\textcolor{red}{\text{want}}}\\\\
 &+ 2\log \sum\limits_{\text{word}\in\text{V}}\exp(u_{\text{word}}^\top v_{\textcolor{red}{\text{want}}})
 \end{align*}
