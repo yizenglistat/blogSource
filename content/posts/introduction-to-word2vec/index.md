@@ -21,7 +21,7 @@ A tutorial, focused on Skip-Gram, for Word2vec with statistical details.
 # What are word vectors representations!
  -->
 
-The word2vec uses the context of a word to build up its numerical representation. One of word2vec models, called **Skip-Gram**, is to learn the representation of a word against words appearing in the context. Let's start with a toy example to illustrate this with a little bit theory behind it.
+The word2vec ([source](https://arxiv.org/pdf/1310.4546.pdf)) uses the context of a word to build up its numerical representation. One of word2vec models, called **Skip-Gram**, is to learn the representation of a word against words appearing in the context. Let's start with a toy example to illustrate this with a little bit theory behind it.
 
 **Example.** Suppose we have a [corpus](https://www.merriam-webster.com/dictionary/corpus) of text containing two sentences:
 - I want to buy an Apple iPhone.
@@ -57,6 +57,13 @@ V&=
 \end{pmatrix}&
 \boldsymbol{\theta}&=
 \begin{bmatrix}
+\theta_{\text{I}}\\\\
+\theta_{\text{want}}\\\\
+\vdots\\\\
+\theta_{\text{iPhone}} \\\\
+\theta_{\text{now}}\\\\
+\end{bmatrix} 
+=\begin{bmatrix}
 \theta_{\text{I},1}\\\\
 \theta_{\text{I},2}\\\\
 \theta_{\text{want},1}\\\\
@@ -66,11 +73,11 @@ V&=
 \theta_{\text{iPhone},2} \\\\
 \theta_{\text{now},1}\\\\
 \theta_{\text{now},2}\\\\
-\end{bmatrix}.
+\end{bmatrix} 
 \end{align*}
-The next step is to determine how much contextual information you want, which is controlled by the window size $m$. In this example, let $m=1$ for simplicity. Now at every position of word in the corpus, $t=1,2,\ldots,T$ with here $T=14$, we will focus on the window with **at most** $2m+1$ words since at the start/end of sentence, the window will be **trimmed** in word2vec.
+The next step is to determine how much contextual information you want, which is controlled by the $\textcolor{BurntOrange}{\text{window}}$ size $m$. In this example, let $m=1$ for simplicity. Now at every position of word in the corpus, $t=1,2,\ldots,T$ with here $T=14$, we will focus on the $\textcolor{BurntOrange}{\text{window}}$ with **at most** $2m+1$ words since at the start/end of sentence, the $\textcolor{BurntOrange}{\text{window}}$ will be **trimmed** in word2vec.
 
-![word2vec-fig1](./word2vec-fig2.png)
+{{< image src="word2vec-fig1.png" alt="word2vec-fig1" >}}
 
 In the figure shown above, The highlighted band is referred to $\textcolor{BurntOrange}{\text{window}}$, in which the red word is called $\textcolor{red}{\text{center}}$ word and blue word is called $\textcolor{Cerulean}{\text{context}}$.
 
@@ -129,6 +136,14 @@ Thus the model parameters will be updated to
 \begin{align*}
 \boldsymbol{\theta}&=
 \begin{bmatrix}
+v_{\textcolor{red}{\text{I}}}\\\\
+\vdots\\\\
+v_{\textcolor{red}{\text{now}}} \\\\
+u_{\textcolor{Cerulean}{\text{I}}}\\\\
+\vdots\\\\
+u_{\textcolor{Cerulean}{\text{now}}} \\\\ 
+\end{bmatrix}=
+\begin{bmatrix}
 v_{\textcolor{red}{\text{I}},1}\\\\
 v_{\textcolor{red}{\text{I}},2}\\\\
 \vdots\\\\
@@ -151,6 +166,8 @@ and consequently we could calculate our loss function $J(\boldsymbol{\theta})$ g
 
 Let's get to the derivative part to find the optimal $\boldsymbol\theta$.
 
+{{< image src="word2vec-fig2.png" alt="word2vec-fig2" >}}
+
 **At position/timestep $t=1$**, our one-window loss function will be 
 \begin{align*}
 J(\boldsymbol\theta)
@@ -169,7 +186,7 @@ Taking first derivative with respect to $v_{\textcolor{red}{\text{I}}}$ yields
 \end{align*}
 Interestingly, the derivative of center word is just the difference between observed context and (conditional) expectation of context.
 
-Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{want}}}$ yields
+Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{want}}}$ within the $\textcolor{BurntOrange}{\text{window}}$ yields
 \begin{align*}
 \frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{want}}}}J(\boldsymbol\theta)
 &=-v_{\textcolor{red}{\text{I}}} + \frac{\sum\limits_{\text{x}\in\text{V}}\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{want}}}}\exp(u_{\text{x}}^\top v_{\textcolor{red}{\text{I}}})}{\sum\limits_{\text{word}\in\text{V}}\exp(u_{\text{word}}^\top v_{\textcolor{red}{\text{I}}})}\\\\
@@ -178,29 +195,82 @@ Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{want}}}$ 
 &=-v_{\textcolor{red}{\text{I}}}[1-\text{Pr}(\textcolor{Cerulean}{\text{want}}\mid\textcolor{red}{\text{I}})].
 \end{align*}
 
-So we will update corresponding parameters in the current window,
+Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{outside}}}$, for $u_{\textcolor{Cerulean}{\text{outside}}}$ belongs to $[u_{\textcolor{Cerulean}{\text{I}}}$, $u_{\textcolor{Cerulean}{\text{to}}}$, $u_{\textcolor{Cerulean}{\text{buy}}}$, $u_{\textcolor{Cerulean}{\text{eat}}}$, $u_{\textcolor{Cerulean}{\text{an}}}$, $u_{\textcolor{Cerulean}{\text{Apple}}}$, $u_{\textcolor{Cerulean}{\text{iPhone}}}$, $u_{\textcolor{Cerulean}{\text{now}}}]$, everything outside the $\textcolor{BurntOrange}{\text{window}}$ yields
+\begin{align*}
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{outside}}}}J(\boldsymbol\theta)
+&=\frac{\sum\limits_{\text{x}\in\text{V}}\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{outside}}}}\exp(u_{\text{x}}^\top v_{\textcolor{red}{\text{I}}})}{\sum\limits_{\text{word}\in\text{V}}\exp(u_{\text{word}}^\top v_{\textcolor{red}{\text{I}}})}\\\\
+&=\frac{v_{\textcolor{red}{\text{I}}}\exp(u_{\textcolor{Cerulean}{\text{outside}}}^\top v_{\textcolor{red}{\text{I}}})}{\sum\limits_{\text{word}\in\text{V}}\exp(u_{\text{word}}^\top v_{\textcolor{red}{\text{I}}})}\\\\
+&=v_{\textcolor{red}{\text{I}}}\text{Pr}(\textcolor{Cerulean}{\text{outside}}\mid\textcolor{red}{\text{I}})
+\end{align*}
+
+So we will update corresponding parameters in the current $\textcolor{BurntOrange}{\text{window}}$ with $\alpha$ being a learning rate,
 \begin{align*}
 \begin{bmatrix}
-v_{\textcolor{red}{\text{I}},1}\\\\
-v_{\textcolor{red}{\text{I}},2}\\\\
-u_{\textcolor{Cerulean}{\text{want}},1}\\\\
-u_{\textcolor{Cerulean}{\text{want}},2}
-\end{bmatrix}
+v_{\textcolor{red}{\text{I}}}\\\\
+v_{\textcolor{red}{\text{want}}}\\\\
+v_{\textcolor{red}{\text{to}}}\\\\
+v_{\textcolor{red}{\text{buy}}}\\\\
+v_{\textcolor{red}{\text{eat}}}\\\\
+v_{\textcolor{red}{\text{an}}}\\\\
+v_{\textcolor{red}{\text{Apple}}}\\\\
+v_{\textcolor{red}{\text{iPhone}}}\\\\
+v_{\textcolor{red}{\text{now}}}\\\\
+u_{\textcolor{Cerulean}{\text{I}}}\\\\
+u_{\textcolor{Cerulean}{\text{want}}}\\\\
+u_{\textcolor{Cerulean}{\text{to}}}\\\\
+u_{\textcolor{Cerulean}{\text{buy}}}\\\\
+u_{\textcolor{Cerulean}{\text{eat}}}\\\\
+u_{\textcolor{Cerulean}{\text{an}}}\\\\
+u_{\textcolor{Cerulean}{\text{Apple}}}\\\\
+u_{\textcolor{Cerulean}{\text{iPhone}}}\\\\
+u_{\textcolor{Cerulean}{\text{now}}}
+\end{bmatrix}^{\text{new}}
 &=
 \begin{bmatrix}
-v_{\textcolor{red}{\text{I}},1}\\\\
-v_{\textcolor{red}{\text{I}},2}\\\\
-u_{\textcolor{Cerulean}{\text{want}},1}\\\\
-u_{\textcolor{Cerulean}{\text{want}},2}
-\end{bmatrix}-\alpha
+v_{\textcolor{red}{\text{I}}}\\\\
+v_{\textcolor{red}{\text{want}}}\\\\
+v_{\textcolor{red}{\text{to}}}\\\\
+v_{\textcolor{red}{\text{buy}}}\\\\
+v_{\textcolor{red}{\text{eat}}}\\\\
+v_{\textcolor{red}{\text{an}}}\\\\
+v_{\textcolor{red}{\text{Apple}}}\\\\
+v_{\textcolor{red}{\text{iPhone}}}\\\\
+v_{\textcolor{red}{\text{now}}}\\\\
+u_{\textcolor{Cerulean}{\text{I}}}\\\\
+u_{\textcolor{Cerulean}{\text{want}}}\\\\
+u_{\textcolor{Cerulean}{\text{to}}}\\\\
+u_{\textcolor{Cerulean}{\text{buy}}}\\\\
+u_{\textcolor{Cerulean}{\text{eat}}}\\\\
+u_{\textcolor{Cerulean}{\text{an}}}\\\\
+u_{\textcolor{Cerulean}{\text{Apple}}}\\\\
+u_{\textcolor{Cerulean}{\text{iPhone}}}\\\\
+u_{\textcolor{Cerulean}{\text{now}}}
+\end{bmatrix}^{\text{old}}-\alpha
 \begin{bmatrix}
 \frac{\partial}{\partial v_{\textcolor{red}{\text{I}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial v_{\textcolor{red}{\text{I}}}}J(\boldsymbol\theta)\\\\
+0\\\\
+0\\\\
+0\\\\
+0\\\\
+0\\\\
+0\\\\
+0\\\\
+0\\\\
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{I}}}}J(\boldsymbol\theta)\\\\
 \frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{want}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{want}}}}J(\boldsymbol\theta)
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{to}}}}J(\boldsymbol\theta)\\\\
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{buy}}}}J(\boldsymbol\theta)\\\\
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{eat}}}}J(\boldsymbol\theta)\\\\
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{an}}}}J(\boldsymbol\theta)\\\\
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{Apple}}}}J(\boldsymbol\theta)\\\\
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{iPhone}}}}J(\boldsymbol\theta)\\\\
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{now}}}}J(\boldsymbol\theta)\\\\
 \end{bmatrix}
 \end{align*}
-**At position/timestep $t=2$**, our one-window loss function will be
+
+{{< image src="word2vec-fig3.png" alt="word2vec-fig3" >}}
+
+**At position/timestep $t=2$**, our loss function will be
 \begin{align*}
 J(\boldsymbol\theta) 
 =&-J_2(\boldsymbol\theta)\\\\
@@ -216,42 +286,78 @@ Taking first derivative with respect to $v_{\textcolor{red}{\text{want}}}$ yield
 =&-u_{\textcolor{Cerulean}{\text{I}}}-u_{\textcolor{Cerulean}{\text{to}}}\\\\
 &+2\sum\limits_{\text{x}\in\text{V}}u_{\text{x}}\text{Pr}(x\mid\textcolor{red}{\text{want}})
 \end{align*}
-Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{I}}}$ yields
+Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{inside}}}$ for $u_{\textcolor{Cerulean}{\text{inside}}}$ in $[u_{\textcolor{Cerulean}{\text{I}}}$, $u_{\textcolor{Cerulean}{\text{to}}}]$ within the $\textcolor{BurntOrange}{\text{window}}$ yields
 \begin{align*}
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{I}}}}J(\boldsymbol\theta)
-=&-v_{\textcolor{red}{\text{want}}}[1-2\text{Pr}(\textcolor{Cerulean}{\text{I}}\mid\textcolor{red}{\text{want}})].
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{inside}}}}J(\boldsymbol\theta)
+=&-v_{\textcolor{red}{\text{want}}}[1-2\text{Pr}(\textcolor{Cerulean}{\text{inside}}\mid\textcolor{red}{\text{want}})].
 \end{align*}
-Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{to}}}$ yields
+Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{outside}}}$ for $u_{\textcolor{Cerulean}{\text{outside}}}$ in $[u_{\textcolor{Cerulean}{\text{want}}}$, $u_{\textcolor{Cerulean}{\text{buy}}}$, $u_{\textcolor{Cerulean}{\text{eat}}}$, $u_{\textcolor{Cerulean}{\text{an}}}$, $u_{\textcolor{Cerulean}{\text{Apple}}}$, $u_{\textcolor{Cerulean}{\text{iPhone}}}$, $u_{\textcolor{Cerulean}{\text{now}}}]$ outside the $\textcolor{BurntOrange}{\text{window}}$ yields
 \begin{align*}
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{to}}}}J(\boldsymbol\theta)
-=&-v_{\textcolor{red}{\text{want}}}[1-2\text{Pr}(\textcolor{Cerulean}{\text{to}}\mid\textcolor{red}{\text{want}})].
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{outside}}}}J(\boldsymbol\theta)
+=&2v_{\textcolor{red}{\text{want}}}\text{Pr}(\textcolor{Cerulean}{\text{outside}}\mid\textcolor{red}{\text{want}}).
 \end{align*}
-So we will update corresponding parameters in the current window,
+So we will update corresponding parameters in the current $\textcolor{BurntOrange}{\text{window}}$,
 \begin{align*}
 \begin{bmatrix}
-v_{\textcolor{red}{\text{want}},1}\\\\
-v_{\textcolor{red}{\text{want}},2}\\\\
-u_{\textcolor{Cerulean}{\text{I}},1}\\\\
-u_{\textcolor{Cerulean}{\text{I}},2}\\\\
-u_{\textcolor{Cerulean}{\text{to}},1}\\\\
-u_{\textcolor{Cerulean}{\text{to}},2}
-\end{bmatrix}
+v_{\textcolor{red}{\text{I}}}\\\\
+v_{\textcolor{red}{\text{want}}}\\\\
+v_{\textcolor{red}{\text{to}}}\\\\
+v_{\textcolor{red}{\text{buy}}}\\\\
+v_{\textcolor{red}{\text{eat}}}\\\\
+v_{\textcolor{red}{\text{an}}}\\\\
+v_{\textcolor{red}{\text{Apple}}}\\\\
+v_{\textcolor{red}{\text{iPhone}}}\\\\
+v_{\textcolor{red}{\text{now}}}\\\\
+u_{\textcolor{Cerulean}{\text{I}}}\\\\
+u_{\textcolor{Cerulean}{\text{want}}}\\\\
+u_{\textcolor{Cerulean}{\text{to}}}\\\\
+u_{\textcolor{Cerulean}{\text{buy}}}\\\\
+u_{\textcolor{Cerulean}{\text{eat}}}\\\\
+u_{\textcolor{Cerulean}{\text{an}}}\\\\
+u_{\textcolor{Cerulean}{\text{Apple}}}\\\\
+u_{\textcolor{Cerulean}{\text{iPhone}}}\\\\
+u_{\textcolor{Cerulean}{\text{now}}}
+\end{bmatrix}^{\text{new}}
 &=
 \begin{bmatrix}
-v_{\textcolor{red}{\text{want}},1}\\\\
-v_{\textcolor{red}{\text{want}},2}\\\\
-u_{\textcolor{Cerulean}{\text{I}},1}\\\\
-u_{\textcolor{Cerulean}{\text{I}},2}\\\\
-u_{\textcolor{Cerulean}{\text{to}},1}\\\\
-u_{\textcolor{Cerulean}{\text{to}},2}
-\end{bmatrix}-\alpha
+v_{\textcolor{red}{\text{I}}}\\\\
+v_{\textcolor{red}{\text{want}}}\\\\
+v_{\textcolor{red}{\text{to}}}\\\\
+v_{\textcolor{red}{\text{buy}}}\\\\
+v_{\textcolor{red}{\text{eat}}}\\\\
+v_{\textcolor{red}{\text{an}}}\\\\
+v_{\textcolor{red}{\text{Apple}}}\\\\
+v_{\textcolor{red}{\text{iPhone}}}\\\\
+v_{\textcolor{red}{\text{now}}}\\\\
+u_{\textcolor{Cerulean}{\text{I}}}\\\\
+u_{\textcolor{Cerulean}{\text{want}}}\\\\
+u_{\textcolor{Cerulean}{\text{to}}}\\\\
+u_{\textcolor{Cerulean}{\text{buy}}}\\\\
+u_{\textcolor{Cerulean}{\text{eat}}}\\\\
+u_{\textcolor{Cerulean}{\text{an}}}\\\\
+u_{\textcolor{Cerulean}{\text{Apple}}}\\\\
+u_{\textcolor{Cerulean}{\text{iPhone}}}\\\\
+u_{\textcolor{Cerulean}{\text{now}}}
+\end{bmatrix}^{\text{old}}-\alpha
 \begin{bmatrix}
+0\\\\
 \frac{\partial}{\partial v_{\textcolor{red}{\text{want}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial v_{\textcolor{red}{\text{want}}}}J(\boldsymbol\theta)\\\\
+0\\\\
+0\\\\
+0\\\\
+0\\\\
+0\\\\
+0\\\\
+0\\\\
 \frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{I}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{I}}}}J(\boldsymbol\theta)\\\\
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{want}}}}J(\boldsymbol\theta)\\\\
 \frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{to}}}}J(\boldsymbol\theta)\\\\
-\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{to}}}}J(\boldsymbol\theta)
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{buy}}}}J(\boldsymbol\theta)\\\\
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{eat}}}}J(\boldsymbol\theta)\\\\
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{an}}}}J(\boldsymbol\theta)\\\\
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{Apple}}}}J(\boldsymbol\theta)\\\\
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{iPhone}}}}J(\boldsymbol\theta)\\\\
+\frac{\partial}{\partial u_{\textcolor{Cerulean}{\text{now}}}}J(\boldsymbol\theta)\\\\
 \end{bmatrix}
 \end{align*}
 Similarly, we could follow these procedures until the end of corpus which completes one pass (also called one epoch). After many passes or epoches, it may converge to some extend and the average of $v_{\textcolor{red}{\text{center}}}$ and $u_{\textcolor{Cerulean}{\text{context}}}$ would be the learned representation for each word. For example, the representation for word want would be
@@ -262,6 +368,6 @@ $$\left[\frac{u_{\textcolor{Cerulean}{\text{want}},1} +v_{\textcolor{red}{\text{
 
 **What's Next?** 
 
-- We could actually use matrix notations to represent everything we did above, which is faster in computation/coding.
+- We could actually use matrix notations to represent everything we did above with a general $m$, which is faster in computation/coding.
 - The calculation of normalization factor $Z$ is a burden when billions of words punch you, so an alternative way, called negative sampling, could be used to avoid it.
 - Implementation in Pytorch with another toy example should be fun! 
