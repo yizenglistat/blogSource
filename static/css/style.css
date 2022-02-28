@@ -7062,6 +7062,10 @@ code {
   margin-bottom: 1.5em;
 }
 
+.content table {
+  overflow-x: scroll;
+}
+
 .content table td,
 .content table th {
   vertical-align: top;
