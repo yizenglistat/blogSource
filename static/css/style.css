@@ -1642,7 +1642,8 @@ a.box:active {
 }
 
 .button.is-link:hover {
-  background-color: #3068e8;
+  background-color: white;
+  color: #23ad51;
 }
 
 .button.is-small {
