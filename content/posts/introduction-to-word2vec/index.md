@@ -1,17 +1,17 @@
 ---
 date: 2022-02-13
-lastmod: 2022-02-26
-linktitle: word2vec-explained 
-title: Word2vec, Explained
+lastmod: 2022-02-27
+linktitle: Introduction to Word2vec
+title: Introduction to Word2vec
 pined: true
 weight: 1
 draft: false
 tags: ["word2vec","statistics", "theory"]
-categories: ["ace seq2seq"]
+categories: ["ace word2vec"]
 image: word2vec-fig1.png
 ---
 
-A tutorial, focused on Skip-Gram, for Word2vec with statistical details explained. 
+A tutorial, focused on Skip-Gram, for Word2vec with statistical details. 
 
 <!--more-->
 
@@ -214,8 +214,8 @@ J(\boldsymbol\theta)
 Taking first derivative with respect to $v_{\textcolor{red}{\text{want}}}$ yields
 \begin{align*}
 \frac{\partial}{\partial v_{\textcolor{red}{\text{want}}}}J(\boldsymbol\theta)
-=&-u_{\textcolor{Cerulean}{\text{I}}}+\sum\limits_{\text{x}\in\text{V}}u_{\text{x}}\text{Pr}(x\mid\textcolor{red}{\text{want}})\\\\
-&-u_{\textcolor{Cerulean}{\text{to}}}+\sum\limits_{\text{x}\in\text{V}}u_{\text{x}}\text{Pr}(x\mid\textcolor{red}{\text{want}})
+=&-u_{\textcolor{Cerulean}{\text{I}}}-u_{\textcolor{Cerulean}{\text{to}}}\\\\
+&+2\sum\limits_{\text{x}\in\text{V}}u_{\text{x}}\text{Pr}(x\mid\textcolor{red}{\text{want}})
 \end{align*}
 Taking first derivative with respect to $u_{\textcolor{Cerulean}{\text{I}}}$ yields
 \begin{align*}

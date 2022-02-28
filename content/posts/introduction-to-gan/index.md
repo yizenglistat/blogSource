@@ -1,18 +1,18 @@
 ---
-date: 2022-02-17
-lastmod: 2022-02-25
+date: 2022-02-25
+lastmod: 2022-02-27
 linktitle: 
-title: GAN, Explained - Part 1
+title: Introduction to GAN
 weight: 1
 pined: true
 draft: false
-tags: ["generator", "review", "lstm"]
-categories: ["ace seq2seq"]
+tags: ["generator"]
+categories: ["ace GAN"]
 <!-- next: /testing-c
 prev: /testing-a -->
 ---
 
- In GAN, generator and discriminator work together in generation tasks. But do we really need the discriminator considering the existence of generation models like VAE.
+A tutorial for GAN with an intuitive guide.
 
 <!--more-->
 
@@ -28,3 +28,4 @@ $$z=\begin{bmatrix}
 
 Our target for this example is to generate a long vector so that it could be reshaped into a digital image. 
 
+TO BE CONTINUE
