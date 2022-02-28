@@ -52,7 +52,7 @@ body.dark-mode .content a:not(.button){
 
 body.dark-mode .content strong{
   color: #F3F3F3;
-  background-color: rgb(45,45,45);
+  background-color: inherit;
 }
 
 body.dark-mode div.a{

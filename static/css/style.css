@@ -1773,6 +1773,10 @@ a.box:active {
   padding: 1.5em;
 }
 
+body.dark-mode .content blockquote {
+  background-color: #353535;
+}
+
 .content ol {
   list-style: decimal;
 }
