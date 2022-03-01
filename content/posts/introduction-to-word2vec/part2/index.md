@@ -7,7 +7,7 @@ pined: true
 weight: 1
 prev: /
 draft: false
-tags: ["word2vec","neural network", "reproduce"]
+tags: ["word2vec","neural network", "reproduce", "python"]
 categories: ["ace word2vec"]
 images: word2vec-fig1.png
 ---
