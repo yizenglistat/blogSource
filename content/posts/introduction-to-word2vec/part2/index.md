@@ -7,7 +7,7 @@ pined: true
 weight: 1
 prev: /
 draft: false
-tags: ["word2vec","neural network", "scratch-in-python"]
+tags: ["word2vec","neural network", "reproduce"]
 categories: ["ace word2vec"]
 images: word2vec-fig1.png
 ---
@@ -16,7 +16,7 @@ A tutorial, focused on Skip-Gram, for Word2vec with model architecture/implement
 
 <!--more-->
 
-As we discussed in [Introduction to Word2vec - Part 1](/posts/introduction-to-word2vec/part1/), the word2vec (Skip-Gram) model is trying to learn a map from words to a numerical representation (vector). Here, we focus more on modeling and implementations from scratch in python.
+As we discussed in [Introduction to Word2vec - Part 1](/posts/introduction-to-word2vec/part1/), the word2vec (Skip-Gram) model is trying to learn a map from a word to a numerical representation (vector). Here, we focus more on modeling and implementations from scratch in python.
 
 We will continue to employ notations and the example used in [Part 1](/posts/introduction-to-word2vec/part1/) and everything should be consistent;
 - I want to buy an Apple iPhone.
