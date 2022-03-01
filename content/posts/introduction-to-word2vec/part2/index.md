@@ -86,7 +86,7 @@ u_{\textcolor{Cerulean}{\text{now}}}\\\\
 \end{align*}
 
 **Training data set.** Our ready-to-train data set should be in the following format:
-- Input $\textcolor{red}{\text{center}}$ word $x$ is one-hot-encoder vector with size $|V|=9$. For example, *Apple* would be
+- Input $\textcolor{red}{\text{center}}$ word $X$ is one-hot-encoder vector with size $|V|=9$. For example, *Apple* would be
 \begin{align*}
 X = \begin{bmatrix}
 0\\\\
@@ -99,7 +99,7 @@ X = \begin{bmatrix}
 0
 \end{bmatrix}
 \end{align*}
-- Target $y$ is the summation of one-hot-encoder $\textcolor{Cerulean}{\text{context}}$ vectors. For example, $\textcolor{Cerulean}{\text{context}}$ for *want* would be 
+- Target $Y$ is the summation of one-hot-encoder $\textcolor{Cerulean}{\text{context}}$ vectors. For example, $\textcolor{Cerulean}{\text{context}}$ for *want* would be 
 \begin{align*}
 Y = \begin{bmatrix}
 \textcolor{Cerulean}{1}\\\\
