@@ -1,8 +1,8 @@
 ---
 date: 2022-02-13
 lastmod: 2022-02-27
-linktitle: Introduction to Word2vec
-title: Introduction to Word2vec
+linktitle: Introduction to Word2vec Part 1
+title: Introduction to Word2vec - Part 1
 pined: true
 weight: 1
 draft: false
