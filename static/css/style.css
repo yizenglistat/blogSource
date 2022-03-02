@@ -249,8 +249,6 @@ body.dark-mode .messagealert strong{
     border: none !important;
     font-size: 100%;
     max-width: 100%;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
 }
 
 mjx-container {
