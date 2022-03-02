@@ -6,7 +6,7 @@ def softmax(x):
     """Compute softmax values for each sets of scores in x."""
     e_x = np.exp(x - np.max(x))
     return e_x / e_x.sum()
-  class word2vec(object):
+class word2vec(object):
     def __init__(self):
         self.N = 10
         self.X_train = []
@@ -128,7 +128,7 @@ def prepare_data_for_training(sentences,w2v):
 corpus = ""
 corpus += "The earth revolves around the sun. The moon revolves around the earth"
 epochs = 1000
- 
+
 training_data = preprocessing(corpus)
 print(training_data)
 w2v = word2vec()

@@ -161,36 +161,7 @@ u_{\textcolor{Cerulean}{\text{now}}}^\top v_{\textcolor{red}{\text{center}}}
 \end{bmatrix}.
 \end{align*}
 
-Then we could find the most likely word in $V$ based on $\arg\max\hat{y}$ by find its corresponding maximum value in prediction. Herein $Z$ is same normalization factor defined in [Part 1](/posts/introduction-to-word2vec/part1). In python, we could implement a crude code to implement the feedforward pass.
-
-```python
-import numpy as np
-
-# our softmax function
-def softmax(x):
-    e_x = np.exp(x)
-    return e_x / e_x.sum()
-
-# word2vec, Skip-Gram, model
-class word2vec:
-    
-    def __init__(self):
-		self.hidden_size 	= 2
-		self.window_size 	= 1
-		self.V 				= 9
-    
-    def initialize(self):
-		
-		self.W1 = np.random.uniform(-1, 1, (self.hidden, self.V))
-		self.W2 = np.random.uniform(-1, 1, (self.V, self.hidden))
-    
-    def feed_forward(self,x):
-    	self.hidden = np.dot(self.W1, x).reshape(self.hidden_size, 1)
-    	self.output = np.dot(self.W2, self.hidden)
-		self.yhat = softmax(self.output)
-        
-        return self.yhat
-```
+Then we could find the most likely word in $V$ based on $\arg\max\hat{y}$ by find its corresponding maximum value in prediction. Herein $Z$ is same normalization factor defined in [Part 1](/posts/introduction-to-word2vec/part1).
 
 **Loss function.** Minimize the cross-entropy is equivalent to maximize the log-likelihood function;
 \begin{align*}
@@ -213,7 +184,9 @@ where $y\_{\textcolor{Cerulean}{\text{context}}}=1$ if $\textcolor{Cerulean}{\te
 0
 \end{bmatrix}\\\\
 \frac{\partial J}{\partial v_{\textcolor{red}{\text{center}}}}
-=&-\sum_{\textcolor{Cerulean}{\text{context}}\in V}u_{\textcolor{Cerulean}{\text{context}}}(y_{\textcolor{Cerulean}{\text{context}}}-\hat y_{\textcolor{Cerulean}{\text{context}}})
+=&-\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}u_{\textcolor{Cerulean}{\text{context}}}\\\\
+&+\sum_{\textcolor{Cerulean}{\text{context}}\in V} u_{\textcolor{Cerulean}{\text{context}}}\hat y_{\textcolor{Cerulean}{\text{context}}}\\\\
+\frac{\partial J}{\partial W_1}=&W_2^\top(\hat y-y)
 \end{align*}
 Taking the first derivative of $J$ with respect to $W_2$ yields
 \begin{align*}
@@ -231,7 +204,10 @@ Taking the first derivative of $J$ with respect to $W_2$ yields
 \end{bmatrix}\\\\
 \frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{context}}}}
 =& -y_{\textcolor{Cerulean}{\text{context}}}v_{\textcolor{red}{\text{center}}}\\\\
-&+Cv_{\textcolor{red}{\text{center}}}\hat y_{\textcolor{Cerulean}{\text{context}}},
+&+Cv_{\textcolor{red}{\text{center}}}\hat y_{\textcolor{Cerulean}{\text{context}}}\\\\
+\frac{\partial J}{\partial W_2}
+=&-y+C\hat yv_{\textcolor{red}{\text{center}}}^\top\\\\
+=&(C\hat y-y)v_{\textcolor{red}{\text{center}}}^\top
 \end{align*}
 where 
 $$
@@ -249,28 +225,59 @@ def softmax(x):
     return e_x / e_x.sum()
 
 # word2vec, Skip-Gram, model
+import numpy as np
+
+# our softmax function
+def softmax(x):
+    e_x = np.exp(x)
+    return e_x / e_x.sum()
+
+# word2vec, Skip-Gram, model
 class word2vec:
-	
-	def __init__(self):
-		self.hidden_size 	= 2
-		self.window_size 	= 1
-		self.V 				= 9
-		self.learning_rate 	= 0.0001
+    def __init__(self):
+        self.hidden_size = 2
+        self.X_train = []
+        self.y_train = []
+        self.window_size = 1
+        self.learning_rate = 0.001
+        self.words = []
+        self.word_index = {}
+  
+    def inital(self,V,data):
+        self.V = V
+        self.W1 = np.random.uniform(-0.8, 0.8, (self.hidden_size, self.V))
+        self.W2 = np.random.uniform(-0.8, 0.8, (self.V, self.hidden_size))
+          
+        self.words = data
+        for i in range(len(data)):
+            self.word_index[data[i]] = i
 
-	def initial(self):
-		self.W1 = np.random.uniform(-1, 1, (self.hidden, self.V))
-		self.W2 = np.random.uniform(-1, 1, (self.V, self.hidden))
-
-	def forward(self, x):
-    	
-    	self.hidden = np.dot(self.W1, x).reshape(self.hidden_size, 1)
-		self.output = np.dot(self.W2, self.hidden)
-		self.yhat = softmax(self.output)    
+    def forward(self, x):
+        self.center = np.dot(self.W1, x).reshape(self.hidden_size, 1)
+        self.output = np.dot(self.W2, self.center)
+        self.yhat = softmax(self.output)
         return self.yhat
-	
-	def backward(self, x):
-		self.
-		self.W1 = self.W1 - self.learning_rate * dJ_dW1
-		self.W2 = self.W2 - self.learning_rate * dJ_dW2
+
+    def backward(self, x, y):
+        # for W1
+        dJ_dW1 = np.dot(np.dot(self.W2.T, self.yhat - y), x.T)
+        # for W2
+        C = y.sum()
+        dJ_dW2 = np.dot(C*self.yhat - y, self.center.T)
+        # update
+        self.W1 = self.W1 - self.learning_rate * dJ_dW1
+        self.W2 = self.W2 - self.learning_rate * dJ_dW2
+
+    def train(self, max_epochs):
+        for epoch in range(1, max_epochs):       
+            self.loss = 0
+            for t in range(len(self.X_train)):
+                x = np.array(self.X_train)[t].reshape(self.V, 1)
+                y = np.array(self.y_train)[t].reshape(self.V, 1)
+                self.forward(x)
+                self.backward(x, y)
+                self.loss += -1*np.dot(y.T, np.log(self.yhat)).reshape(1,)[0]
+            print(f"epoch={epoch} with loss={self.loss}")
+            self.learning_rate *= 1/( (1+self.learning_rate*epoch) )
 ```
 
