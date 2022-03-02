@@ -1,5 +1,5 @@
 .MathJax_Display{
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
 }
 
@@ -251,7 +251,6 @@ code.has-jax {
     background: inherit !important;
     border: none !important;
     font-size: 100%;
-    overflow-x: scroll !important;
 }
 
 
