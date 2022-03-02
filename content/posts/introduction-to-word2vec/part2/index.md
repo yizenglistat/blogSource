@@ -34,6 +34,7 @@ The vocabulary is denoted as $V=\\{$I, want, to, buy, eat, an, Apple, iPhone, no
 
 **Model parameters.** In this model, only two weight matrices are our parameters, which gets together to be $\boldsymbol\theta$ in [Part 1](/posts/introduction-to-word2vec/part1));
 - $W_{1}$ is the weight matrix connecting input layer and hidden layer. No bias terms. 
+
 \begin{align*}
 W_1^\top&=\begin{bmatrix}
 v_{\textcolor{red}{\text{I}},1},v_{\textcolor{red}{\text{I}},2}\\\\
@@ -58,7 +59,9 @@ v_{\textcolor{red}{\text{iPhone}}}\\\\
 v_{\textcolor{red}{\text{now}}}\\\\
 \end{bmatrix}
 \end{align*}
+
 - $W_{2}$ is the weight matrix connecting hidden layer and output layer (before softmax). No bias terms.
+
 \begin{align*}
 W_2&=\begin{bmatrix}
 u_{\textcolor{Cerulean}{\text{I}},1},u_{\textcolor{Cerulean}{\text{I}},2}\\\\
@@ -86,6 +89,7 @@ u_{\textcolor{Cerulean}{\text{now}}}\\\\
 
 **Training data set.** Our ready-to-train data set should be in the following format:
 - Input $\textcolor{red}{\text{center}}$ word $x$ is one-hot-encoder vector with size $|V|=9$. For example, *Apple* would be
+
 \begin{align*}
 x = \begin{bmatrix}
 0\\\\
@@ -98,7 +102,9 @@ x = \begin{bmatrix}
 0
 \end{bmatrix}
 \end{align*}
+
 - Target $y$ is the summation of one-hot-encoder $\textcolor{Cerulean}{\text{context}}$ vectors. For example, $\textcolor{Cerulean}{\text{context}}$ for *want* would be 
+
 \begin{align*}
 y = \begin{bmatrix}
 \textcolor{Cerulean}{1}\\\\
@@ -114,6 +120,7 @@ y = \begin{bmatrix}
 \end{align*}
 
 **Feedforward pass.** Given an input $x$, the model will ouput a $\hat{y}$ as follows
+
 \begin{align*}
 v_{\textcolor{red}{\text{center}}} 
 =&
@@ -161,14 +168,17 @@ u_{\textcolor{Cerulean}{\text{now}}}^\top v_{\textcolor{red}{\text{center}}}
 Then we could find the most likely word in $V$ based on $\arg\max\hat{y}$ by find its corresponding maximum value in prediction. Herein $Z$ is same normalization factor defined in [Part 1](/posts/introduction-to-word2vec/part1).
 
 **Loss function.** Minimize the cross-entropy is equivalent to maximize the log-likelihood function;
+
 \begin{align*}
 J
 =& - \sum_{\textcolor{Cerulean}{\text{context}}\in V} y_{\textcolor{Cerulean}{\text{context}}}\log\hat{y}_{\textcolor{Cerulean}{\text{context}}}
 \end{align*}
+
 where $y\_{\textcolor{Cerulean}{\text{context}}}=1$ if $\textcolor{Cerulean}{\text{context}}$ exists in the $\textcolor{BurntOrange}{\text{window}}$ of current $\textcolor{red}{\text{center}}$, as indicated in true label $y$. And herein our $\hat y\_{\textcolor{Cerulean}{\text{context}}}=\text{Pr}(\textcolor{Cerulean}{\text{context}} \mid \textcolor{red}{\text{center}})$ defined in [Part 1](/posts/introduction-to-word2vec/part1).
 
 
 **Gradient computations.** Taking the first derivative of $J$ with respect to $W_1$ will lead to the fact that only one $v_{\textcolor{red}{\text{center}}}$ is involved in the loss function. Thus
+
 \begin{align*}
 \frac{\partial J}{\partial W_1}
 =& \begin{bmatrix}
@@ -185,7 +195,9 @@ where $y\_{\textcolor{Cerulean}{\text{context}}}=1$ if $\textcolor{Cerulean}{\te
 =&W_2^\top(\hat y-y)\\\\
 \frac{\partial J}{\partial W_1}=&W_2^\top(\hat y-y)x^\top
 \end{align*}
+
 Taking the first derivative of $J$ with respect to $W_2$ yields
+
 \begin{align*}
 \frac{\partial J}{\partial W_2}
 =& \begin{bmatrix}
@@ -204,9 +216,11 @@ Taking the first derivative of $J$ with respect to $W_2$ yields
 \frac{\partial J}{\partial W_2}
 =&-y+C\hat yv_{\textcolor{red}{\text{center}}}^\top=(C\hat y-y)v_{\textcolor{red}{\text{center}}}^\top
 \end{align*}
+
 where 
+
 $$
-C=\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}
+C=\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}
 $$
 
 **Implementations in python.** Combining the feedforward and gradients, we are able to train the model given a dataset by using stochastic gradient desent.
