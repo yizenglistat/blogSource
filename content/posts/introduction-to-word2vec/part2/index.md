@@ -6,7 +6,7 @@ title: Introduction to Word2vec - Part 2
 pined: false
 weight: 1
 draft: false
-tags: ["word2vec", "from-scratch", "python"]
+tags: ["word2vec", "from scratch", "python"]
 categories: ["ace word2vec"]
 featured_image: /posts/introduction-to-word2vec/part2/word2vec-fig4.png
 ---
