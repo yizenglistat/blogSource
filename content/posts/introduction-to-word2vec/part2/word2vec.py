@@ -6,8 +6,7 @@ def softmax(x):
     """Compute softmax values for each sets of scores in x."""
     e_x = np.exp(x - np.max(x))
     return e_x / e_x.sum()
-  
-class word2vec(object):
+  class word2vec(object):
     def __init__(self):
         self.N = 10
         self.X_train = []
@@ -37,7 +36,7 @@ class word2vec(object):
     def backpropagate(self,x,t):
         e = self.y - np.asarray(t).reshape(self.V,1)
         # e.shape is V x 1
-        dLdW1 = np.dot(self.h,e.T)
+        dLdW1 = np.dot(self.h, e.T)
         X = np.array(x).reshape(self.V,1)
         dLdW = np.dot(X, np.dot(self.W1,e).T)
         self.W1 = self.W1 - self.alpha*dLdW1

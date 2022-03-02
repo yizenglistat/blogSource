@@ -213,8 +213,7 @@ where $y\_{\textcolor{Cerulean}{\text{context}}}=1$ if $\textcolor{Cerulean}{\te
 0
 \end{bmatrix}\\\\
 \frac{\partial J}{\partial v_{\textcolor{red}{\text{center}}}}
-=&-\sum_{\textcolor{Cerulean}{\text{context}}\in V}I(y_{\textcolor{Cerulean}{\text{context}}}=1)u_{\textcolor{Cerulean}{\text{word}}}\\\\
-&+\sum_{\textcolor{Cerulean}{\text{context}}\in V} u_{\textcolor{Cerulean}{\text{context}}}\hat y_{\textcolor{Cerulean}{\text{context}}}
+=&-\sum_{\textcolor{Cerulean}{\text{context}}\in V}u_{\textcolor{Cerulean}{\text{context}}}(y_{\textcolor{Cerulean}{\text{context}}}-\hat y_{\textcolor{Cerulean}{\text{context}}})
 \end{align*}
 Taking the first derivative of $J$ with respect to $W_2$ yields
 \begin{align*}
@@ -231,15 +230,15 @@ Taking the first derivative of $J$ with respect to $W_2$ yields
 \frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{now}}}}
 \end{bmatrix}\\\\
 \frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{context}}}}
-=& -I(y_{\textcolor{Cerulean}{\text{context}}}=1)v_{\textcolor{red}{\text{center}}}\\\\
+=& -y_{\textcolor{Cerulean}{\text{context}}}v_{\textcolor{red}{\text{center}}}\\\\
 &+Cv_{\textcolor{red}{\text{center}}}\hat y_{\textcolor{Cerulean}{\text{context}}},
 \end{align*}
 where 
 $$
-C=\sum_{\textcolor{Cerulean}{\text{context}}\in V}I(y_{\textcolor{Cerulean}{\text{context}}}=1) 
+C=\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}
 $$
 
-**Implementations in python.** Combining the feedforward and gradients, we are able to train the model given a dataset by using stochastic gradient descent.
+**Implementations in python.** Combining the feedforward and gradients, we are able to train the model given a dataset by using stochastic gradient desent.
 
 ```python
 import numpy as np
@@ -256,8 +255,9 @@ class word2vec:
 		self.hidden_size 	= 2
 		self.window_size 	= 1
 		self.V 				= 9
+		self.learning_rate 	= 0.0001
 
-	def initialize(self):
+	def initial(self):
 		self.W1 = np.random.uniform(-1, 1, (self.hidden, self.V))
 		self.W2 = np.random.uniform(-1, 1, (self.V, self.hidden))
 
@@ -267,13 +267,10 @@ class word2vec:
 		self.output = np.dot(self.W2, self.hidden)
 		self.yhat = softmax(self.output)    
         return self.yhat
+	
 	def backward(self, x):
-    	e = self.y - np.asarray(t).reshape(self.V, 1)
-        # e.shape is V x 1
-        dLdW1 = np.dot(self.h,e.T)
-        X = np.array(x).reshape(self.V,1)
-        dLdW = np.dot(X, np.dot(self.W1,e).T)
-        self.W1 = self.W1 - self.alpha * dLdW1
-        self.W = self.W - self.alpha * dLdW
+		self.
+		self.W1 = self.W1 - self.learning_rate * dJ_dW1
+		self.W2 = self.W2 - self.learning_rate * dJ_dW2
 ```
 
