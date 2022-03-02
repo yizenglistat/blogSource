@@ -3,12 +3,12 @@ date: 2022-02-13
 lastmod: 2022-02-27
 linktitle: Introduction to Word2vec Part 1
 title: Introduction to Word2vec - Part 1
-pined: true
+pined: false
 weight: 1
 draft: false
 tags: ["word2vec","statistics", "theory"]
 categories: ["ace word2vec"]
-image: word2vec-fig1.png
+featured_image: /posts/introduction-to-word2vec/part1/word2vec-fig1.png
 ---
 
 A tutorial, focused on Skip-Gram, for Word2vec with statistical details. 

@@ -3,12 +3,12 @@ date: 2022-02-28
 lastmod: 2022-03-01
 linktitle: Introduction to Word2vec Part 2 
 title: Introduction to Word2vec - Part 2
-pined: true
+pined: false
 weight: 1
 draft: false
-tags: ["word2vec","neural network", "reproduce", "python"]
+tags: ["word2vec", "from-scratch", "python"]
 categories: ["ace word2vec"]
-image: /word2vec-fig4.png
+featured_image: /posts/introduction-to-word2vec/part2/word2vec-fig4.png
 ---
 
 A tutorial, focused on Skip-Gram, for Word2vec with model architecture/implementation from scratch in python. 
@@ -164,10 +164,10 @@ Then we could find the most likely word in $V$ based on $\arg\max\hat{y}$ by fin
 
 **Loss function.** Minimize the cross-entropy is equivalent to maximize the log-likelihood function;
 \begin{align*}
-J=
+J
 =& - \sum_{\textcolor{Cerulean}{\text{context}}\in V} y_{\textcolor{Cerulean}{\text{context}}}\log\hat{y}_{\textcolor{Cerulean}{\text{context}}}
 \end{align*}
-where $y\_{\textcolor{Cerulean}{\text{context}}}=1$ if $\textcolor{Cerulean}{\text{context}}$ exists in the $\textcolor{BurntOrange}{\text{window}}$ of current $\textcolor{red}{\text{center}}$, as indicated in true label $y$. And herein our $\hat y\_{\textcolor{Cerulean}{\text{context}}}$ will be same as our $\log\text{Pr}(\textcolor{Cerulean}{\text{context}} \mid \textcolor{red}{\text{center}})$ defined in previous blog.
+where $y\_{\textcolor{Cerulean}{\text{context}}}=1$ if $\textcolor{Cerulean}{\text{context}}$ exists in the $\textcolor{BurntOrange}{\text{window}}$ of current $\textcolor{red}{\text{center}}$, as indicated in true label $y$. And herein our $\hat y\_{\textcolor{Cerulean}{\text{context}}}=\text{Pr}(\textcolor{Cerulean}{\text{context}} \mid \textcolor{red}{\text{center}})$ defined in [Part 1](/posts/introduction-to-word2vec/part1).
 
 
 **Gradient computations.** Taking the first derivative of $J$ with respect to $W_1$ will lead to the fact that only one $v_{\textcolor{red}{\text{center}}}$ is involved in the loss function. Thus

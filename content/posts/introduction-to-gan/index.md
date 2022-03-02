@@ -1,6 +1,6 @@
 ---
-date: 2022-02-25
-lastmod: 2022-02-27
+date: 2022-03-01
+lastmod: 2022-03-02
 linktitle: 
 title: Introduction to GAN
 weight: 1

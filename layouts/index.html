@@ -131,6 +131,9 @@ body.dark-mode .pluses {
       </h2>
       
       <div class="content" id=mysummary style="margin-top: -1em;">
+        {{if .Params.featured_image}}
+        <img {{ with .Params.featured_image }} style="display: block;margin-left: auto;margin-right: auto;" width="50%" src="{{ . }}"{{ end }} alt="{{ .Title }}">
+        {{end}}
         {{ .Summary | plainify | safeHTML }}
         {{ if .Truncated }}
         <p><a class="button is-link" href="{{ .Permalink }}" style="margin-left:0px;padding: 0;height:28px">
@@ -180,6 +183,11 @@ body.dark-mode .pluses {
       </h2>
       
       <div class="content" id="mysummary" style=";margin-top: -1em;">
+        
+        {{if .Params.featured_image}}
+        <img {{ with .Params.featured_image }} style="display: block;margin-left: auto;margin-right: auto;" width="50%" src="{{ . }}"{{ end }} alt="{{ .Title }}">
+        {{end}}
+
         {{ .Summary | plainify | safeHTML }}
         {{ if .Truncated }}
         <p><a class="button is-link" href="{{ .Permalink }}" style="margin-left:0px;padding: 0;height:28px">
