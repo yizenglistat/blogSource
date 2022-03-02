@@ -216,7 +216,7 @@ $$
 
 **Implementations in python.** Combining the feedforward and gradients, we are able to train the model given a dataset by using stochastic gradient desent.
 
-Only trained for 100 epoches but it is kind of cool! You can play the notebook yourself [[source code]](https://github.com/yizenglistat/blogsource/blob/master/content/posts/introduction-to-word2vec/part2/word2vec-toy.ipynb). 
+Only trained for 100 epoches but it is kind of cool! You can play the code or notebook yourself: [word2vec-toy.py](https://github.com/yizenglistat/blogsource/blob/master/content/posts/introduction-to-word2vec/part2/word2vec-toy.py) and [word2vec-toy.ipynb](https://github.com/yizenglistat/blogsource/blob/master/content/posts/introduction-to-word2vec/part2/word2vec-toy.ipynb). 
 
 ```
 import numpy as np
