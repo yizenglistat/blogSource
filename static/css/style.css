@@ -248,14 +248,15 @@ body.dark-mode .messagealert strong{
     background: inherit !important;
     border: none !important;
     font-size: 100%;
+    max-width: 100%;
     overflow-x: auto !important;
     overflow-y: hidden !important;
 }
 
 mjx-container {
   display: inline-grid;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
   max-width: 100%;
 }
 
