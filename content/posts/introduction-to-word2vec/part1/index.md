@@ -344,6 +344,6 @@ $$\left[\frac{u_{\textcolor{Cerulean}{\text{Apple}},1} +v_{\textcolor{red}{\text
 
 **What's Next?** 
 
-- We could actually use matrix notations to represent everything we did above with a general $m$, which is faster in computation/coding.
+- We could actually use matrix notations to represent everything we did above, which is faster in computation/coding; see [Introduction to Word2vec - Part 2](/posts/introduction-to-word2vec/part2).
 - The calculation of normalization factor $Z$ is a burden when billions of words punch you, so an alternative way, called negative sampling, could be used to avoid it.
-- Implementation in Pytorch with another toy example should be fun! 
+- Implementation in Pytorch with another toy example should be fun!
