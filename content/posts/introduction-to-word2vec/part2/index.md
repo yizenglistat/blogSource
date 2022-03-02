@@ -135,8 +135,7 @@ u_{\textcolor{Cerulean}{\text{Apple}}}^\top v_{\textcolor{red}{\text{center}}}\\
 u_{\textcolor{Cerulean}{\text{iPhone}}}^\top v_{\textcolor{red}{\text{center}}}\\\\
 u_{\textcolor{Cerulean}{\text{now}}}^\top v_{\textcolor{red}{\text{center}}}
 \end{bmatrix}\\\\
-\hat{y}=&\text{softmax}(W_2v_{\textcolor{red}{\text{center}}})\\\\
-=&\begin{bmatrix}
+\hat{y}=&\text{softmax}(W_2v_{\textcolor{red}{\text{center}}})=\begin{bmatrix}
 \frac{\exp(u_{\textcolor{Cerulean}{\text{I}}}^\top v_{\textcolor{red}{\text{center}}})}{Z}\\\\
 \frac{\exp(u_{\textcolor{Cerulean}{\text{want}}}^\top v_{\textcolor{red}{\text{center}}})}{Z}\\\\
 \frac{\exp(u_{\textcolor{Cerulean}{\text{to}}}^\top v_{\textcolor{red}{\text{center}}})}{Z}\\\\
@@ -146,8 +145,7 @@ u_{\textcolor{Cerulean}{\text{now}}}^\top v_{\textcolor{red}{\text{center}}}
 \frac{\exp(u_{\textcolor{Cerulean}{\text{Apple}}}^\top v_{\textcolor{red}{\text{center}}})}{Z}\\\\
 \frac{\exp(u_{\textcolor{Cerulean}{\text{iPhone}}}^\top v_{\textcolor{red}{\text{center}}})}{Z}\\\\
 \frac{\exp(u_{\textcolor{Cerulean}{\text{now}}}^\top v_{\textcolor{red}{\text{center}}})}{Z}
-\end{bmatrix}\\\\
-=&\begin{bmatrix}
+\end{bmatrix}=\begin{bmatrix}
 \hat y_{\textcolor{Cerulean}{\text{I}}}\\\\
 \hat y_{\textcolor{Cerulean}{\text{want}}}\\\\
 \hat y_{\textcolor{Cerulean}{\text{to}}}\\\\
@@ -183,8 +181,7 @@ where $y\_{\textcolor{Cerulean}{\text{context}}}=1$ if $\textcolor{Cerulean}{\te
 0
 \end{bmatrix}\\\\
 \frac{\partial J}{\partial v_{\textcolor{red}{\text{center}}}}
-=&-\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}u_{\textcolor{Cerulean}{\text{context}}}\\\\
-&+\sum_{\textcolor{Cerulean}{\text{context}}\in V} u_{\textcolor{Cerulean}{\text{context}}}\hat y_{\textcolor{Cerulean}{\text{context}}}\\\\
+=&-\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}u_{\textcolor{Cerulean}{\text{context}}}+\sum_{\textcolor{Cerulean}{\text{context}}\in V} u_{\textcolor{Cerulean}{\text{context}}}\hat y_{\textcolor{Cerulean}{\text{context}}}\\\\
 =&W_2^\top(\hat y-y)\\\\
 \frac{\partial J}{\partial W_1}=&W_2^\top(\hat y-y)x^\top
 \end{align*}
@@ -203,11 +200,9 @@ Taking the first derivative of $J$ with respect to $W_2$ yields
 \frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{now}}}}
 \end{bmatrix}\\\\
 \frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{context}}}}
-=& -y_{\textcolor{Cerulean}{\text{context}}}v_{\textcolor{red}{\text{center}}}\\\\
-&+Cv_{\textcolor{red}{\text{center}}}\hat y_{\textcolor{Cerulean}{\text{context}}}\\\\
+=& -y_{\textcolor{Cerulean}{\text{context}}}v_{\textcolor{red}{\text{center}}}+Cv_{\textcolor{red}{\text{center}}}\hat y_{\textcolor{Cerulean}{\text{context}}}\\\\
 \frac{\partial J}{\partial W_2}
-=&-y+C\hat yv_{\textcolor{red}{\text{center}}}^\top\\\\
-=&(C\hat y-y)v_{\textcolor{red}{\text{center}}}^\top
+=&-y+C\hat yv_{\textcolor{red}{\text{center}}}^\top=(C\hat y-y)v_{\textcolor{red}{\text{center}}}^\top
 \end{align*}
 where 
 $$
