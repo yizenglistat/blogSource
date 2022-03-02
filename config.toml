@@ -105,5 +105,5 @@ hrefTargetBlank = true
     lineNos = false
     lineNumbersInTable = true
     noClasses = true
-    style = 'monokai'
+    style = 'solarized-dark'
     tabWidth = 4

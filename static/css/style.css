@@ -1,7 +1,4 @@
-.MathJax_Display{
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
+
 
 .fig-center {
   text-align: center;
@@ -246,13 +243,21 @@ body.dark-mode .messagealert strong{
   color: #232b2b;
 }
 
-code.has-jax {
+.has-jax {
     -webkit-font-smoothing: antialiased;
     background: inherit !important;
     border: none !important;
     font-size: 100%;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
 }
 
+mjx-container {
+  display: inline-grid;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
 
 
 
