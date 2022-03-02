@@ -2943,8 +2943,8 @@ body.dark-mode .content blockquote {
 }
 
 .nav-active{
-  text-decoration: underline;
-  text-underline-offset:5px;
+/*  text-decoration: underline;
+  text-underline-offset:5px;*/
   text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
   boder:0;
 }
