@@ -147,7 +147,7 @@ u_{\textcolor{Cerulean}{\text{now}}}^\top v_{\textcolor{red}{\text{center}}}
 \frac{\exp(u_{\textcolor{Cerulean}{\text{Apple}}}^\top v_{\textcolor{red}{\text{center}}})}{Z}\\\\
 \frac{\exp(u_{\textcolor{Cerulean}{\text{iPhone}}}^\top v_{\textcolor{red}{\text{center}}})}{Z}\\\\
 \frac{\exp(u_{\textcolor{Cerulean}{\text{now}}}^\top v_{\textcolor{red}{\text{center}}})}{Z}
-\end{bmatrix}
+\end{bmatrix}\\\\
 =&\begin{bmatrix}
 \hat y_{\textcolor{Cerulean}{\text{I}}}\\\\
 \hat y_{\textcolor{Cerulean}{\text{want}}}\\\\
@@ -174,18 +174,16 @@ def softmax(x):
 # word2vec, Skip-Gram, model
 class word2vec:
     def __init__(self):
-        self.hidden_size 	= 2
-        self.window_size 	= 1
-        self.V 				= 9
-  
+		self.hidden_size 	= 2
+		self.window_size 	= 1
+		self.V 				= 9
     def initialize(self):
-        self.W1 = np.random.uniform(-1, 1, (self.hidden, self.V))
-        self.W2 = np.random.uniform(-1, 1, (self.V, self.hidden))
-
+		self.W1 = np.random.uniform(-1, 1, (self.hidden, self.V))
+		self.W2 = np.random.uniform(-1, 1, (self.V, self.hidden))
     def feed_forward(self,x):
-        self.hidden 	= np.dot(self.W1, x).reshape(self.hidden_size, 1) # (2 x 9) x (9 x 1) = 2 x 1
-        self.output 	= np.dot(self.W2, self.hidden) # (9 x 2) x (2 x 1) = 9 x 1
-        self.yhat 		= softmax(self.output) # 9 x 1
+		self.hidden 	= np.dot(self.W1, x).reshape(self.hidden_size, 1) # (2 x 9) x (9 x 1) = 2 x 1
+		self.output 	= np.dot(self.W2, self.hidden) # (9 x 2) x (2 x 1) = 9 x 1
+		self.yhat 		= softmax(self.output) # 9 x 1
         return self.yhat
 ```
 
@@ -209,7 +207,7 @@ where $y\_{\textcolor{Cerulean}{\text{context}}}=1$ if $\textcolor{Cerulean}{\te
 \vdots\\\\
 0
 \end{bmatrix}\\\\
-\frac{\partial J(W_1,W_2)}{\partial v_{\textcolor{red}{\text{center}}}}
+\frac{\partial J}{\partial v_{\textcolor{red}{\text{center}}}}
 =&-\sum_{\textcolor{Cerulean}{\text{context}}\in V}I(y_{\textcolor{Cerulean}{\text{context}}}=1)u_{\textcolor{Cerulean}{\text{word}}}\\\\
 &+\sum_{\textcolor{Cerulean}{\text{context}}\in V} u_{\textcolor{Cerulean}{\text{context}}}\hat y_{\textcolor{Cerulean}{\text{context}}}
 \end{align*}
