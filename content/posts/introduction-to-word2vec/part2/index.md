@@ -281,3 +281,28 @@ class word2vec:
             self.learning_rate *= 1/( (1+self.learning_rate*epoch) )
 ```
 
+Only trained for 100 epoches but it is kind of cool! You can play the notebook yourself here. 
+
+```
+epoch=1 with loss=55.09354880947808
+epoch=2 with loss=55.064578930077715
+epoch=3 with loss=55.035757463479
+epoch=4 with loss=55.00711108927134
+epoch=5 with loss=54.97866570194483
+epoch=6 with loss=54.95044627223492
+epoch=7 with loss=54.92247672005741
+epoch=8 with loss=54.89477980056858
+epoch=9 with loss=54.86737700457328
+epoch=10 with loss=54.840288474171665
+epoch=11 with loss=54.81353293419522
+...
+...
+epoch=93 with loss=53.76422452733378
+epoch=94 with loss=53.75955310729455
+epoch=95 with loss=53.754964560776756
+epoch=96 with loss=53.750456851387305
+epoch=97 with loss=53.74602800353098
+epoch=98 with loss=53.74167610040396
+epoch=99 with loss=53.73739928205228
+```
+
