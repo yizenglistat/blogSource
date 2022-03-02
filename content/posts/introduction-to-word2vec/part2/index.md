@@ -227,7 +227,7 @@ $$
 
 Only trained for 100 epoches but it is kind of cool! You can play the code or notebook yourself: [word2vec-toy.py](https://github.com/yizenglistat/blogsource/blob/master/content/posts/introduction-to-word2vec/part2/word2vec-toy.py) and [word2vec-toy.ipynb](https://github.com/yizenglistat/blogsource/blob/master/content/posts/introduction-to-word2vec/part2/word2vec-toy.ipynb). 
 
-```
+```python
 import numpy as np
 
 # our softmax function
@@ -308,7 +308,6 @@ epoch=99 with loss=53.73739928205228
 ```
 
 **What's Next?** 
-
 - The calculation of normalization factor $Z$ is a burden when billions of words punch you, so an alternative way, called negative sampling, could be used to avoid it.  
 - Implementation in Pytorch with another toy example should be fun!
 - Word2vec could be aligned with GAN for textual generation tasks, i.e., seq2seq model or transformer.
