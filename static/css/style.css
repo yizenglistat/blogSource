@@ -243,7 +243,7 @@ body.dark-mode .messagealert strong{
   color: #232b2b;
 }
 
-.has-jax {
+code.has-jax {
     -webkit-font-smoothing: antialiased;
     background: inherit !important;
     border: none !important;
@@ -257,6 +257,8 @@ mjx-container {
   overflow-x: auto !important;
   overflow-y: hidden !important;
   max-width: 100%;
+  background: inherit !important;
+  border: none !important;
   -webkit-text-size-adjust: 100%;
 }
 
