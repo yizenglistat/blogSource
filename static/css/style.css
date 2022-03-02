@@ -251,6 +251,8 @@ code.has-jax {
     background: inherit !important;
     border: none !important;
     font-size: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .svg-fill{
