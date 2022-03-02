@@ -173,6 +173,7 @@ def softmax(x):
 
 # word2vec, Skip-Gram, model
 class word2vec:
+    
     def __init__(self):
 		self.hidden_size 	= 2
 		self.window_size 	= 1
@@ -184,9 +185,8 @@ class word2vec:
 		self.W2 = np.random.uniform(-1, 1, (self.V, self.hidden))
     
     def feed_forward(self,x):
-    	
     	self.hidden = np.dot(self.W1, x).reshape(self.hidden_size, 1)
-		self.output = np.dot(self.W2, self.hidden)
+    	self.output = np.dot(self.W2, self.hidden)
 		self.yhat = softmax(self.output)
         
         return self.yhat
@@ -239,5 +239,41 @@ $$
 C=\sum_{\textcolor{Cerulean}{\text{context}}\in V}I(y_{\textcolor{Cerulean}{\text{context}}}=1) 
 $$
 
-**Implementations in python.** TO BE CONTINUE
+**Implementations in python.** Combining the feedforward and gradients, we are able to train the model given a dataset by using stochastic gradient descent.
+
+```python
+import numpy as np
+
+# our softmax function
+def softmax(x):
+    e_x = np.exp(x)
+    return e_x / e_x.sum()
+
+# word2vec, Skip-Gram, model
+class word2vec:
+	
+	def __init__(self):
+		self.hidden_size 	= 2
+		self.window_size 	= 1
+		self.V 				= 9
+
+	def initialize(self):
+		self.W1 = np.random.uniform(-1, 1, (self.hidden, self.V))
+		self.W2 = np.random.uniform(-1, 1, (self.V, self.hidden))
+
+	def forward(self, x):
+    	
+    	self.hidden = np.dot(self.W1, x).reshape(self.hidden_size, 1)
+		self.output = np.dot(self.W2, self.hidden)
+		self.yhat = softmax(self.output)    
+        return self.yhat
+	def backward(self, x):
+    	e = self.y - np.asarray(t).reshape(self.V, 1)
+        # e.shape is V x 1
+        dLdW1 = np.dot(self.h,e.T)
+        X = np.array(x).reshape(self.V,1)
+        dLdW = np.dot(X, np.dot(self.W1,e).T)
+        self.W1 = self.W1 - self.alpha * dLdW1
+        self.W = self.W - self.alpha * dLdW
+```
 
