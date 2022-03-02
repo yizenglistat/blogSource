@@ -1,8 +1,3 @@
-.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-
 .fig-center {
   text-align: center;
 }
@@ -254,6 +249,9 @@ code.has-jax {
     overflow-x: auto;
     overflow-y: hidden;
 }
+
+
+
 
 .svg-fill{
   fill:#474848;
