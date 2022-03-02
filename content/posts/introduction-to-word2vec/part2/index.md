@@ -186,7 +186,7 @@ where $y\_{\textcolor{Cerulean}{\text{context}}}=1$ if $\textcolor{Cerulean}{\te
 \frac{\partial J}{\partial v_{\textcolor{red}{\text{center}}}}
 =&-\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}u_{\textcolor{Cerulean}{\text{context}}}\\\\
 &+\sum_{\textcolor{Cerulean}{\text{context}}\in V} u_{\textcolor{Cerulean}{\text{context}}}\hat y_{\textcolor{Cerulean}{\text{context}}}\\\\
-\frac{\partial J}{\partial W_1}=&W_2^\top(\hat y-y)
+\frac{\partial J}{\partial W_1}=&W_2^\top(\hat y-y)x^\top
 \end{align*}
 Taking the first derivative of $J$ with respect to $W_2$ yields
 \begin{align*}
