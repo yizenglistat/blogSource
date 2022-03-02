@@ -5,7 +5,6 @@ linktitle: Introduction to Word2vec Part 2
 title: Introduction to Word2vec - Part 2
 pined: true
 weight: 1
-prev: /
 draft: false
 tags: ["word2vec","neural network", "reproduce", "python"]
 categories: ["ace word2vec"]
