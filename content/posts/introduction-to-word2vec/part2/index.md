@@ -191,16 +191,15 @@ class word2vec:
 
 **Loss function.** Minimize the cross-entropy is equivalent to maximize the log-likelihood function;
 \begin{align*}
-J(W_1,W_2)
-=& - \sum_{\textcolor{Cerulean}{\text{context}}\in V} y_{\textcolor{Cerulean}{\text{context}}}\log\hat{y}_{\textcolor{Cerulean}{\text{context}}}\\\\
-=& - \sum\_{\textcolor{Cerulean}{\text{word}}\in V} y\_{\textcolor{Cerulean}{\text{context}}}\log\frac{\exp(u\_{\textcolor{Cerulean}{\text{context}}}v\_{\textcolor{red}{\text{center}}})}{Z}
+J=
+=& - \sum_{\textcolor{Cerulean}{\text{context}}\in V} y_{\textcolor{Cerulean}{\text{context}}}\log\hat{y}_{\textcolor{Cerulean}{\text{context}}}
 \end{align*}
 where $y\_{\textcolor{Cerulean}{\text{context}}}=1$ if $\textcolor{Cerulean}{\text{context}}$ exists in the $\textcolor{BurntOrange}{\text{window}}$ of current $\textcolor{red}{\text{center}}$, as indicated in true label $y$. And herein our $\hat y\_{\textcolor{Cerulean}{\text{context}}}$ will be same as our $\log\text{Pr}(\textcolor{Cerulean}{\text{context}} \mid \textcolor{red}{\text{center}})$ defined in previous blog.
 
 
-**Gradient computations.** Taking the first derivative of $J(W_1,W_2)$ with respect to $W_1$ will lead to the fact that only one $v_{\textcolor{red}{\text{center}}}$ is involved in the loss function. Thus
+**Gradient computations.** Taking the first derivative of $J$ with respect to $W_1$ will lead to the fact that only one $v_{\textcolor{red}{\text{center}}}$ is involved in the loss function. Thus
 \begin{align*}
-\frac{\partial J(W_1,W_2)}{\partial W_1}
+\frac{\partial J}{\partial W_1}
 =& \begin{bmatrix}
 0\\\\
 \vdots\\\\
@@ -214,9 +213,9 @@ where $y\_{\textcolor{Cerulean}{\text{context}}}=1$ if $\textcolor{Cerulean}{\te
 =&-\sum_{\textcolor{Cerulean}{\text{context}}\in V}I(y_{\textcolor{Cerulean}{\text{context}}}=1)u_{\textcolor{Cerulean}{\text{word}}}\\\\
 &+\sum_{\textcolor{Cerulean}{\text{context}}\in V} u_{\textcolor{Cerulean}{\text{context}}}\hat y_{\textcolor{Cerulean}{\text{context}}}
 \end{align*}
-Taking the first derivative of $J(W_1,W_2)$ with respect to $W_2$ yields
+Taking the first derivative of $J$ with respect to $W_2$ yields
 \begin{align*}
-\frac{\partial J(W_1,W_2)}{\partial W_2}
+\frac{\partial J}{\partial W_2}
 =& \begin{bmatrix}
 \frac{\partial J(W_1,W_2)}{\partial u_{\textcolor{Cerulean}{\text{I}}}}\\\\
 \frac{\partial J(W_1,W_2)}{\partial u_{\textcolor{Cerulean}{\text{want}}}}\\\\
@@ -228,9 +227,14 @@ Taking the first derivative of $J(W_1,W_2)$ with respect to $W_2$ yields
 \frac{\partial J(W_1,W_2)}{\partial u_{\textcolor{Cerulean}{\text{iPhone}}}}\\\\
 \frac{\partial J(W_1,W_2)}{\partial u_{\textcolor{Cerulean}{\text{now}}}}
 \end{bmatrix}\\\\
-\frac{\partial J(W_1,W_2)}{\partial u_{\textcolor{Cerulean}{\text{context}}}}
+\frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{context}}}}
 =& -\sum_{\textcolor{Cerulean}{\text{context}}\in V}I(y_{\textcolor{Cerulean}{\text{context}}}=1)v_{\textcolor{red}{\text{center}}}\\\\
-&+ v_{\textcolor{red}{\text{center}}}\hat y_{\textcolor{Cerulean}{\text{context}}}\sum_{\textcolor{Cerulean}{\text{context}}\in V}I(y_{\textcolor{Cerulean}{\text{context}}}=1) 
+&+Cv_{\textcolor{red}{\text{center}}}\hat y_{\textcolor{Cerulean}{\text{context}}},
 \end{align*}
+where 
+$$
+C=\sum_{\textcolor{Cerulean}{\text{context}}\in V}I(y_{\textcolor{Cerulean}{\text{context}}}=1) 
+$$
+
 **Implementations in python.** TO BE CONTINUE
 
