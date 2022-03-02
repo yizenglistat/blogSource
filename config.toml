@@ -13,7 +13,7 @@ enableRobotsTXT = true
 [params.selected]
 numPosts = 3
 showHot = false
-toptags = 20
+toptags = 5
 topseries = 2
 
 [params.rss] # Adding this tag enables RSS feed
