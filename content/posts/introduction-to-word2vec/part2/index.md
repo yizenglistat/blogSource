@@ -204,7 +204,7 @@ where $y\_{\textcolor{Cerulean}{\text{context}}}=1$ if $\textcolor{Cerulean}{\te
 0\\\\
 \vdots\\\\
 0\\\\
-\frac{\partial J(W_1,W_2)}{\partial v_{\textcolor{red}{\text{center}}}}\\\\
+\frac{\partial J}{\partial v_{\textcolor{red}{\text{center}}}}\\\\
 0\\\\
 \vdots\\\\
 0
@@ -217,18 +217,18 @@ Taking the first derivative of $J$ with respect to $W_2$ yields
 \begin{align*}
 \frac{\partial J}{\partial W_2}
 =& \begin{bmatrix}
-\frac{\partial J(W_1,W_2)}{\partial u_{\textcolor{Cerulean}{\text{I}}}}\\\\
-\frac{\partial J(W_1,W_2)}{\partial u_{\textcolor{Cerulean}{\text{want}}}}\\\\
-\frac{\partial J(W_1,W_2)}{\partial u_{\textcolor{Cerulean}{\text{to}}}}\\\\
-\frac{\partial J(W_1,W_2)}{\partial u_{\textcolor{Cerulean}{\text{buy}}}}\\\\
-\frac{\partial J(W_1,W_2)}{\partial u_{\textcolor{Cerulean}{\text{eat}}}}\\\\
-\frac{\partial J(W_1,W_2)}{\partial u_{\textcolor{Cerulean}{\text{an}}}}\\\\
-\frac{\partial J(W_1,W_2)}{\partial u_{\textcolor{Cerulean}{\text{Apple}}}}\\\\
-\frac{\partial J(W_1,W_2)}{\partial u_{\textcolor{Cerulean}{\text{iPhone}}}}\\\\
-\frac{\partial J(W_1,W_2)}{\partial u_{\textcolor{Cerulean}{\text{now}}}}
+\frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{I}}}}\\\\
+\frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{want}}}}\\\\
+\frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{to}}}}\\\\
+\frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{buy}}}}\\\\
+\frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{eat}}}}\\\\
+\frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{an}}}}\\\\
+\frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{Apple}}}}\\\\
+\frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{iPhone}}}}\\\\
+\frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{now}}}}
 \end{bmatrix}\\\\
 \frac{\partial J}{\partial u_{\textcolor{Cerulean}{\text{context}}}}
-=& -\sum_{\textcolor{Cerulean}{\text{context}}\in V}I(y_{\textcolor{Cerulean}{\text{context}}}=1)v_{\textcolor{red}{\text{center}}}\\\\
+=& -I(y_{\textcolor{Cerulean}{\text{context}}}=1)v_{\textcolor{red}{\text{center}}}\\\\
 &+Cv_{\textcolor{red}{\text{center}}}\hat y_{\textcolor{Cerulean}{\text{context}}},
 \end{align*}
 where 
