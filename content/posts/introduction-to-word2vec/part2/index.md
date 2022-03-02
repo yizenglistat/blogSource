@@ -181,9 +181,9 @@ class word2vec:
 		self.W1 = np.random.uniform(-1, 1, (self.hidden, self.V))
 		self.W2 = np.random.uniform(-1, 1, (self.V, self.hidden))
     def feed_forward(self,x):
-		self.hidden 	= np.dot(self.W1, x).reshape(self.hidden_size, 1) # (2 x 9) x (9 x 1) = 2 x 1
-		self.output 	= np.dot(self.W2, self.hidden) # (9 x 2) x (2 x 1) = 9 x 1
-		self.yhat 		= softmax(self.output) # 9 x 1
+    	self.hidden = np.dot(self.W1, x).reshape(self.hidden_size, 1) # (2 x 9) x (9 x 1) = 2 x 1
+		self.output = np.dot(self.W2, self.hidden) # (9 x 2) x (2 x 1) = 9 x 1
+		self.yhat 	= softmax(self.output) # 9 x 1
         return self.yhat
 ```
 
