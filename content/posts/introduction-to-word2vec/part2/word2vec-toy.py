@@ -51,7 +51,7 @@ class word2vec:
                 self.backward(x, y)
                 self.loss += -1*np.dot(y.T, np.log(self.yhat)).reshape(1,)[0]
             print(f"epoch={epoch} with loss={self.loss}")
-            self.learning_rate *= 1/( (1+self.learning_rate*epoch) )
+            self.learning_rate *= 1/( (1+self.learning_rate*epoch))
 
 
 # clean data and format data

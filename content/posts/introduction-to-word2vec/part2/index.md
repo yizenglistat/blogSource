@@ -186,6 +186,7 @@ where $y\_{\textcolor{Cerulean}{\text{context}}}=1$ if $\textcolor{Cerulean}{\te
 \frac{\partial J}{\partial v_{\textcolor{red}{\text{center}}}}
 =&-\sum_{\textcolor{Cerulean}{\text{context}}\in V}y_{\textcolor{Cerulean}{\text{context}}}u_{\textcolor{Cerulean}{\text{context}}}\\\\
 &+\sum_{\textcolor{Cerulean}{\text{context}}\in V} u_{\textcolor{Cerulean}{\text{context}}}\hat y_{\textcolor{Cerulean}{\text{context}}}\\\\
+=&W_2^\top(\hat y-y)\\\\
 \frac{\partial J}{\partial W_1}=&W_2^\top(\hat y-y)x^\top
 \end{align*}
 Taking the first derivative of $J$ with respect to $W_2$ yields
@@ -217,6 +218,63 @@ $$
 **Implementations in python.** Combining the feedforward and gradients, we are able to train the model given a dataset by using stochastic gradient desent.
 
 Only trained for 100 epoches but it is kind of cool! You can play the notebook yourself [[source code]](https://github.com/yizenglistat/blogsource/blob/master/content/posts/introduction-to-word2vec/part2/word2vec-toy.ipynb). 
+
+```R
+import numpy as np
+
+# our softmax function
+def softmax(x):
+    e_x = np.exp(x)
+    return e_x / e_x.sum()
+
+# word2vec, Skip-Gram, model
+class word2vec:
+    def __init__(self):
+        self.hidden_size = 2
+        self.X_train = []
+        self.y_train = []
+        self.window_size = 1
+        self.learning_rate = 0.001
+        self.words = []
+        self.word_index = {}
+  
+    def inital(self,V,data):
+        self.V = V
+        self.W1 = np.random.uniform(-0.8, 0.8, (self.hidden_size, self.V))
+        self.W2 = np.random.uniform(-0.8, 0.8, (self.V, self.hidden_size))
+          
+        self.words = data
+        for i in range(len(data)):
+            self.word_index[data[i]] = i
+
+    def forward(self, x):
+        self.center = np.dot(self.W1, x).reshape(self.hidden_size, 1)
+        self.output = np.dot(self.W2, self.center)
+        self.yhat = softmax(self.output)
+        return self.yhat
+
+    def backward(self, x, y):
+        # for W1
+        dJ_dW1 = np.dot(np.dot(self.W2.T, self.yhat - y), x.T)
+        # for W2
+        C = y.sum()
+        dJ_dW2 = np.dot(C*self.yhat - y, self.center.T)
+        # update
+        self.W1 = self.W1 - self.learning_rate * dJ_dW1
+        self.W2 = self.W2 - self.learning_rate * dJ_dW2
+
+    def train(self, max_epochs):
+        for epoch in range(1, max_epochs):       
+            self.loss = 0
+            for t in range(len(self.X_train)):
+                x = np.array(self.X_train)[t].reshape(self.V, 1)
+                y = np.array(self.y_train)[t].reshape(self.V, 1)
+                self.forward(x)
+                self.backward(x, y)
+                self.loss += -1*np.dot(y.T, np.log(self.yhat)).reshape(1,)[0]
+            print(f"epoch={epoch} with loss={self.loss}")
+            self.learning_rate *= 1/( (1+self.learning_rate*epoch))
+```
 
 ```
 epoch=1 with loss=55.09354880947808
