@@ -9,7 +9,7 @@ prev: /
 draft: false
 tags: ["word2vec","neural network", "reproduce", "python"]
 categories: ["ace word2vec"]
-images: word2vec-fig1.png
+image: word2vec-fig4.png
 ---
 
 A tutorial, focused on Skip-Gram, for Word2vec with model architecture/implementation from scratch in python. 
