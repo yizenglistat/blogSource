@@ -219,7 +219,7 @@ $$
 
 Only trained for 100 epoches but it is kind of cool! You can play the notebook yourself [[source code]](https://github.com/yizenglistat/blogsource/blob/master/content/posts/introduction-to-word2vec/part2/word2vec-toy.ipynb). 
 
-```R
+```
 import numpy as np
 
 # our softmax function
