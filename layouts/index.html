@@ -144,7 +144,7 @@ body.dark-mode .pluses {
       
       <div class="content" id=mysummary style="margin-top: -1em;">
         {{if .Params.featured_image}}
-        <img {{ with .Params.featured_image }} style="display: block;margin-left: auto;margin-right: auto;" height="300vh" width="50%" src="{{ . }}"{{ end }} alt="{{ .Title }}">
+        <img {{ with .Params.featured_image }} style="display: block;margin-left: auto;margin-right: auto;" height="30%" src="{{ . }}"{{ end }} alt="{{ .Title }}">
         {{end}}
         {{ .Summary | plainify | safeHTML }}
         {{ if .Truncated }}
@@ -197,7 +197,7 @@ body.dark-mode .pluses {
       <div class="content" id="mysummary" style=";margin-top: -1em;">
         
         {{if .Params.featured_image}}
-        <img {{ with .Params.featured_image }} style="display: block;margin-left: auto;margin-right: auto;" height="300vh" width="50%" src="{{ . }}"{{ end }} alt="{{ .Title }}">
+        <img {{ with .Params.featured_image }} style="display: block;margin-left: auto;margin-right: auto;" height="30%" src="{{ . }}"{{ end }} alt="{{ .Title }}">
         {{end}}
 
         {{ .Summary | plainify | safeHTML }}
