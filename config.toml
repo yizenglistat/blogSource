@@ -102,7 +102,6 @@ hrefTargetBlank = true
   lineNoStart = 1
   lineNumberInTable = true
   tabWidth = 4
-  style = 'solarized-dark'
 
 pygmentsUseClasses = true
 pygmentsCodeFences = true
