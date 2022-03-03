@@ -96,4 +96,13 @@ hrefTargetBlank = true
 
 [markup]
   [markup.highlight]
-    style = 'solarized-dark'
+  codeFences = true
+  guessSyntax = true
+  hl_Lines = ""
+  lineNoStart = 1
+  lineNumberInTable = true
+  tabWidth = 4
+  style = 'solarized-dark'
+
+pygmentsUseClasses = true
+pygmentsCodeFences = true

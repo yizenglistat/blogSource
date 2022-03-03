@@ -48,15 +48,15 @@ v_{\textcolor{red}{\text{iPhone}},1},v_{\textcolor{red}{\text{iPhone}},2}\\\\
 v_{\textcolor{red}{\text{now}},1},v_{\textcolor{red}{\text{now}},2}\\\\
 \end{bmatrix}
 =\begin{bmatrix}
-v_{\textcolor{red}{\text{I}}}\\\\
-v_{\textcolor{red}{\text{want}}}\\\\
-v_{\textcolor{red}{\text{to}}}\\\\
-v_{\textcolor{red}{\text{buy}}}\\\\
-v_{\textcolor{red}{\text{eat}}}\\\\
-v_{\textcolor{red}{\text{an}}}\\\\
-v_{\textcolor{red}{\text{Apple}}}\\\\
-v_{\textcolor{red}{\text{iPhone}}}\\\\
-v_{\textcolor{red}{\text{now}}}\\\\
+v_{\textcolor{red}{\text{I}}}^\top\\\\
+v_{\textcolor{red}{\text{want}}}^\top\\\\
+v_{\textcolor{red}{\text{to}}}^\top\\\\
+v_{\textcolor{red}{\text{buy}}}^\top\\\\
+v_{\textcolor{red}{\text{eat}}}^\top\\\\
+v_{\textcolor{red}{\text{an}}}^\top\\\\
+v_{\textcolor{red}{\text{Apple}}}^\top\\\\
+v_{\textcolor{red}{\text{iPhone}}}^\top\\\\
+v_{\textcolor{red}{\text{now}}}^\top
 \end{bmatrix}
 \end{align*}
 
@@ -72,18 +72,18 @@ u_{\textcolor{Cerulean}{\text{eat}},1},u_{\textcolor{Cerulean}{\text{eat}},2}\\\
 u_{\textcolor{Cerulean}{\text{an}},1},u_{\textcolor{Cerulean}{\text{an}},2}\\\\
 u_{\textcolor{Cerulean}{\text{Apple}},1},u_{\textcolor{Cerulean}{\text{Apple}},2}\\\\
 u_{\textcolor{Cerulean}{\text{iPhone}},1},u_{\textcolor{Cerulean}{\text{iPhone}},2}\\\\
-u_{\textcolor{Cerulean}{\text{now}},1},u_{\textcolor{Cerulean}{\text{now}},2}\\\\
+u_{\textcolor{Cerulean}{\text{now}},1},u_{\textcolor{Cerulean}{\text{now}},2}
 \end{bmatrix}
 =\begin{bmatrix}
-u_{\textcolor{Cerulean}{\text{I}}}\\\\
-u_{\textcolor{Cerulean}{\text{want}}}\\\\
-u_{\textcolor{Cerulean}{\text{to}}}\\\\
-u_{\textcolor{Cerulean}{\text{buy}}}\\\\
-u_{\textcolor{Cerulean}{\text{eat}}}\\\\
-u_{\textcolor{Cerulean}{\text{an}}}\\\\
-u_{\textcolor{Cerulean}{\text{Apple}}}\\\\
-u_{\textcolor{Cerulean}{\text{iPhone}}}\\\\
-u_{\textcolor{Cerulean}{\text{now}}}\\\\
+u_{\textcolor{Cerulean}{\text{I}}}^\top\\\\
+u_{\textcolor{Cerulean}{\text{want}}}^\top\\\\
+u_{\textcolor{Cerulean}{\text{to}}}^\top\\\\
+u_{\textcolor{Cerulean}{\text{buy}}}^\top\\\\
+u_{\textcolor{Cerulean}{\text{eat}}}^\top\\\\
+u_{\textcolor{Cerulean}{\text{an}}}^\top\\\\
+u_{\textcolor{Cerulean}{\text{Apple}}}^\top\\\\
+u_{\textcolor{Cerulean}{\text{iPhone}}}^\top\\\\
+u_{\textcolor{Cerulean}{\text{now}}}^\top
 \end{bmatrix}
 \end{align*}
 
@@ -142,7 +142,7 @@ u_{\textcolor{Cerulean}{\text{Apple}}}^\top v_{\textcolor{red}{\text{center}}}\\
 u_{\textcolor{Cerulean}{\text{iPhone}}}^\top v_{\textcolor{red}{\text{center}}}\\\\
 u_{\textcolor{Cerulean}{\text{now}}}^\top v_{\textcolor{red}{\text{center}}}
 \end{bmatrix}\\\\
-\hat{y}=&\text{softmax}(W_2v_{\textcolor{red}{\text{center}}})=\begin{bmatrix}
+\hat{y}=\text{softmax}(W_2v_{\textcolor{red}{\text{center}}})=&\begin{bmatrix}
 \frac{\exp(u_{\textcolor{Cerulean}{\text{I}}}^\top v_{\textcolor{red}{\text{center}}})}{Z}\\\\
 \frac{\exp(u_{\textcolor{Cerulean}{\text{want}}}^\top v_{\textcolor{red}{\text{center}}})}{Z}\\\\
 \frac{\exp(u_{\textcolor{Cerulean}{\text{to}}}^\top v_{\textcolor{red}{\text{center}}})}{Z}\\\\
@@ -227,7 +227,7 @@ $$
 
 Only trained for 100 epoches but it is kind of cool! You can play the code or notebook yourself: [word2vec-toy.py](https://github.com/yizenglistat/blogsource/blob/master/content/posts/introduction-to-word2vec/part2/word2vec-toy.py) and [word2vec-toy.ipynb](https://github.com/yizenglistat/blogsource/blob/master/content/posts/introduction-to-word2vec/part2/word2vec-toy.ipynb). 
 
-```
+```python
 import numpy as np
 
 # our softmax function
