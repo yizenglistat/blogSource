@@ -82,7 +82,17 @@ body.dark-mode #specialtitle{
     
     <h1 class="content">
       {{- $type := .Type }}
-      
+      {{ $max_count := 0 }}
+      {{- range $key, $value := .Data.Terms.Alphabetical }}
+        {{- $name := .Name }}
+        {{- $count := .Count }}
+        {{if gt $count $max_count}}
+        {{$max_count = $count}}
+        {{end}}
+      {{end}}
+
+      {{$max_count = float $max_count}}
+
       {{- range $key, $value := .Data.Terms.Alphabetical }}
         
         {{- $name := .Name }}
@@ -94,7 +104,8 @@ body.dark-mode #specialtitle{
             {{ if $firstChar | in $letters }}
                   <div style="display: flex;flex-direction: row;justify-content: space-between;">
                   <div style="display: inline-block;">
-                  <a href={{.Permalink}}>{{ .Title }}</a>
+                  {{$importance := div $count $max_count | add 0.3}}
+                  <a href={{.Permalink}} style="opacity: {{$importance}}">{{ .Title }}<sup>({{$count}})</sup></a>
                   </div>
                   <div style="display: flex;margin-left: auto;">
                   {{ $curLetter := $.Scratch.Get "curLetter" }}
