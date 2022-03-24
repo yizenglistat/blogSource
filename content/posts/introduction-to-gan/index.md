@@ -18,7 +18,7 @@ A tutorial for GAN with an intuitive guide.
 
 The **G**nerative **A**dversarial **N**etwork (GAN) is used to generate "realistic" new data given a training set. 
 
-Let's start with an example. Suppose we have a vector $z$ sampled from a normal distribution as below.
+Let's start with an example. Suppose we have a vector $z$ sampled from a normal distribution as below. 
 
 $$z=\begin{bmatrix}
 -0.3\\\\
@@ -29,3 +29,5 @@ $$z=\begin{bmatrix}
 Our target for this example is to generate a long vector so that it could be reshaped into a digital image. 
 
 TO BE CONTINUE
+
+END
