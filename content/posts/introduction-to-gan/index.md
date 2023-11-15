@@ -29,5 +29,3 @@ $$z=\begin{bmatrix}
 Our target for this example is to generate a long vector so that it could be reshaped into a digital image. 
 
 TO BE CONTINUE
-
-END NOW
